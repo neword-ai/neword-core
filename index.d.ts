@@ -1,2 +1,4 @@
-declare DocumentEntityType;
-from "../../types/DocumentEntityType";
+import { DocumentEntityType } from "./types/DocumentEntityType";
+
+declare;
+DocumentEntityType;
