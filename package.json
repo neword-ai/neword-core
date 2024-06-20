@@ -15,5 +15,9 @@
     "url": "https://github.com/shaidrai/neword-core/issues"
   },
   "homepage": "https://github.com/shaidrai/neword-core#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.14.6",
+    "typescript": "^5.4.5"
+  }
 }
