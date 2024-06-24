@@ -1,5 +1,6 @@
 import { DocumentEntityType } from "../../types/DocumentEntityType";
 import { z } from "zod";
+import { DocumentCategory } from "../../types/documentCategory";
 
 export const DocumentTypeFactory = {
   [DocumentEntityType.INSTAGRAM_CAPTION]: {
@@ -11,6 +12,7 @@ export const DocumentTypeFactory = {
         captionText: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_POST_IDEA]: {
     inputParams: z.object({
@@ -21,6 +23,7 @@ export const DocumentTypeFactory = {
         ideaDescription: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_BIO_DESCRIPTION]: {
     inputParams: z.object({
@@ -31,6 +34,7 @@ export const DocumentTypeFactory = {
         bioDescription: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_STORY_IDEA]: {
     inputParams: z.object({
@@ -41,6 +45,7 @@ export const DocumentTypeFactory = {
         storyIdea: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_REEL_IDEA]: {
     inputParams: z.object({
@@ -51,6 +56,7 @@ export const DocumentTypeFactory = {
         reelIdea: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_REEL_SCRIPT]: {
     inputParams: z.object({
@@ -61,6 +67,7 @@ export const DocumentTypeFactory = {
         reelScript: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.FACEBOOK_POST_CAPTION]: {
     inputParams: z.object({
@@ -71,6 +78,7 @@ export const DocumentTypeFactory = {
         postCaption: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.FACEBOOK_POST_IDEA]: {
     inputParams: z.object({
@@ -81,6 +89,7 @@ export const DocumentTypeFactory = {
         postIdea: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.FACEBOOK_PAGE_ABOUT]: {
     inputParams: z.object({
@@ -91,6 +100,7 @@ export const DocumentTypeFactory = {
         pageAbout: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.LINKEDIN_POST_CAPTION]: {
     inputParams: z.object({
@@ -101,6 +111,7 @@ export const DocumentTypeFactory = {
         postCaption: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.LINKEDIN_POST_IDEA]: {
     inputParams: z.object({
@@ -111,6 +122,7 @@ export const DocumentTypeFactory = {
         postIdea: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.LINKEDIN_PAGE_ABOUT]: {
     inputParams: z.object({
@@ -121,6 +133,7 @@ export const DocumentTypeFactory = {
         pageAbout: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.TWITTER_TWIT]: {
     inputParams: z.object({
@@ -131,6 +144,7 @@ export const DocumentTypeFactory = {
         tweetContent: z.string(),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.THREADS_TWIT]: {
     inputParams: z.object({
@@ -141,8 +155,8 @@ export const DocumentTypeFactory = {
         threadContent: z.array(z.string()),
       })
       .array(),
+    category: DocumentCategory.SOCIAL_MEDIA,
   },
-
   [DocumentEntityType.EMAIL_CONTENT]: {
     inputParams: z.object({
       description: z.string(),
@@ -151,8 +165,8 @@ export const DocumentTypeFactory = {
       subject: z.string(),
       content: z.string(),
     }),
+    category: DocumentCategory.MAILING,
   },
-
   [DocumentEntityType.EMAIL_IDEA]: {
     inputParams: z.object({
       description: z.string(),
@@ -162,6 +176,7 @@ export const DocumentTypeFactory = {
         emailIdea: z.string(),
       })
       .array(),
+    category: DocumentCategory.MAILING,
   },
   [DocumentEntityType.SMS_CONTENT]: {
     inputParams: z.object({
@@ -172,6 +187,7 @@ export const DocumentTypeFactory = {
         smsContent: z.string(),
       })
       .array(),
+    category: DocumentCategory.MAILING,
   },
   [DocumentEntityType.SMS_IDEA]: {
     inputParams: z.object({
@@ -182,6 +198,7 @@ export const DocumentTypeFactory = {
         smsIdea: z.string(),
       })
       .array(),
+    category: DocumentCategory.MAILING,
   },
   [DocumentEntityType.PHONE_CALL_SCRIPT]: {
     inputParams: z.object({
@@ -192,6 +209,7 @@ export const DocumentTypeFactory = {
         phoneCallScript: z.string(),
       })
       .array(),
+    category: DocumentCategory.MAILING,
   },
   [DocumentEntityType.GOOGLE_ADS_KEYWORDS]: {
     inputParams: z.object({
@@ -202,6 +220,7 @@ export const DocumentTypeFactory = {
         adKeywords: z.array(z.string()),
       })
       .array(),
+    category: DocumentCategory.PAID,
   },
   [DocumentEntityType.GOOGLE_ADS_IDEA]: {
     inputParams: z.object({
@@ -212,6 +231,7 @@ export const DocumentTypeFactory = {
         adIdea: z.string(),
       })
       .array(),
+    category: DocumentCategory.PAID,
   },
   [DocumentEntityType.WEBSITE_ABOUT]: {
     inputParams: z.object({
@@ -222,6 +242,7 @@ export const DocumentTypeFactory = {
         aboutContent: z.string(),
       })
       .array(),
+    category: DocumentCategory.WEB,
   },
   [DocumentEntityType.WEBSITE_FAQ]: {
     inputParams: z.object({
@@ -235,6 +256,7 @@ export const DocumentTypeFactory = {
         ),
       })
       .array(),
+    category: DocumentCategory.WEB,
   },
   [DocumentEntityType.WEBSITE_TESTEMONIAL]: {
     inputParams: z.object({
@@ -245,6 +267,7 @@ export const DocumentTypeFactory = {
         testimonials: z.array(z.string()),
       })
       .array(),
+    category: DocumentCategory.WEB,
   },
   [DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION]: {
     inputParams: z.object({
@@ -258,5 +281,6 @@ export const DocumentTypeFactory = {
         ),
       })
       .array(),
+    category: DocumentCategory.WEB,
   },
 };
