@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { DocumentCategory } from "../../types/documentCategory";
 export declare const DocumentTypeFactory: {
     INSTAGRAM_CAPTION: {
         inputParams: z.ZodObject<{
@@ -8,13 +9,14 @@ export declare const DocumentTypeFactory: {
         }, {
             caption: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             captionText: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             captionText: string;
         }, {
             captionText: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     INSTAGRAM_POST_IDEA: {
         inputParams: z.ZodObject<{
@@ -24,13 +26,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             ideaDescription: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             ideaDescription: string;
         }, {
             ideaDescription: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     INSTAGRAM_BIO_DESCRIPTION: {
         inputParams: z.ZodObject<{
@@ -40,13 +43,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             bioDescription: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             bioDescription: string;
         }, {
             bioDescription: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     INSTAGRAM_STORY_IDEA: {
         inputParams: z.ZodObject<{
@@ -56,13 +60,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             storyIdea: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             storyIdea: string;
         }, {
             storyIdea: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     INSTAGRAM_REEL_IDEA: {
         inputParams: z.ZodObject<{
@@ -72,13 +77,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             reelIdea: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             reelIdea: string;
         }, {
             reelIdea: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     INSTAGRAM_REEL_SCRIPT: {
         inputParams: z.ZodObject<{
@@ -88,13 +94,14 @@ export declare const DocumentTypeFactory: {
         }, {
             script: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             reelScript: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             reelScript: string;
         }, {
             reelScript: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     FACEBOOK_POST_CAPTION: {
         inputParams: z.ZodObject<{
@@ -104,13 +111,14 @@ export declare const DocumentTypeFactory: {
         }, {
             caption: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             postCaption: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             postCaption: string;
         }, {
             postCaption: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     FACEBOOK_POST_IDEA: {
         inputParams: z.ZodObject<{
@@ -120,13 +128,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             postIdea: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             postIdea: string;
         }, {
             postIdea: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     FACEBOOK_PAGE_ABOUT: {
         inputParams: z.ZodObject<{
@@ -136,13 +145,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             pageAbout: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             pageAbout: string;
         }, {
             pageAbout: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     LINKEDIN_POST_CAPTION: {
         inputParams: z.ZodObject<{
@@ -152,13 +162,14 @@ export declare const DocumentTypeFactory: {
         }, {
             caption: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             postCaption: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             postCaption: string;
         }, {
             postCaption: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     LINKEDIN_POST_IDEA: {
         inputParams: z.ZodObject<{
@@ -168,13 +179,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             postIdea: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             postIdea: string;
         }, {
             postIdea: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     LINKEDIN_PAGE_ABOUT: {
         inputParams: z.ZodObject<{
@@ -184,13 +196,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             pageAbout: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             pageAbout: string;
         }, {
             pageAbout: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     TWITTER_TWIT: {
         inputParams: z.ZodObject<{
@@ -200,13 +213,14 @@ export declare const DocumentTypeFactory: {
         }, {
             tweet: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             tweetContent: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             tweetContent: string;
         }, {
             tweetContent: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     THREADS_TWIT: {
         inputParams: z.ZodObject<{
@@ -216,13 +230,14 @@ export declare const DocumentTypeFactory: {
         }, {
             thread: string[];
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             threadContent: z.ZodArray<z.ZodString, "many">;
         }, "strip", z.ZodTypeAny, {
             threadContent: string[];
         }, {
             threadContent: string[];
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     EMAIL_CONTENT: {
         inputParams: z.ZodObject<{
@@ -242,6 +257,7 @@ export declare const DocumentTypeFactory: {
             content: string;
             subject: string;
         }>;
+        category: DocumentCategory;
     };
     EMAIL_IDEA: {
         inputParams: z.ZodObject<{
@@ -251,13 +267,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             emailIdea: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             emailIdea: string;
         }, {
             emailIdea: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     SMS_CONTENT: {
         inputParams: z.ZodObject<{
@@ -267,13 +284,14 @@ export declare const DocumentTypeFactory: {
         }, {
             content: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             smsContent: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             smsContent: string;
         }, {
             smsContent: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     SMS_IDEA: {
         inputParams: z.ZodObject<{
@@ -283,13 +301,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             smsIdea: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             smsIdea: string;
         }, {
             smsIdea: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     PHONE_CALL_SCRIPT: {
         inputParams: z.ZodObject<{
@@ -299,13 +318,14 @@ export declare const DocumentTypeFactory: {
         }, {
             script: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             phoneCallScript: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             phoneCallScript: string;
         }, {
             phoneCallScript: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     GOOGLE_ADS_KEYWORDS: {
         inputParams: z.ZodObject<{
@@ -315,13 +335,14 @@ export declare const DocumentTypeFactory: {
         }, {
             keywords: string[];
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             adKeywords: z.ZodArray<z.ZodString, "many">;
         }, "strip", z.ZodTypeAny, {
             adKeywords: string[];
         }, {
             adKeywords: string[];
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     GOOGLE_ADS_IDEA: {
         inputParams: z.ZodObject<{
@@ -331,13 +352,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             adIdea: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             adIdea: string;
         }, {
             adIdea: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     WEBSITE_ABOUT: {
         inputParams: z.ZodObject<{
@@ -347,13 +369,14 @@ export declare const DocumentTypeFactory: {
         }, {
             description: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             aboutContent: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             aboutContent: string;
         }, {
             aboutContent: string;
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     WEBSITE_FAQ: {
         inputParams: z.ZodObject<{
@@ -366,7 +389,7 @@ export declare const DocumentTypeFactory: {
             answer: string;
             question: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             faqEntries: z.ZodArray<z.ZodObject<{
                 question: z.ZodString;
                 answer: z.ZodString;
@@ -387,7 +410,8 @@ export declare const DocumentTypeFactory: {
                 answer: string;
                 question: string;
             }[];
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     WEBSITE_TESTEMONIAL: {
         inputParams: z.ZodObject<{
@@ -397,13 +421,14 @@ export declare const DocumentTypeFactory: {
         }, {
             testimonial: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             testimonials: z.ZodArray<z.ZodString, "many">;
         }, "strip", z.ZodTypeAny, {
             testimonials: string[];
         }, {
             testimonials: string[];
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
     WEBSITE_PRODUCT_DESCRIPTION: {
         inputParams: z.ZodObject<{
@@ -416,7 +441,7 @@ export declare const DocumentTypeFactory: {
             description: string;
             productName: string;
         }>;
-        output: z.ZodArray<z.ZodObject<{
+        output: z.ZodObject<{
             productDescriptions: z.ZodArray<z.ZodObject<{
                 productName: z.ZodString;
                 description: z.ZodString;
@@ -437,7 +462,8 @@ export declare const DocumentTypeFactory: {
                 description: string;
                 productName: string;
             }[];
-        }>, "many">;
+        }>;
+        category: DocumentCategory;
     };
 };
 //# sourceMappingURL=documentBase.d.ts.map
