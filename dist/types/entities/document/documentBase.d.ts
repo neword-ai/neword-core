@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { DocumentCategory } from "../../types/documentCategory";
 export declare const DocumentTypeFactory: {
     INSTAGRAM_CAPTION: {
         inputParams: z.ZodObject<{
@@ -15,6 +16,7 @@ export declare const DocumentTypeFactory: {
         }, {
             captionText: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     INSTAGRAM_POST_IDEA: {
         inputParams: z.ZodObject<{
@@ -31,6 +33,7 @@ export declare const DocumentTypeFactory: {
         }, {
             ideaDescription: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     INSTAGRAM_BIO_DESCRIPTION: {
         inputParams: z.ZodObject<{
@@ -47,6 +50,7 @@ export declare const DocumentTypeFactory: {
         }, {
             bioDescription: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     INSTAGRAM_STORY_IDEA: {
         inputParams: z.ZodObject<{
@@ -63,6 +67,7 @@ export declare const DocumentTypeFactory: {
         }, {
             storyIdea: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     INSTAGRAM_REEL_IDEA: {
         inputParams: z.ZodObject<{
@@ -79,6 +84,7 @@ export declare const DocumentTypeFactory: {
         }, {
             reelIdea: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     INSTAGRAM_REEL_SCRIPT: {
         inputParams: z.ZodObject<{
@@ -95,6 +101,7 @@ export declare const DocumentTypeFactory: {
         }, {
             reelScript: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     FACEBOOK_POST_CAPTION: {
         inputParams: z.ZodObject<{
@@ -111,6 +118,7 @@ export declare const DocumentTypeFactory: {
         }, {
             postCaption: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     FACEBOOK_POST_IDEA: {
         inputParams: z.ZodObject<{
@@ -127,6 +135,7 @@ export declare const DocumentTypeFactory: {
         }, {
             postIdea: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     FACEBOOK_PAGE_ABOUT: {
         inputParams: z.ZodObject<{
@@ -143,6 +152,7 @@ export declare const DocumentTypeFactory: {
         }, {
             pageAbout: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     LINKEDIN_POST_CAPTION: {
         inputParams: z.ZodObject<{
@@ -159,6 +169,7 @@ export declare const DocumentTypeFactory: {
         }, {
             postCaption: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     LINKEDIN_POST_IDEA: {
         inputParams: z.ZodObject<{
@@ -175,6 +186,7 @@ export declare const DocumentTypeFactory: {
         }, {
             postIdea: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     LINKEDIN_PAGE_ABOUT: {
         inputParams: z.ZodObject<{
@@ -191,6 +203,7 @@ export declare const DocumentTypeFactory: {
         }, {
             pageAbout: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     TWITTER_TWIT: {
         inputParams: z.ZodObject<{
@@ -207,6 +220,7 @@ export declare const DocumentTypeFactory: {
         }, {
             tweetContent: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     THREADS_TWIT: {
         inputParams: z.ZodObject<{
@@ -223,6 +237,7 @@ export declare const DocumentTypeFactory: {
         }, {
             threadContent: string[];
         }>, "many">;
+        category: DocumentCategory;
     };
     EMAIL_CONTENT: {
         inputParams: z.ZodObject<{
@@ -242,6 +257,7 @@ export declare const DocumentTypeFactory: {
             content: string;
             subject: string;
         }>;
+        category: DocumentCategory;
     };
     EMAIL_IDEA: {
         inputParams: z.ZodObject<{
@@ -258,6 +274,7 @@ export declare const DocumentTypeFactory: {
         }, {
             emailIdea: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     SMS_CONTENT: {
         inputParams: z.ZodObject<{
@@ -274,6 +291,7 @@ export declare const DocumentTypeFactory: {
         }, {
             smsContent: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     SMS_IDEA: {
         inputParams: z.ZodObject<{
@@ -290,6 +308,7 @@ export declare const DocumentTypeFactory: {
         }, {
             smsIdea: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     PHONE_CALL_SCRIPT: {
         inputParams: z.ZodObject<{
@@ -306,6 +325,7 @@ export declare const DocumentTypeFactory: {
         }, {
             phoneCallScript: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     GOOGLE_ADS_KEYWORDS: {
         inputParams: z.ZodObject<{
@@ -322,6 +342,7 @@ export declare const DocumentTypeFactory: {
         }, {
             adKeywords: string[];
         }>, "many">;
+        category: DocumentCategory;
     };
     GOOGLE_ADS_IDEA: {
         inputParams: z.ZodObject<{
@@ -338,6 +359,7 @@ export declare const DocumentTypeFactory: {
         }, {
             adIdea: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     WEBSITE_ABOUT: {
         inputParams: z.ZodObject<{
@@ -354,6 +376,7 @@ export declare const DocumentTypeFactory: {
         }, {
             aboutContent: string;
         }>, "many">;
+        category: DocumentCategory;
     };
     WEBSITE_FAQ: {
         inputParams: z.ZodObject<{
@@ -388,6 +411,7 @@ export declare const DocumentTypeFactory: {
                 question: string;
             }[];
         }>, "many">;
+        category: DocumentCategory;
     };
     WEBSITE_TESTEMONIAL: {
         inputParams: z.ZodObject<{
@@ -404,6 +428,7 @@ export declare const DocumentTypeFactory: {
         }, {
             testimonials: string[];
         }>, "many">;
+        category: DocumentCategory;
     };
     WEBSITE_PRODUCT_DESCRIPTION: {
         inputParams: z.ZodObject<{
@@ -438,6 +463,7 @@ export declare const DocumentTypeFactory: {
                 productName: string;
             }[];
         }>, "many">;
+        category: DocumentCategory;
     };
 };
 //# sourceMappingURL=documentBase.d.ts.map
