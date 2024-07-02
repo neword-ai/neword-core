@@ -7,154 +7,126 @@ export const DocumentTypeFactory = {
     inputParams: z.object({
       caption: z.string(),
     }),
-    output: z
-      .object({
-        captionText: z.string(),
-      })
-      .array(),
+    output: z.object({
+      captionText: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_POST_IDEA]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        ideaDescription: z.string(),
-      })
-      .array(),
+    output: z.object({
+      ideaDescription: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_BIO_DESCRIPTION]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        bioDescription: z.string(),
-      })
-      .array(),
+    output: z.object({
+      bioDescription: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_STORY_IDEA]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        storyIdea: z.string(),
-      })
-      .array(),
+    output: z.object({
+      storyIdea: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_REEL_IDEA]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        reelIdea: z.string(),
-      })
-      .array(),
+    output: z.object({
+      reelIdea: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_REEL_SCRIPT]: {
     inputParams: z.object({
       script: z.string(),
     }),
-    output: z
-      .object({
-        reelScript: z.string(),
-      })
-      .array(),
+    output: z.object({
+      reelScript: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.FACEBOOK_POST_CAPTION]: {
     inputParams: z.object({
       caption: z.string(),
     }),
-    output: z
-      .object({
-        postCaption: z.string(),
-      })
-      .array(),
+    output: z.object({
+      postCaption: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.FACEBOOK_POST_IDEA]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        postIdea: z.string(),
-      })
-      .array(),
+    output: z.object({
+      postIdea: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.FACEBOOK_PAGE_ABOUT]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        pageAbout: z.string(),
-      })
-      .array(),
+    output: z.object({
+      pageAbout: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.LINKEDIN_POST_CAPTION]: {
     inputParams: z.object({
       caption: z.string(),
     }),
-    output: z
-      .object({
-        postCaption: z.string(),
-      })
-      .array(),
+    output: z.object({
+      postCaption: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.LINKEDIN_POST_IDEA]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        postIdea: z.string(),
-      })
-      .array(),
+    output: z.object({
+      postIdea: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.LINKEDIN_PAGE_ABOUT]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        pageAbout: z.string(),
-      })
-      .array(),
+    output: z.object({
+      pageAbout: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.TWITTER_TWIT]: {
     inputParams: z.object({
       tweet: z.string(),
     }),
-    output: z
-      .object({
-        tweetContent: z.string(),
-      })
-      .array(),
+    output: z.object({
+      tweetContent: z.string(),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.THREADS_TWIT]: {
     inputParams: z.object({
       thread: z.array(z.string()),
     }),
-    output: z
-      .object({
-        threadContent: z.array(z.string()),
-      })
-      .array(),
+    output: z.object({
+      threadContent: z.array(z.string()),
+    }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.EMAIL_CONTENT]: {
@@ -171,77 +143,63 @@ export const DocumentTypeFactory = {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        emailIdea: z.string(),
-      })
-      .array(),
+    output: z.object({
+      emailIdea: z.string(),
+    }),
     category: DocumentCategory.MAILING,
   },
   [DocumentEntityType.SMS_CONTENT]: {
     inputParams: z.object({
       content: z.string(),
     }),
-    output: z
-      .object({
-        smsContent: z.string(),
-      })
-      .array(),
+    output: z.object({
+      smsContent: z.string(),
+    }),
     category: DocumentCategory.MAILING,
   },
   [DocumentEntityType.SMS_IDEA]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        smsIdea: z.string(),
-      })
-      .array(),
+    output: z.object({
+      smsIdea: z.string(),
+    }),
     category: DocumentCategory.MAILING,
   },
   [DocumentEntityType.PHONE_CALL_SCRIPT]: {
     inputParams: z.object({
       script: z.string(),
     }),
-    output: z
-      .object({
-        phoneCallScript: z.string(),
-      })
-      .array(),
+    output: z.object({
+      phoneCallScript: z.string(),
+    }),
     category: DocumentCategory.MAILING,
   },
   [DocumentEntityType.GOOGLE_ADS_KEYWORDS]: {
     inputParams: z.object({
       keywords: z.array(z.string()),
     }),
-    output: z
-      .object({
-        adKeywords: z.array(z.string()),
-      })
-      .array(),
+    output: z.object({
+      adKeywords: z.array(z.string()),
+    }),
     category: DocumentCategory.PAID,
   },
   [DocumentEntityType.GOOGLE_ADS_IDEA]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        adIdea: z.string(),
-      })
-      .array(),
+    output: z.object({
+      adIdea: z.string(),
+    }),
     category: DocumentCategory.PAID,
   },
   [DocumentEntityType.WEBSITE_ABOUT]: {
     inputParams: z.object({
       description: z.string(),
     }),
-    output: z
-      .object({
-        aboutContent: z.string(),
-      })
-      .array(),
+    output: z.object({
+      aboutContent: z.string(),
+    }),
     category: DocumentCategory.WEB,
   },
   [DocumentEntityType.WEBSITE_FAQ]: {
@@ -249,24 +207,20 @@ export const DocumentTypeFactory = {
       question: z.string(),
       answer: z.string(),
     }),
-    output: z
-      .object({
-        faqEntries: z.array(
-          z.object({ question: z.string(), answer: z.string() })
-        ),
-      })
-      .array(),
+    output: z.object({
+      faqEntries: z.array(
+        z.object({ question: z.string(), answer: z.string() })
+      ),
+    }),
     category: DocumentCategory.WEB,
   },
   [DocumentEntityType.WEBSITE_TESTEMONIAL]: {
     inputParams: z.object({
       testimonial: z.string(),
     }),
-    output: z
-      .object({
-        testimonials: z.array(z.string()),
-      })
-      .array(),
+    output: z.object({
+      testimonials: z.array(z.string()),
+    }),
     category: DocumentCategory.WEB,
   },
   [DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION]: {
@@ -274,13 +228,11 @@ export const DocumentTypeFactory = {
       productName: z.string(),
       description: z.string(),
     }),
-    output: z
-      .object({
-        productDescriptions: z.array(
-          z.object({ productName: z.string(), description: z.string() })
-        ),
-      })
-      .array(),
+    output: z.object({
+      productDescriptions: z.array(
+        z.object({ productName: z.string(), description: z.string() })
+      ),
+    }),
     category: DocumentCategory.WEB,
   },
 };
