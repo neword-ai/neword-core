@@ -1,3 +1,0 @@
-export declare enum DocumentEntityType {
-    INSTAGRAM_POST = "INSTAGRAM_POST"
-}
