@@ -7,13 +7,7 @@ export interface DocumentEntity<T extends DocumentEntityType>
   extends EntityBase {
   type: DocumentEntityType;
   output: z.infer<(typeof DocumentTypeFactory)[T]["output"]>[];
-  inputParams: z.infer<(typeof DocumentTypeFactory)[T]["inputParams"]>;
+  inputParams?: z.infer<(typeof DocumentTypeFactory)[T]["inputParams"]>;
   websiteId: string;
   companyId: string;
 }
-
-// function get<T extends DocumentEntityType>(): DocumentEntity<T> {
-//   return {} as any as DocumentEntity<T>;
-// }
-
-// const x = get<DocumentEntityType.INSTAGRAM_CAPTION>().inputParams.;

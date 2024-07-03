@@ -5,7 +5,7 @@ import { EntityBase } from "../entityBase";
 export interface DocumentEntity<T extends DocumentEntityType> extends EntityBase {
     type: DocumentEntityType;
     output: z.infer<(typeof DocumentTypeFactory)[T]["output"]>[];
-    inputParams: z.infer<(typeof DocumentTypeFactory)[T]["inputParams"]>;
+    inputParams?: z.infer<(typeof DocumentTypeFactory)[T]["inputParams"]>;
     websiteId: string;
     companyId: string;
 }
