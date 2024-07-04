@@ -224,11 +224,11 @@ export declare const DocumentTypeFactory: {
     };
     THREADS_TWIT: {
         inputParams: z.ZodObject<{
-            thread: z.ZodArray<z.ZodString, "many">;
+            thread: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            thread: string[];
+            thread: string;
         }, {
-            thread: string[];
+            thread: string;
         }>;
         output: z.ZodObject<{
             threadContent: z.ZodArray<z.ZodString, "many">;

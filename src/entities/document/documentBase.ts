@@ -122,7 +122,7 @@ export const DocumentTypeFactory = {
   },
   [DocumentEntityType.THREADS_TWIT]: {
     inputParams: z.object({
-      thread: z.array(z.string()),
+      thread: z.string(),
     }),
     output: z.object({
       threadContent: z.array(z.string()),
