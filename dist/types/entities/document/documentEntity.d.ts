@@ -8,5 +8,6 @@ export interface DocumentEntity<T extends DocumentEntityType> extends EntityBase
     inputParams?: z.infer<(typeof DocumentTypeFactory)[T]["inputParams"]>;
     websiteId: string;
     companyId: string;
+    name: string;
 }
 //# sourceMappingURL=documentEntity.d.ts.map
