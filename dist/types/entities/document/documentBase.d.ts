@@ -5,15 +5,18 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             caption: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             caption: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             caption: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -29,11 +32,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -49,11 +55,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -69,11 +78,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -89,11 +101,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -109,15 +124,18 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             script: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             script: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             script: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -133,15 +151,18 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             caption: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             caption: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             caption: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -157,11 +178,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -177,11 +201,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -197,15 +224,18 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             caption: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             caption: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             caption: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -221,11 +251,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -241,11 +274,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -261,14 +297,17 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             tweet: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             tweet: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             tweet: string;
             imageUrl?: string | undefined;
         }>;
@@ -285,14 +324,17 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             thread: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             thread: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             thread: string;
             imageUrl?: string | undefined;
         }>;
@@ -309,11 +351,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -332,11 +377,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -352,15 +400,18 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             content: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             content: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             content: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -376,11 +427,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -396,15 +450,18 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             script: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             script: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             script: string;
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -420,14 +477,17 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             keywords: z.ZodArray<z.ZodString, "many">;
         }>, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             keywords: string[];
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             keywords: string[];
             imageUrl?: string | undefined;
         }>;
@@ -444,11 +504,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -464,11 +527,14 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -484,17 +550,20 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             question: z.ZodString;
             answer: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             answer: string;
             description: string;
+            audienceId: string;
             question: string;
             imageUrl?: string | undefined;
         }, {
             answer: string;
             description: string;
+            audienceId: string;
             question: string;
             imageUrl?: string | undefined;
         }>;
@@ -526,14 +595,17 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             testimonial: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             testimonial: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             testimonial: string;
             imageUrl?: string | undefined;
         }>;
@@ -550,14 +622,17 @@ export declare const DocumentTypeFactory: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
         }, {
             productName: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             description: string;
+            audienceId: string;
             productName: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
+            audienceId: string;
             productName: string;
             imageUrl?: string | undefined;
         }>;

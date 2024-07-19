@@ -5,6 +5,7 @@ import { DocumentCategory } from "../../types/documentCategory";
 const baseInputParams = z.object({
   description: z.string(),
   imageUrl: z.string().optional(),
+  audienceId: z.string(),
 });
 
 export const DocumentTypeFactory = {
