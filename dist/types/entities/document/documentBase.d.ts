@@ -8,15 +8,24 @@ export declare const DocumentTypeFactory: {
             audienceId: z.ZodString;
         }, {
             caption: z.ZodString;
+            useEmoji: z.ZodBoolean;
+            useHashtag: z.ZodBoolean;
+            tone: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
+            tone: string;
             caption: string;
             description: string;
             audienceId: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
+            tone: string;
             caption: string;
             description: string;
             audienceId: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{

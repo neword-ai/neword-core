@@ -10,6 +10,9 @@ export const DocumentTypeFactory = {
     [DocumentEntityType.INSTAGRAM_CAPTION]: {
         inputParams: baseInputParams.extend({
             caption: z.string(),
+            useEmoji: z.boolean(),
+            useHashtag: z.boolean(),
+            tone: z.string(),
         }),
         output: z.object({
             captionText: z.string(),
