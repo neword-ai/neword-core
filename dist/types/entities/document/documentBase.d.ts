@@ -7,13 +7,11 @@ export declare const DocumentTypeFactory: {
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
         }, {
-            caption: z.ZodString;
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
             tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
             tone: string;
-            caption: string;
             description: string;
             audienceId: string;
             useEmoji: boolean;
@@ -21,7 +19,6 @@ export declare const DocumentTypeFactory: {
             imageUrl?: string | undefined;
         }, {
             tone: string;
-            caption: string;
             description: string;
             audienceId: string;
             useEmoji: boolean;
@@ -87,15 +84,19 @@ export declare const DocumentTypeFactory: {
         category: DocumentCategory;
     };
     INSTAGRAM_STORY_IDEA: {
-        inputParams: z.ZodObject<{
+        inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
+        }, {
+            tone: z.ZodEnum<[string, ...string[]]>;
+        }>, "strip", z.ZodTypeAny, {
+            tone: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;

@@ -13,7 +13,6 @@ const ToneValues = Object.values(DocumentToneType) as [string, ...string[]];
 export const DocumentTypeFactory = {
   [DocumentEntityType.INSTAGRAM_CAPTION]: {
     inputParams: baseInputParams.extend({
-      caption: z.string(),
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
       tone: z.enum(ToneValues),
@@ -39,7 +38,7 @@ export const DocumentTypeFactory = {
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_STORY_IDEA]: {
-    inputParams: baseInputParams,
+    inputParams: baseInputParams.extend({ tone: z.enum(ToneValues) }),
     output: z.object({
       storyIdea: z.string(),
       storyDescription: z.string(),
