@@ -1,7 +1,7 @@
 import { DocumentEntityType } from "../../types/DocumentEntityType";
 import { z } from "zod";
 import { DocumentCategory } from "../../types/documentCategory";
-import { DocumentToneType } from "./documentToneType";
+import { DocumentToneType } from "../../types/documentToneType";
 
 const baseInputParams = z.object({
   description: z.string(),
