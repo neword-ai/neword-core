@@ -1,12 +1,13 @@
 import { DocumentEntityType } from "../../types/DocumentEntityType";
 import { z } from "zod";
 import { DocumentCategory } from "../../types/documentCategory";
+import { ZDocumentToneType } from "../../types/DocumentToneType";
 
 const baseInputParams = z.object({
   description: z.string(),
   imageUrl: z.string().optional(),
   audienceId: z.string(),
-  tone: z.enum(["MARKETING", "SOLDABLE", "FRIENDLLY"]),
+  tone: ZDocumentToneType,
 });
 
 export const DocumentTypeFactory = {

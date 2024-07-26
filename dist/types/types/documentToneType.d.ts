@@ -1,6 +1,4 @@
-export declare enum DocumentToneType {
-    MARKETING = "MARKETING",
-    SOLDABLE = "SOLDABLE",
-    FRIENDLLY = "FRIENDLLY"
-}
-//# sourceMappingURL=documentToneType.d.ts.map
+import { z } from "zod";
+export declare const ZDocumentToneType: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
+export type DocumentToneType = z.infer<typeof ZDocumentToneType>;
+//# sourceMappingURL=DocumentToneType.d.ts.map
