@@ -10,7 +10,7 @@ export declare const DocumentTypeFactory: {
             caption: z.ZodString;
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
-            tone: z.ZodString;
+            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
             tone: string;
             caption: string;
@@ -76,9 +76,12 @@ export declare const DocumentTypeFactory: {
         }>;
         output: z.ZodObject<{
             bioDescription: z.ZodString;
+            tone: z.ZodEnum<[string, ...string[]]>;
         }, "strip", z.ZodTypeAny, {
+            tone: string;
             bioDescription: string;
         }, {
+            tone: string;
             bioDescription: string;
         }>;
         category: DocumentCategory;
@@ -99,33 +102,49 @@ export declare const DocumentTypeFactory: {
         }>;
         output: z.ZodObject<{
             storyIdea: z.ZodString;
+            storyDescription: z.ZodString;
+            storyWidgets: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             storyIdea: string;
+            storyDescription: string;
+            storyWidgets: string;
         }, {
             storyIdea: string;
+            storyDescription: string;
+            storyWidgets: string;
         }>;
         category: DocumentCategory;
     };
     INSTAGRAM_REEL_IDEA: {
-        inputParams: z.ZodObject<{
+        inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
+        }, {
+            tone: z.ZodEnum<[string, ...string[]]>;
+        }>, "strip", z.ZodTypeAny, {
+            tone: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
             reelIdea: z.ZodString;
+            reelDescription: z.ZodString;
+            reelWidgets: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             reelIdea: string;
+            reelDescription: string;
+            reelWidgets: string;
         }, {
             reelIdea: string;
+            reelDescription: string;
+            reelWidgets: string;
         }>;
         category: DocumentCategory;
     };
@@ -162,16 +181,22 @@ export declare const DocumentTypeFactory: {
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
         }, {
-            caption: z.ZodString;
+            useEmoji: z.ZodBoolean;
+            useHashtag: z.ZodBoolean;
+            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
-            caption: string;
+            tone: string;
             description: string;
             audienceId: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
-            caption: string;
+            tone: string;
             description: string;
             audienceId: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -184,15 +209,19 @@ export declare const DocumentTypeFactory: {
         category: DocumentCategory;
     };
     FACEBOOK_POST_IDEA: {
-        inputParams: z.ZodObject<{
+        inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
+        }, {
+            tone: z.ZodEnum<[string, ...string[]]>;
+        }>, "strip", z.ZodTypeAny, {
+            tone: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -207,17 +236,27 @@ export declare const DocumentTypeFactory: {
         category: DocumentCategory;
     };
     FACEBOOK_PAGE_ABOUT: {
-        inputParams: z.ZodObject<{
+        inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
+        }, {
+            useEmoji: z.ZodBoolean;
+            useHashtag: z.ZodBoolean;
+            tone: z.ZodEnum<[string, ...string[]]>;
+        }>, "strip", z.ZodTypeAny, {
+            tone: string;
             description: string;
             audienceId: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
+            tone: string;
             description: string;
             audienceId: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -235,16 +274,22 @@ export declare const DocumentTypeFactory: {
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
         }, {
-            caption: z.ZodString;
+            useEmoji: z.ZodBoolean;
+            useHashtag: z.ZodBoolean;
+            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
-            caption: string;
+            tone: string;
             description: string;
             audienceId: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
-            caption: string;
+            tone: string;
             description: string;
             audienceId: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -272,9 +317,18 @@ export declare const DocumentTypeFactory: {
         }>;
         output: z.ZodObject<{
             postIdea: z.ZodString;
+            useEmoji: z.ZodBoolean;
+            useHashtag: z.ZodBoolean;
+            tone: z.ZodEnum<[string, ...string[]]>;
         }, "strip", z.ZodTypeAny, {
+            tone: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             postIdea: string;
         }, {
+            tone: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             postIdea: string;
         }>;
         category: DocumentCategory;
@@ -308,16 +362,22 @@ export declare const DocumentTypeFactory: {
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
         }, {
-            tweet: z.ZodString;
+            useEmoji: z.ZodBoolean;
+            useHashtag: z.ZodBoolean;
+            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
+            tone: string;
             description: string;
             audienceId: string;
-            tweet: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
+            tone: string;
             description: string;
             audienceId: string;
-            tweet: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -335,16 +395,22 @@ export declare const DocumentTypeFactory: {
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
         }, {
-            thread: z.ZodString;
+            useEmoji: z.ZodBoolean;
+            useHashtag: z.ZodBoolean;
+            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
+            tone: string;
             description: string;
             audienceId: string;
-            thread: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
+            tone: string;
             description: string;
             audienceId: string;
-            thread: string;
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{

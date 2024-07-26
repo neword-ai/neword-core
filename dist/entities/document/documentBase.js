@@ -1,18 +1,20 @@
 import { DocumentEntityType } from "../../types/DocumentEntityType";
 import { z } from "zod";
 import { DocumentCategory } from "../../types/documentCategory";
+import { DocumentToneType } from "./documentToneType";
 const baseInputParams = z.object({
     description: z.string(),
     imageUrl: z.string().optional(),
     audienceId: z.string(),
 });
+const ToneValues = Object.values(DocumentToneType);
 export const DocumentTypeFactory = {
     [DocumentEntityType.INSTAGRAM_CAPTION]: {
         inputParams: baseInputParams.extend({
             caption: z.string(),
             useEmoji: z.boolean(),
             useHashtag: z.boolean(),
-            tone: z.string(),
+            tone: z.enum(ToneValues),
         }),
         output: z.object({
             captionText: z.string(),
@@ -30,6 +32,7 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams,
         output: z.object({
             bioDescription: z.string(),
+            tone: z.enum(ToneValues),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
@@ -37,13 +40,17 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams,
         output: z.object({
             storyIdea: z.string(),
+            storyDescription: z.string(),
+            storyWidgets: z.string(),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
     [DocumentEntityType.INSTAGRAM_REEL_IDEA]: {
-        inputParams: baseInputParams,
+        inputParams: baseInputParams.extend({ tone: z.enum(ToneValues) }),
         output: z.object({
             reelIdea: z.string(),
+            reelDescription: z.string(),
+            reelWidgets: z.string(),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
@@ -58,7 +65,9 @@ export const DocumentTypeFactory = {
     },
     [DocumentEntityType.FACEBOOK_POST_CAPTION]: {
         inputParams: baseInputParams.extend({
-            caption: z.string(),
+            useEmoji: z.boolean(),
+            useHashtag: z.boolean(),
+            tone: z.enum(ToneValues),
         }),
         output: z.object({
             postCaption: z.string(),
@@ -66,14 +75,20 @@ export const DocumentTypeFactory = {
         category: DocumentCategory.SOCIAL_MEDIA,
     },
     [DocumentEntityType.FACEBOOK_POST_IDEA]: {
-        inputParams: baseInputParams,
+        inputParams: baseInputParams.extend({
+            tone: z.enum(ToneValues),
+        }),
         output: z.object({
             postIdea: z.string(),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
     [DocumentEntityType.FACEBOOK_PAGE_ABOUT]: {
-        inputParams: baseInputParams,
+        inputParams: baseInputParams.extend({
+            useEmoji: z.boolean(),
+            useHashtag: z.boolean(),
+            tone: z.enum(ToneValues),
+        }),
         output: z.object({
             pageAbout: z.string(),
         }),
@@ -81,7 +96,9 @@ export const DocumentTypeFactory = {
     },
     [DocumentEntityType.LINKEDIN_POST_CAPTION]: {
         inputParams: baseInputParams.extend({
-            caption: z.string(),
+            useEmoji: z.boolean(),
+            useHashtag: z.boolean(),
+            tone: z.enum(ToneValues),
         }),
         output: z.object({
             postCaption: z.string(),
@@ -92,6 +109,9 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams,
         output: z.object({
             postIdea: z.string(),
+            useEmoji: z.boolean(),
+            useHashtag: z.boolean(),
+            tone: z.enum(ToneValues),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
@@ -104,7 +124,9 @@ export const DocumentTypeFactory = {
     },
     [DocumentEntityType.TWITTER_TWIT]: {
         inputParams: baseInputParams.extend({
-            tweet: z.string(),
+            useEmoji: z.boolean(),
+            useHashtag: z.boolean(),
+            tone: z.enum(ToneValues),
         }),
         output: z.object({
             tweetContent: z.string(),
@@ -113,7 +135,9 @@ export const DocumentTypeFactory = {
     },
     [DocumentEntityType.THREADS_TWIT]: {
         inputParams: baseInputParams.extend({
-            thread: z.string(),
+            useEmoji: z.boolean(),
+            useHashtag: z.boolean(),
+            tone: z.enum(ToneValues),
         }),
         output: z.object({
             threadContent: z.array(z.string()),
