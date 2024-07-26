@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
     "rootDir": "./src",
-    "strict": true,
     "declaration": true,
-    "declarationMap": true,
     "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "declarationDir": "./dist/types",
-    "target": "ES2022",
-    "moduleResolution":"node"
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
