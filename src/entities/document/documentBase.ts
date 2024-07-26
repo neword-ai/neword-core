@@ -1,21 +1,19 @@
 import { DocumentEntityType } from "../../types/DocumentEntityType";
 import { z } from "zod";
 import { DocumentCategory } from "../../types/documentCategory";
-import { DocumentToneType } from "../../types/documentToneType";
 
 const baseInputParams = z.object({
   description: z.string(),
   imageUrl: z.string().optional(),
   audienceId: z.string(),
+  tone: z.enum(["MARKETING", "SOLDABLE", "FRIENDLLY"]),
 });
-const ToneValues = Object.values(DocumentToneType) as [string, ...string[]];
 
 export const DocumentTypeFactory = {
   [DocumentEntityType.INSTAGRAM_CAPTION]: {
     inputParams: baseInputParams.extend({
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
-      tone: z.enum(ToneValues),
     }),
     output: z.object({
       captionText: z.string(),
@@ -33,12 +31,11 @@ export const DocumentTypeFactory = {
     inputParams: baseInputParams,
     output: z.object({
       bioDescription: z.string(),
-      tone: z.enum(ToneValues),
     }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_STORY_IDEA]: {
-    inputParams: baseInputParams.extend({ tone: z.enum(ToneValues) }),
+    inputParams: baseInputParams,
     output: z.object({
       storyIdea: z.string(),
       storyDescription: z.string(),
@@ -47,7 +44,7 @@ export const DocumentTypeFactory = {
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.INSTAGRAM_REEL_IDEA]: {
-    inputParams: baseInputParams.extend({ tone: z.enum(ToneValues) }),
+    inputParams: baseInputParams,
     output: z.object({
       reelIdea: z.string(),
       reelDescription: z.string(),
@@ -68,7 +65,6 @@ export const DocumentTypeFactory = {
     inputParams: baseInputParams.extend({
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
-      tone: z.enum(ToneValues),
     }),
     output: z.object({
       postCaption: z.string(),
@@ -76,9 +72,7 @@ export const DocumentTypeFactory = {
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.FACEBOOK_POST_IDEA]: {
-    inputParams: baseInputParams.extend({
-      tone: z.enum(ToneValues),
-    }),
+    inputParams: baseInputParams,
     output: z.object({
       postIdea: z.string(),
     }),
@@ -88,7 +82,6 @@ export const DocumentTypeFactory = {
     inputParams: baseInputParams.extend({
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
-      tone: z.enum(ToneValues),
     }),
     output: z.object({
       pageAbout: z.string(),
@@ -99,7 +92,6 @@ export const DocumentTypeFactory = {
     inputParams: baseInputParams.extend({
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
-      tone: z.enum(ToneValues),
     }),
     output: z.object({
       postCaption: z.string(),
@@ -112,7 +104,6 @@ export const DocumentTypeFactory = {
       postIdea: z.string(),
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
-      tone: z.enum(ToneValues),
     }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
@@ -127,7 +118,6 @@ export const DocumentTypeFactory = {
     inputParams: baseInputParams.extend({
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
-      tone: z.enum(ToneValues),
     }),
     output: z.object({
       tweetContent: z.string(),
@@ -138,7 +128,6 @@ export const DocumentTypeFactory = {
     inputParams: baseInputParams.extend({
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
-      tone: z.enum(ToneValues),
     }),
     output: z.object({
       threadContent: z.array(z.string()),

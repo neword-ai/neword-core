@@ -6,19 +6,19 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
-            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
             useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
@@ -39,11 +39,14 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -62,41 +65,40 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
             bioDescription: z.ZodString;
-            tone: z.ZodEnum<[string, ...string[]]>;
         }, "strip", z.ZodTypeAny, {
-            tone: string;
             bioDescription: string;
         }, {
-            tone: string;
             bioDescription: string;
         }>;
         category: DocumentCategory;
     };
     INSTAGRAM_STORY_IDEA: {
-        inputParams: z.ZodObject<z.objectUtil.extendShape<{
+        inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
-        }, {
-            tone: z.ZodEnum<[string, ...string[]]>;
-        }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
+        }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -117,19 +119,18 @@ export declare const DocumentTypeFactory: {
         category: DocumentCategory;
     };
     INSTAGRAM_REEL_IDEA: {
-        inputParams: z.ZodObject<z.objectUtil.extendShape<{
+        inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
-        }, {
-            tone: z.ZodEnum<[string, ...string[]]>;
-        }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
+        }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -154,14 +155,17 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             script: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             script: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             script: string;
             description: string;
             audienceId: string;
@@ -181,19 +185,19 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
-            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
             useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
@@ -210,19 +214,18 @@ export declare const DocumentTypeFactory: {
         category: DocumentCategory;
     };
     FACEBOOK_POST_IDEA: {
-        inputParams: z.ZodObject<z.objectUtil.extendShape<{
+        inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
-        }, {
-            tone: z.ZodEnum<[string, ...string[]]>;
-        }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
+        }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -241,19 +244,19 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
-            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
             useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
@@ -274,19 +277,19 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
-            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
             useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
@@ -307,11 +310,14 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -320,14 +326,11 @@ export declare const DocumentTypeFactory: {
             postIdea: z.ZodString;
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
-            tone: z.ZodEnum<[string, ...string[]]>;
         }, "strip", z.ZodTypeAny, {
-            tone: string;
             useEmoji: boolean;
             useHashtag: boolean;
             postIdea: string;
         }, {
-            tone: string;
             useEmoji: boolean;
             useHashtag: boolean;
             postIdea: string;
@@ -339,11 +342,14 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -362,19 +368,19 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
-            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
             useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
@@ -395,19 +401,19 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
-            tone: z.ZodEnum<[string, ...string[]]>;
         }>, "strip", z.ZodTypeAny, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
             useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
-            tone: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             useEmoji: boolean;
@@ -428,11 +434,14 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -454,11 +463,14 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -477,14 +489,17 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             content: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             content: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             content: string;
             description: string;
             audienceId: string;
@@ -504,11 +519,14 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -527,14 +545,17 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             script: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             script: string;
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             script: string;
             description: string;
             audienceId: string;
@@ -554,14 +575,17 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             keywords: z.ZodArray<z.ZodString, "many">;
         }>, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             keywords: string[];
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             keywords: string[];
@@ -581,11 +605,14 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -604,11 +631,14 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             imageUrl?: string | undefined;
@@ -627,16 +657,19 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             question: z.ZodString;
             answer: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             answer: string;
             description: string;
             audienceId: string;
             question: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             answer: string;
             description: string;
             audienceId: string;
@@ -672,14 +705,17 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             testimonial: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             testimonial: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             testimonial: string;
@@ -699,14 +735,17 @@ export declare const DocumentTypeFactory: {
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
         }, {
             productName: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             productName: string;
             imageUrl?: string | undefined;
         }, {
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
             description: string;
             audienceId: string;
             productName: string;
