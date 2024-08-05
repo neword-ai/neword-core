@@ -141,7 +141,7 @@ export const DocumentTypeFactory = {
       tone: z.enum(ToneValues),
     }),
     output: z.object({
-      threadContent: z.array(z.string()),
+      threadContent: z.string(),
     }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },

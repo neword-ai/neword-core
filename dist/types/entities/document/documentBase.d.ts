@@ -415,11 +415,11 @@ export declare const DocumentTypeFactory: {
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
-            threadContent: z.ZodArray<z.ZodString, "many">;
+            threadContent: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            threadContent: string[];
+            threadContent: string;
         }, {
-            threadContent: string[];
+            threadContent: string;
         }>;
         category: DocumentCategory;
     };
