@@ -133,7 +133,7 @@ exports.DocumentTypeFactory = (_a = {},
             useHashtag: zod_1.z.boolean(),
         }),
         output: zod_1.z.object({
-            threadContent: zod_1.z.array(zod_1.z.string()),
+            threadContent: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
