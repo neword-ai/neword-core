@@ -752,26 +752,14 @@ export declare const DocumentTypeFactory: {
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
-            productDescriptions: z.ZodObject<{
-                productName: z.ZodString;
-                description: z.ZodString;
-            }, "strip", z.ZodTypeAny, {
-                description: string;
-                productName: string;
-            }, {
-                description: string;
-                productName: string;
-            }>;
+            productName: z.ZodString;
+            description: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            productDescriptions: {
-                description: string;
-                productName: string;
-            };
+            description: string;
+            productName: string;
         }, {
-            productDescriptions: {
-                description: string;
-                productName: string;
-            };
+            description: string;
+            productName: string;
         }>;
         category: DocumentCategory;
     };

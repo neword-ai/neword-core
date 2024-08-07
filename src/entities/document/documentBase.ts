@@ -224,10 +224,8 @@ export const DocumentTypeFactory = {
       productName: z.string(),
     }),
     output: z.object({
-      productDescriptions: z.object({
-        productName: z.string(),
-        description: z.string(),
-      }),
+      productName: z.string(),
+      description: z.string(),
     }),
     category: DocumentCategory.WEB,
   },
