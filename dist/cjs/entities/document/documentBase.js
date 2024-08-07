@@ -224,7 +224,10 @@ exports.DocumentTypeFactory = (_a = {},
             productName: zod_1.z.string(),
         }),
         output: zod_1.z.object({
-            productDescriptions: zod_1.z.array(zod_1.z.object({ productName: zod_1.z.string(), description: zod_1.z.string() })),
+            productDescriptions: zod_1.z.object({
+                productName: zod_1.z.string(),
+                description: zod_1.z.string(),
+            }),
         }),
         category: documentCategory_1.DocumentCategory.WEB,
     },
