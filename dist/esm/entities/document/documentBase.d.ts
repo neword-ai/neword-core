@@ -701,54 +701,46 @@ export declare const DocumentTypeFactory: {
         category: DocumentCategory;
     };
     WEBSITE_TESTEMONIAL: {
-        inputParams: z.ZodObject<z.objectUtil.extendShape<{
+        inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
-        }, {
-            testimonial: z.ZodString;
-        }>, "strip", z.ZodTypeAny, {
+        }, "strip", z.ZodTypeAny, {
             description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
-            testimonial: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
-            testimonial: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
-            testimonials: z.ZodArray<z.ZodString, "many">;
+            testimonial: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            testimonials: string[];
+            testimonial: string;
         }, {
-            testimonials: string[];
+            testimonial: string;
         }>;
         category: DocumentCategory;
     };
     WEBSITE_PRODUCT_DESCRIPTION: {
-        inputParams: z.ZodObject<z.objectUtil.extendShape<{
+        inputParams: z.ZodObject<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
-        }, {
-            productName: z.ZodString;
-        }>, "strip", z.ZodTypeAny, {
+        }, "strip", z.ZodTypeAny, {
             description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
-            productName: string;
             imageUrl?: string | undefined;
         }, {
             description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
-            productName: string;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{

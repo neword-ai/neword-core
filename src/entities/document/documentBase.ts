@@ -211,18 +211,14 @@ export const DocumentTypeFactory = {
     category: DocumentCategory.WEB,
   },
   [DocumentEntityType.WEBSITE_TESTEMONIAL]: {
-    inputParams: baseInputParams.extend({
-      testimonial: z.string(),
-    }),
+    inputParams: baseInputParams,
     output: z.object({
-      testimonials: z.array(z.string()),
+      testimonial: z.string(),
     }),
     category: DocumentCategory.WEB,
   },
   [DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION]: {
-    inputParams: baseInputParams.extend({
-      productName: z.string(),
-    }),
+    inputParams: baseInputParams,
     output: z.object({
       productName: z.string(),
       description: z.string(),

@@ -211,18 +211,14 @@ exports.DocumentTypeFactory = (_a = {},
         category: documentCategory_1.DocumentCategory.WEB,
     },
     _a[DocumentEntityType_1.DocumentEntityType.WEBSITE_TESTEMONIAL] = {
-        inputParams: baseInputParams.extend({
-            testimonial: zod_1.z.string(),
-        }),
+        inputParams: baseInputParams,
         output: zod_1.z.object({
-            testimonials: zod_1.z.array(zod_1.z.string()),
+            testimonial: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.WEB,
     },
     _a[DocumentEntityType_1.DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION] = {
-        inputParams: baseInputParams.extend({
-            productName: zod_1.z.string(),
-        }),
+        inputParams: baseInputParams,
         output: zod_1.z.object({
             productName: zod_1.z.string(),
             description: zod_1.z.string(),
