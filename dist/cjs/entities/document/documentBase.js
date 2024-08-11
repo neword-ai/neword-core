@@ -27,6 +27,7 @@ exports.DocumentTypeFactory = (_a = {},
         inputParams: baseInputParams,
         output: zod_1.z.object({
             ideaDescription: zod_1.z.string(),
+            imageDescription: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
@@ -103,11 +104,13 @@ exports.DocumentTypeFactory = (_a = {},
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
     _a[DocumentEntityType_1.DocumentEntityType.LINKEDIN_POST_IDEA] = {
-        inputParams: baseInputParams,
-        output: zod_1.z.object({
-            postIdea: zod_1.z.string(),
+        inputParams: baseInputParams.extend({
             useEmoji: zod_1.z.boolean(),
             useHashtag: zod_1.z.boolean(),
+        }),
+        output: zod_1.z.object({
+            postIdea: zod_1.z.string(),
+            imageDescription: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },

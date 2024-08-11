@@ -53,10 +53,13 @@ export declare const DocumentTypeFactory: {
         }>;
         output: z.ZodObject<{
             ideaDescription: z.ZodString;
+            imageDescription: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             ideaDescription: string;
+            imageDescription: string;
         }, {
             ideaDescription: string;
+            imageDescription: string;
         }>;
         category: DocumentCategory;
     };
@@ -234,11 +237,11 @@ export declare const DocumentTypeFactory: {
             postIdea: z.ZodString;
             imageDescription: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            postIdea: string;
             imageDescription: string;
+            postIdea: string;
         }, {
-            postIdea: string;
             imageDescription: string;
+            postIdea: string;
         }>;
         category: DocumentCategory;
     };
@@ -309,33 +312,37 @@ export declare const DocumentTypeFactory: {
         category: DocumentCategory;
     };
     LINKEDIN_POST_IDEA: {
-        inputParams: z.ZodObject<{
+        inputParams: z.ZodObject<z.objectUtil.extendShape<{
             description: z.ZodString;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
-        }, "strip", z.ZodTypeAny, {
+        }, {
+            useEmoji: z.ZodBoolean;
+            useHashtag: z.ZodBoolean;
+        }>, "strip", z.ZodTypeAny, {
             description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }, {
             description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
+            useEmoji: boolean;
+            useHashtag: boolean;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
             postIdea: z.ZodString;
-            useEmoji: z.ZodBoolean;
-            useHashtag: z.ZodBoolean;
+            imageDescription: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            useEmoji: boolean;
-            useHashtag: boolean;
+            imageDescription: string;
             postIdea: string;
         }, {
-            useEmoji: boolean;
-            useHashtag: boolean;
+            imageDescription: string;
             postIdea: string;
         }>;
         category: DocumentCategory;

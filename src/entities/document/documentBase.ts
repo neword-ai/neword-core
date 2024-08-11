@@ -25,6 +25,7 @@ export const DocumentTypeFactory = {
     inputParams: baseInputParams,
     output: z.object({
       ideaDescription: z.string(),
+      imageDescription: z.string(),
     }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
@@ -101,11 +102,13 @@ export const DocumentTypeFactory = {
     category: DocumentCategory.SOCIAL_MEDIA,
   },
   [DocumentEntityType.LINKEDIN_POST_IDEA]: {
-    inputParams: baseInputParams,
-    output: z.object({
-      postIdea: z.string(),
+    inputParams: baseInputParams.extend({
       useEmoji: z.boolean(),
       useHashtag: z.boolean(),
+    }),
+    output: z.object({
+      postIdea: z.string(),
+      imageDescription: z.string(),
     }),
     category: DocumentCategory.SOCIAL_MEDIA,
   },
