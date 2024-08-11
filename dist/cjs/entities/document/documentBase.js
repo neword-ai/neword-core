@@ -78,6 +78,7 @@ exports.DocumentTypeFactory = (_a = {},
         inputParams: baseInputParams,
         output: zod_1.z.object({
             postIdea: zod_1.z.string(),
+            imageDescription: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },

@@ -74,6 +74,7 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams,
         output: z.object({
             postIdea: z.string(),
+            imageDescription: z.string(),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
