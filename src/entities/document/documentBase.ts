@@ -184,6 +184,7 @@ export const DocumentTypeFactory = {
       keywords: z.array(z.string()),
     }),
     output: z.object({
+      keywordsType: z.string(),
       adKeywords: z.array(z.string()),
     }),
     category: DocumentCategory.PAID,
