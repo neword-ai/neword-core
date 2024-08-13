@@ -602,10 +602,13 @@ export declare const DocumentTypeFactory: {
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
+            keywordsType: z.ZodString;
             adKeywords: z.ZodArray<z.ZodString, "many">;
         }, "strip", z.ZodTypeAny, {
+            keywordsType: string;
             adKeywords: string[];
         }, {
+            keywordsType: string;
             adKeywords: string[];
         }>;
         category: DocumentCategory;

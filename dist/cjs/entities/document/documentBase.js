@@ -186,6 +186,7 @@ exports.DocumentTypeFactory = (_a = {},
             keywords: zod_1.z.array(zod_1.z.string()),
         }),
         output: zod_1.z.object({
+            keywordsType: zod_1.z.string(),
             adKeywords: zod_1.z.array(zod_1.z.string()),
         }),
         category: documentCategory_1.DocumentCategory.PAID,
