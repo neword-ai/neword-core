@@ -23,6 +23,7 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams,
         output: z.object({
             ideaDescription: z.string(),
+            imageDescription: z.string(),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
@@ -74,7 +75,11 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams,
         output: z.object({
             postIdea: z.string(),
+<<<<<<< HEAD
             imageIdea: z.string().describe("Image idea for the post"),
+=======
+            imageDescription: z.string(),
+>>>>>>> c3c42606ea8abd1884ebda1ba1536b59557ceab0
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
@@ -99,11 +104,13 @@ export const DocumentTypeFactory = {
         category: DocumentCategory.SOCIAL_MEDIA,
     },
     [DocumentEntityType.LINKEDIN_POST_IDEA]: {
-        inputParams: baseInputParams,
-        output: z.object({
-            postIdea: z.string(),
+        inputParams: baseInputParams.extend({
             useEmoji: z.boolean(),
             useHashtag: z.boolean(),
+        }),
+        output: z.object({
+            postIdea: z.string(),
+            imageDescription: z.string(),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
@@ -130,7 +137,7 @@ export const DocumentTypeFactory = {
             useHashtag: z.boolean(),
         }),
         output: z.object({
-            threadContent: z.array(z.string()),
+            threadContent: z.string(),
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
@@ -179,6 +186,7 @@ export const DocumentTypeFactory = {
             keywords: z.array(z.string()),
         }),
         output: z.object({
+            keywordsType: z.string(),
             adKeywords: z.array(z.string()),
         }),
         category: DocumentCategory.PAID,
@@ -208,20 +216,17 @@ export const DocumentTypeFactory = {
         category: DocumentCategory.WEB,
     },
     [DocumentEntityType.WEBSITE_TESTEMONIAL]: {
-        inputParams: baseInputParams.extend({
-            testimonial: z.string(),
-        }),
+        inputParams: baseInputParams,
         output: z.object({
-            testimonials: z.array(z.string()),
+            testimonial: z.string(),
         }),
         category: DocumentCategory.WEB,
     },
     [DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION]: {
-        inputParams: baseInputParams.extend({
-            productName: z.string(),
-        }),
+        inputParams: baseInputParams,
         output: z.object({
-            productDescriptions: z.array(z.object({ productName: z.string(), description: z.string() })),
+            productName: z.string(),
+            description: z.string(),
         }),
         category: DocumentCategory.WEB,
     },

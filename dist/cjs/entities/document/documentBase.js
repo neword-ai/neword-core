@@ -27,6 +27,7 @@ exports.DocumentTypeFactory = (_a = {},
         inputParams: baseInputParams,
         output: zod_1.z.object({
             ideaDescription: zod_1.z.string(),
+            imageDescription: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
@@ -78,7 +79,11 @@ exports.DocumentTypeFactory = (_a = {},
         inputParams: baseInputParams,
         output: zod_1.z.object({
             postIdea: zod_1.z.string(),
+<<<<<<< HEAD
             imageIdea: zod_1.z.string().describe("Image idea for the post"),
+=======
+            imageDescription: zod_1.z.string(),
+>>>>>>> c3c42606ea8abd1884ebda1ba1536b59557ceab0
         }),
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
@@ -103,11 +108,13 @@ exports.DocumentTypeFactory = (_a = {},
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
     _a[DocumentEntityType_1.DocumentEntityType.LINKEDIN_POST_IDEA] = {
-        inputParams: baseInputParams,
-        output: zod_1.z.object({
-            postIdea: zod_1.z.string(),
+        inputParams: baseInputParams.extend({
             useEmoji: zod_1.z.boolean(),
             useHashtag: zod_1.z.boolean(),
+        }),
+        output: zod_1.z.object({
+            postIdea: zod_1.z.string(),
+            imageDescription: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
@@ -134,7 +141,7 @@ exports.DocumentTypeFactory = (_a = {},
             useHashtag: zod_1.z.boolean(),
         }),
         output: zod_1.z.object({
-            threadContent: zod_1.z.array(zod_1.z.string()),
+            threadContent: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
@@ -183,6 +190,7 @@ exports.DocumentTypeFactory = (_a = {},
             keywords: zod_1.z.array(zod_1.z.string()),
         }),
         output: zod_1.z.object({
+            keywordsType: zod_1.z.string(),
             adKeywords: zod_1.z.array(zod_1.z.string()),
         }),
         category: documentCategory_1.DocumentCategory.PAID,
@@ -212,20 +220,17 @@ exports.DocumentTypeFactory = (_a = {},
         category: documentCategory_1.DocumentCategory.WEB,
     },
     _a[DocumentEntityType_1.DocumentEntityType.WEBSITE_TESTEMONIAL] = {
-        inputParams: baseInputParams.extend({
-            testimonial: zod_1.z.string(),
-        }),
+        inputParams: baseInputParams,
         output: zod_1.z.object({
-            testimonials: zod_1.z.array(zod_1.z.string()),
+            testimonial: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.WEB,
     },
     _a[DocumentEntityType_1.DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION] = {
-        inputParams: baseInputParams.extend({
-            productName: zod_1.z.string(),
-        }),
+        inputParams: baseInputParams,
         output: zod_1.z.object({
-            productDescriptions: zod_1.z.array(zod_1.z.object({ productName: zod_1.z.string(), description: zod_1.z.string() })),
+            productName: zod_1.z.string(),
+            description: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.WEB,
     },
