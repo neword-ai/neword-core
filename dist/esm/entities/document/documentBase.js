@@ -75,11 +75,7 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams,
         output: z.object({
             postIdea: z.string(),
-<<<<<<< HEAD
             imageIdea: z.string().describe("Image idea for the post"),
-=======
-            imageDescription: z.string(),
->>>>>>> c3c42606ea8abd1884ebda1ba1536b59557ceab0
         }),
         category: DocumentCategory.SOCIAL_MEDIA,
     },
