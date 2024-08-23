@@ -232,10 +232,13 @@ export declare const DocumentTypeFactory: {
         }>;
         output: z.ZodObject<{
             postIdea: z.ZodString;
+            imageIdea: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             postIdea: string;
+            imageIdea: string;
         }, {
             postIdea: string;
+            imageIdea: string;
         }>;
         category: DocumentCategory;
     };
