@@ -739,6 +739,35 @@ export declare const DocumentTypeFactory: {
         }>;
         category: DocumentCategory;
     };
+    ARTICLE: {
+        inputParams: z.ZodObject<{
+            description: z.ZodString;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY"]>;
+        }, "strip", z.ZodTypeAny, {
+            description: string;
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
+            imageUrl?: string | undefined;
+        }, {
+            description: string;
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY";
+            imageUrl?: string | undefined;
+        }>;
+        output: z.ZodObject<{
+            title: z.ZodString;
+            body: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            title: string;
+            body: string;
+        }, {
+            title: string;
+            body: string;
+        }>;
+        category: DocumentCategory;
+    };
     WEBSITE_PRODUCT_DESCRIPTION: {
         inputParams: z.ZodObject<{
             description: z.ZodString;

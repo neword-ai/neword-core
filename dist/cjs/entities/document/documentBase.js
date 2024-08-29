@@ -222,6 +222,14 @@ exports.DocumentTypeFactory = (_a = {},
         }),
         category: documentCategory_1.DocumentCategory.WEB,
     },
+    _a[DocumentEntityType_1.DocumentEntityType.ARTICLE] = {
+        inputParams: baseInputParams,
+        output: zod_1.z.object({
+            title: zod_1.z.string(),
+            body: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.WEB,
+    },
     _a[DocumentEntityType_1.DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION] = {
         inputParams: baseInputParams,
         output: zod_1.z.object({

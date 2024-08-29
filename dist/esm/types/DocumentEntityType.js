@@ -21,6 +21,7 @@ export var DocumentEntityType;
     DocumentEntityType["PHONE_CALL_SCRIPT"] = "PHONE_CALL_SCRIPT";
     DocumentEntityType["GOOGLE_ADS_KEYWORDS"] = "GOOGLE_ADS_KEYWORDS";
     DocumentEntityType["GOOGLE_ADS_IDEA"] = "GOOGLE_ADS_IDEA";
+    DocumentEntityType["ARTICLE"] = "ARTICLE";
     DocumentEntityType["WEBSITE_ABOUT"] = "WEBSITE_ABOUT";
     DocumentEntityType["WEBSITE_FAQ"] = "WEBSITE_FAQ";
     DocumentEntityType["WEBSITE_TESTEMONIAL"] = "WEBSITE_TESTEMONIAL";

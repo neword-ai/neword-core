@@ -222,6 +222,14 @@ export const DocumentTypeFactory = {
     }),
     category: DocumentCategory.WEB,
   },
+  [DocumentEntityType.ARTICLE]: {
+    inputParams: baseInputParams,
+    output: z.object({
+      title: z.string(),
+      body: z.string(),
+    }),
+    category: DocumentCategory.WEB,
+  },
   [DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION]: {
     inputParams: baseInputParams,
     output: z.object({
