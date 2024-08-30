@@ -228,7 +228,7 @@ exports.DocumentTypeFactory = (_a = {},
             title: zod_1.z.string(),
             body: zod_1.z.string(),
         }),
-        category: documentCategory_1.DocumentCategory.WEB,
+        category: documentCategory_1.DocumentCategory.BLOG,
     },
     _a[DocumentEntityType_1.DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION] = {
         inputParams: baseInputParams,

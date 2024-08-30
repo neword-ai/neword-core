@@ -228,7 +228,7 @@ export const DocumentTypeFactory = {
       title: z.string(),
       body: z.string(),
     }),
-    category: DocumentCategory.WEB,
+    category: DocumentCategory.BLOG,
   },
   [DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION]: {
     inputParams: baseInputParams,
