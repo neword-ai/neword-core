@@ -29,5 +29,15 @@ var DocumentEntityType;
     DocumentEntityType["WEBSITE_FAQ"] = "WEBSITE_FAQ";
     DocumentEntityType["WEBSITE_TESTEMONIAL"] = "WEBSITE_TESTEMONIAL";
     DocumentEntityType["WEBSITE_PRODUCT_DESCRIPTION"] = "WEBSITE_PRODUCT_DESCRIPTION";
+    DocumentEntityType["BLOG_POST_OPINION"] = "BLOG_POST_OPINION";
+    DocumentEntityType["BLOG_POST_TIPS"] = "BLOG_POST_TIPS";
+    // BLOG_POST_GUIDE = "BLOG_POST_GUIDE",
+    // BLOG_POST_COMPARISON = "BLOG_POST_COMPARISON",
+    // BLOG_POST_CASE_STUDY = "BLOG_POST_CASE_STUDY",
+    // BLOG_POST_GENERAL = "BLOG_POST_GENERAL",
+    // EMAIL_AD_PROMO = "EMAIL_AD_PROMO",
+    DocumentEntityType["SOCIAL_AD_LINKEDIN"] = "SOCIAL_AD_LINKEDIN";
+    DocumentEntityType["SOCIAL_AD_FACEBOOK_INSTAGRAM_TWITTER"] = "SOCIAL_AD_FACEBOOK_INSTAGRAM_TWITTER";
+    DocumentEntityType["SEARCH_AD"] = "SEARCH_AD";
 })(DocumentEntityType || (exports.DocumentEntityType = DocumentEntityType = {}));
 //# sourceMappingURL=DocumentEntityType.js.map

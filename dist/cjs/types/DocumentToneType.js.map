@@ -1,1 +1,1 @@
-{"version":3,"file":"DocumentToneType.js","sourceRoot":"","sources":["../../../src/types/DocumentToneType.ts"],"names":[],"mappings":";;;AAAA,2BAAwB;AAEX,QAAA,iBAAiB,GAAG,OAAC,CAAC,IAAI,CAAC,CAAC,WAAW,EAAE,UAAU,EAAE,WAAW,CAAC,CAAC,CAAC"}
+{"version":3,"file":"DocumentToneType.js","sourceRoot":"","sources":["../../../src/types/DocumentToneType.ts"],"names":[],"mappings":";;;AAAA,2BAAwB;AAEX,QAAA,iBAAiB,GAAG,OAAC,CAAC,IAAI,CAAC;IACtC,WAAW;IACX,UAAU;IACV,WAAW;IACX,UAAU;IACV,eAAe;IACf,YAAY;CACb,CAAC,CAAC"}
