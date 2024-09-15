@@ -3,7 +3,7 @@ import { z } from "zod";
 import { DocumentCategory } from "../../types/documentCategory";
 import { ZDocumentToneType } from "../../types/DocumentToneType";
 const baseInputParams = z.object({
-    description: z.string(),
+    description: z.string().optional(),
     imageUrl: z.string().optional(),
     audienceId: z.string(),
     tone: ZDocumentToneType,

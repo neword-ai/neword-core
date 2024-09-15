@@ -3,7 +3,7 @@ import { DocumentCategory } from "../../types/documentCategory";
 export declare const DocumentTypeFactory: {
     INSTAGRAM_CAPTION: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -11,18 +11,18 @@ export declare const DocumentTypeFactory: {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -36,19 +36,19 @@ export declare const DocumentTypeFactory: {
     };
     INSTAGRAM_POST_IDEA: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -65,19 +65,19 @@ export declare const DocumentTypeFactory: {
     };
     INSTAGRAM_BIO_DESCRIPTION: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -91,19 +91,19 @@ export declare const DocumentTypeFactory: {
     };
     INSTAGRAM_STORY_IDEA: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -123,19 +123,19 @@ export declare const DocumentTypeFactory: {
     };
     INSTAGRAM_REEL_IDEA: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -155,23 +155,23 @@ export declare const DocumentTypeFactory: {
     };
     INSTAGRAM_REEL_SCRIPT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, {
             script: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             script: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             script: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -185,7 +185,7 @@ export declare const DocumentTypeFactory: {
     };
     LINKEDIN_POST_CAPTION: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -193,18 +193,18 @@ export declare const DocumentTypeFactory: {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -218,7 +218,7 @@ export declare const DocumentTypeFactory: {
     };
     LINKEDIN_POST_IDEA: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -226,18 +226,18 @@ export declare const DocumentTypeFactory: {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -254,19 +254,19 @@ export declare const DocumentTypeFactory: {
     };
     LINKEDIN_PAGE_ABOUT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -280,7 +280,7 @@ export declare const DocumentTypeFactory: {
     };
     FACEBOOK_POST_CAPTION: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -288,18 +288,18 @@ export declare const DocumentTypeFactory: {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -313,23 +313,23 @@ export declare const DocumentTypeFactory: {
     };
     FACEBOOK_POST_IDEA: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, {
             imageIdea: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             imageIdea: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             imageIdea: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -346,7 +346,7 @@ export declare const DocumentTypeFactory: {
     };
     FACEBOOK_PAGE_ABOUT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -354,18 +354,18 @@ export declare const DocumentTypeFactory: {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -379,7 +379,7 @@ export declare const DocumentTypeFactory: {
     };
     TWITTER_TWIT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -387,18 +387,18 @@ export declare const DocumentTypeFactory: {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -412,7 +412,7 @@ export declare const DocumentTypeFactory: {
     };
     THREADS_TWIT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -420,18 +420,18 @@ export declare const DocumentTypeFactory: {
             useEmoji: z.ZodBoolean;
             useHashtag: z.ZodBoolean;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             useEmoji: boolean;
             useHashtag: boolean;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -445,7 +445,7 @@ export declare const DocumentTypeFactory: {
     };
     EMAIL_CONTENT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -453,16 +453,16 @@ export declare const DocumentTypeFactory: {
             legalInformation: z.ZodOptional<z.ZodString>;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
@@ -481,7 +481,7 @@ export declare const DocumentTypeFactory: {
     };
     EMAIL_IDEA: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -489,16 +489,16 @@ export declare const DocumentTypeFactory: {
             legalInformation: z.ZodOptional<z.ZodString>;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
@@ -514,7 +514,7 @@ export declare const DocumentTypeFactory: {
     };
     SMS_CONTENT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -524,18 +524,18 @@ export declare const DocumentTypeFactory: {
         }>, {
             content: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             content: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             content: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
@@ -551,7 +551,7 @@ export declare const DocumentTypeFactory: {
     };
     SMS_IDEA: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -559,16 +559,16 @@ export declare const DocumentTypeFactory: {
             legalInformation: z.ZodOptional<z.ZodString>;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
@@ -584,7 +584,7 @@ export declare const DocumentTypeFactory: {
     };
     PHONE_CALL_SCRIPT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -594,18 +594,18 @@ export declare const DocumentTypeFactory: {
         }>, {
             script: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             script: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             script: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
             additionalInformation?: string | undefined;
@@ -621,23 +621,23 @@ export declare const DocumentTypeFactory: {
     };
     GOOGLE_ADS_KEYWORDS: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, {
             keywords: z.ZodArray<z.ZodString, "many">;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             keywords: string[];
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             keywords: string[];
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -654,19 +654,19 @@ export declare const DocumentTypeFactory: {
     };
     GOOGLE_ADS_IDEA: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {}>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -680,7 +680,7 @@ export declare const DocumentTypeFactory: {
     };
     SOCIAL_AD_LINKEDIN: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -691,7 +691,6 @@ export declare const DocumentTypeFactory: {
             headline: z.ZodString;
             callToAction: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             adGoal: string;
@@ -699,9 +698,9 @@ export declare const DocumentTypeFactory: {
             introductoryText: string;
             headline: string;
             callToAction: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             adGoal: string;
@@ -709,6 +708,7 @@ export declare const DocumentTypeFactory: {
             introductoryText: string;
             headline: string;
             callToAction: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -731,7 +731,7 @@ export declare const DocumentTypeFactory: {
     };
     SOCIAL_AD_FACEBOOK_INSTAGRAM_TWITTER: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -783,7 +783,7 @@ export declare const DocumentTypeFactory: {
     };
     SEARCH_AD: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -792,20 +792,20 @@ export declare const DocumentTypeFactory: {
             keywords: z.ZodArray<z.ZodString, "many">;
             cta: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
             keywords: string[];
             productOrService: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
             keywords: string[];
             productOrService: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
@@ -822,7 +822,7 @@ export declare const DocumentTypeFactory: {
     };
     WEBSITE_ABOUT: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -830,16 +830,16 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodOptional<z.ZodString>;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
@@ -855,7 +855,7 @@ export declare const DocumentTypeFactory: {
     };
     WEBSITE_FAQ: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -866,20 +866,20 @@ export declare const DocumentTypeFactory: {
             question: z.ZodString;
             answer: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             question: string;
             answer: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             question: string;
             answer: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
@@ -910,7 +910,7 @@ export declare const DocumentTypeFactory: {
     };
     WEBSITE_TESTEMONIAL: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -918,16 +918,16 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodOptional<z.ZodString>;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
@@ -943,7 +943,7 @@ export declare const DocumentTypeFactory: {
     };
     ARTICLE: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -951,16 +951,16 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodOptional<z.ZodString>;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
@@ -979,7 +979,7 @@ export declare const DocumentTypeFactory: {
     };
     WEBSITE_PRODUCT_DESCRIPTION: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -987,16 +987,16 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodOptional<z.ZodString>;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             cta?: string | undefined;
@@ -1015,7 +1015,7 @@ export declare const DocumentTypeFactory: {
     };
     BLOG_POST_OPINION: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -1028,23 +1028,23 @@ export declare const DocumentTypeFactory: {
             blogOpinion: z.ZodString;
             blogBrief: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             blogTopic: string;
             blogOpinion: string;
             blogBrief: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
             keywords?: string[] | undefined;
             internalLinks?: string[] | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             blogTopic: string;
             blogOpinion: string;
             blogBrief: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
             keywords?: string[] | undefined;
@@ -1064,7 +1064,7 @@ export declare const DocumentTypeFactory: {
     };
     BLOG_POST_TIPS: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
-            description: z.ZodString;
+            description: z.ZodOptional<z.ZodString>;
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
@@ -1076,21 +1076,21 @@ export declare const DocumentTypeFactory: {
             blogTopic: z.ZodString;
             blogBrief: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             blogTopic: string;
             blogBrief: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
             keywords?: string[] | undefined;
             internalLinks?: string[] | undefined;
         }, {
-            description: string;
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             blogTopic: string;
             blogBrief: string;
+            description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
             keywords?: string[] | undefined;

@@ -7,7 +7,7 @@ var zod_1 = require("zod");
 var documentCategory_1 = require("../../types/documentCategory");
 var DocumentToneType_1 = require("../../types/DocumentToneType");
 var baseInputParams = zod_1.z.object({
-    description: zod_1.z.string(),
+    description: zod_1.z.string().optional(),
     imageUrl: zod_1.z.string().optional(),
     audienceId: zod_1.z.string(),
     tone: DocumentToneType_1.ZDocumentToneType,
