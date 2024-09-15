@@ -19,4 +19,7 @@ __exportStar(require("./types/DocumentEntityType"), exports);
 __exportStar(require("./entities/document/documentBase"), exports);
 __exportStar(require("./entities/document/documentEntity"), exports);
 __exportStar(require("./types/DocumentToneType"), exports);
+__exportStar(require("./entities/post/postEntity"), exports);
+__exportStar(require("./entities/post/postEntityType"), exports);
+__exportStar(require("./entities/post/postStatusType"), exports);
 //# sourceMappingURL=index.js.map
