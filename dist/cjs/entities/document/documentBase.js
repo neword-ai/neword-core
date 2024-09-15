@@ -345,9 +345,9 @@ exports.DocumentTypeFactory = (_b = {},
         inputParams: baseInputParams
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.BLOG])
             .extend({
-            blogTopic: zod_1.z.string(),
-            blogOpinion: zod_1.z.string(),
-            blogBrief: zod_1.z.string(),
+            blogTopic: zod_1.z.string().min(1),
+            blogOpinion: zod_1.z.string().min(1),
+            blogBrief: zod_1.z.string().min(1),
         }),
         output: zod_1.z.object({
             title: zod_1.z.string(),

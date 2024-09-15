@@ -341,9 +341,9 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams
             .merge(categoryInputParams[DocumentCategory.BLOG])
             .extend({
-            blogTopic: z.string(),
-            blogOpinion: z.string(),
-            blogBrief: z.string(),
+            blogTopic: z.string().min(1),
+            blogOpinion: z.string().min(1),
+            blogBrief: z.string().min(1),
         }),
         output: z.object({
             title: z.string(),
