@@ -8,7 +8,7 @@ import { PostEntityType } from "./postEntityType";
 
 export interface PostEntity<T extends PostEntityType> extends EntityBase {
   externalId: string;
-  type: DocumentEntityType;
+  type: T;
   data: PostFactory[T];
   externalLink?: string | null;
   status: PostStatusType; // Assuming PostStatus is an enum
