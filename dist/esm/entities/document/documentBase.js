@@ -356,7 +356,56 @@ export const DocumentTypeFactory = {
             .merge(categoryInputParams[DocumentCategory.BLOG])
             .extend({
             blogTopic: z.string(),
-            blogBrief: z.string(),
+        }),
+        output: z.object({
+            title: z.string(),
+            body: z.string(),
+        }),
+        category: DocumentCategory.BLOG,
+    },
+    [DocumentEntityType.BLOG_POST_GUIDE]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.BLOG])
+            .extend({
+            blogTopic: z.string(),
+        }),
+        output: z.object({
+            title: z.string(),
+            body: z.string(),
+        }),
+        category: DocumentCategory.BLOG,
+    },
+    [DocumentEntityType.BLOG_POST_COMPARISON]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.BLOG])
+            .extend({
+            blogTopic: z.string(),
+            comparisonFocusPoints: z.string(),
+        }),
+        output: z.object({
+            title: z.string(),
+            body: z.string(),
+        }),
+        category: DocumentCategory.BLOG,
+    },
+    [DocumentEntityType.BLOG_POST_CASE_STUDY]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.BLOG])
+            .extend({
+            solutionDescription: z.string(),
+            results: z.string(),
+        }),
+        output: z.object({
+            title: z.string(),
+            body: z.string(),
+        }),
+        category: DocumentCategory.BLOG,
+    },
+    [DocumentEntityType.BLOG_POST_GENERAL]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.BLOG])
+            .extend({
+            blogTopic: z.string(),
         }),
         output: z.object({
             title: z.string(),

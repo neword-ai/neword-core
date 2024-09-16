@@ -1074,12 +1074,10 @@ export declare const DocumentTypeFactory: {
             internalLinks: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
         }>, {
             blogTopic: z.ZodString;
-            blogBrief: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             blogTopic: string;
-            blogBrief: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -1089,7 +1087,184 @@ export declare const DocumentTypeFactory: {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             blogTopic: string;
-            blogBrief: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+            cta?: string | undefined;
+            keywords?: string[] | undefined;
+            internalLinks?: string[] | undefined;
+        }>;
+        output: z.ZodObject<{
+            title: z.ZodString;
+            body: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            title: string;
+            body: string;
+        }, {
+            title: string;
+            body: string;
+        }>;
+        category: DocumentCategory;
+    };
+    BLOG_POST_GUIDE: {
+        inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+            description: z.ZodOptional<z.ZodString>;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+        }, {
+            cta: z.ZodOptional<z.ZodString>;
+            keywords: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+            internalLinks: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+        }>, {
+            blogTopic: z.ZodString;
+        }>, "strip", z.ZodTypeAny, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            blogTopic: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+            cta?: string | undefined;
+            keywords?: string[] | undefined;
+            internalLinks?: string[] | undefined;
+        }, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            blogTopic: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+            cta?: string | undefined;
+            keywords?: string[] | undefined;
+            internalLinks?: string[] | undefined;
+        }>;
+        output: z.ZodObject<{
+            title: z.ZodString;
+            body: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            title: string;
+            body: string;
+        }, {
+            title: string;
+            body: string;
+        }>;
+        category: DocumentCategory;
+    };
+    BLOG_POST_COMPARISON: {
+        inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+            description: z.ZodOptional<z.ZodString>;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+        }, {
+            cta: z.ZodOptional<z.ZodString>;
+            keywords: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+            internalLinks: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+        }>, {
+            blogTopic: z.ZodString;
+            comparisonFocusPoints: z.ZodString;
+        }>, "strip", z.ZodTypeAny, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            blogTopic: string;
+            comparisonFocusPoints: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+            cta?: string | undefined;
+            keywords?: string[] | undefined;
+            internalLinks?: string[] | undefined;
+        }, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            blogTopic: string;
+            comparisonFocusPoints: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+            cta?: string | undefined;
+            keywords?: string[] | undefined;
+            internalLinks?: string[] | undefined;
+        }>;
+        output: z.ZodObject<{
+            title: z.ZodString;
+            body: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            title: string;
+            body: string;
+        }, {
+            title: string;
+            body: string;
+        }>;
+        category: DocumentCategory;
+    };
+    BLOG_POST_CASE_STUDY: {
+        inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+            description: z.ZodOptional<z.ZodString>;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+        }, {
+            cta: z.ZodOptional<z.ZodString>;
+            keywords: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+            internalLinks: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+        }>, {
+            solutionDescription: z.ZodString;
+            results: z.ZodString;
+        }>, "strip", z.ZodTypeAny, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            solutionDescription: string;
+            results: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+            cta?: string | undefined;
+            keywords?: string[] | undefined;
+            internalLinks?: string[] | undefined;
+        }, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            solutionDescription: string;
+            results: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+            cta?: string | undefined;
+            keywords?: string[] | undefined;
+            internalLinks?: string[] | undefined;
+        }>;
+        output: z.ZodObject<{
+            title: z.ZodString;
+            body: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            title: string;
+            body: string;
+        }, {
+            title: string;
+            body: string;
+        }>;
+        category: DocumentCategory;
+    };
+    BLOG_POST_GENERAL: {
+        inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+            description: z.ZodOptional<z.ZodString>;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+        }, {
+            cta: z.ZodOptional<z.ZodString>;
+            keywords: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+            internalLinks: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+        }>, {
+            blogTopic: z.ZodString;
+        }>, "strip", z.ZodTypeAny, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            blogTopic: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+            cta?: string | undefined;
+            keywords?: string[] | undefined;
+            internalLinks?: string[] | undefined;
+        }, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;

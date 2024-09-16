@@ -360,7 +360,56 @@ exports.DocumentTypeFactory = (_b = {},
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.BLOG])
             .extend({
             blogTopic: zod_1.z.string(),
-            blogBrief: zod_1.z.string(),
+        }),
+        output: zod_1.z.object({
+            title: zod_1.z.string(),
+            body: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.BLOG,
+    },
+    _b[DocumentEntityType_1.DocumentEntityType.BLOG_POST_GUIDE] = {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.BLOG])
+            .extend({
+            blogTopic: zod_1.z.string(),
+        }),
+        output: zod_1.z.object({
+            title: zod_1.z.string(),
+            body: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.BLOG,
+    },
+    _b[DocumentEntityType_1.DocumentEntityType.BLOG_POST_COMPARISON] = {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.BLOG])
+            .extend({
+            blogTopic: zod_1.z.string(),
+            comparisonFocusPoints: zod_1.z.string(),
+        }),
+        output: zod_1.z.object({
+            title: zod_1.z.string(),
+            body: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.BLOG,
+    },
+    _b[DocumentEntityType_1.DocumentEntityType.BLOG_POST_CASE_STUDY] = {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.BLOG])
+            .extend({
+            solutionDescription: zod_1.z.string(),
+            results: zod_1.z.string(),
+        }),
+        output: zod_1.z.object({
+            title: zod_1.z.string(),
+            body: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.BLOG,
+    },
+    _b[DocumentEntityType_1.DocumentEntityType.BLOG_POST_GENERAL] = {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.BLOG])
+            .extend({
+            blogTopic: zod_1.z.string(),
         }),
         output: zod_1.z.object({
             title: zod_1.z.string(),
