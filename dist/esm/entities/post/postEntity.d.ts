@@ -1,11 +1,9 @@
 import { EntityBase } from "../entityBase";
 import { PostStatusType } from "./postStatusType";
-import { PostFactory } from "./postFactory";
-import { PostEntityType } from "./postEntityType";
-export interface PostEntity<T extends PostEntityType> extends EntityBase {
+import { PostData } from "./postData";
+export interface PostEntity extends EntityBase {
     externalId: string;
-    type: T;
-    data: PostFactory[T];
+    data: PostData;
     externalLink?: string | null;
     status: PostStatusType;
     companyId: string;

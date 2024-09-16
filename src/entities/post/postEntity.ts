@@ -1,15 +1,10 @@
-import { z } from "zod";
-import { DocumentEntityType } from "../../types/DocumentEntityType";
-import { DocumentTypeFactory } from "../document/documentBase";
 import { EntityBase } from "../entityBase";
 import { PostStatusType } from "./postStatusType";
-import { PostFactory } from "./postFactory";
-import { PostEntityType } from "./postEntityType";
+import { PostData } from "./postData";
 
-export interface PostEntity<T extends PostEntityType> extends EntityBase {
+export interface PostEntity extends EntityBase {
   externalId: string;
-  type: T;
-  data: PostFactory[T];
+  data: PostData;
   externalLink?: string | null;
   status: PostStatusType; // Assuming PostStatus is an enum
   companyId: string;
