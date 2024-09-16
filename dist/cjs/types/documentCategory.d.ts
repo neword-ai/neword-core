@@ -3,5 +3,6 @@ export declare enum DocumentCategory {
     WEB = "WEB",
     MAILING = "MAILING",
     PAID = "PAID",
-    BLOG = "BLOG"
+    BLOG = "BLOG",
+    SMS = "SMS"
 }

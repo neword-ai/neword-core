@@ -5,5 +5,6 @@ export var DocumentCategory;
     DocumentCategory["MAILING"] = "MAILING";
     DocumentCategory["PAID"] = "PAID";
     DocumentCategory["BLOG"] = "BLOG";
+    DocumentCategory["SMS"] = "SMS";
 })(DocumentCategory || (DocumentCategory = {}));
 //# sourceMappingURL=documentCategory.js.map

@@ -11,9 +11,12 @@ const baseInputParams = z.object({
 const categoryInputParams = {
     [DocumentCategory.SOCIAL_MEDIA]: z.object({}),
     [DocumentCategory.PAID]: z.object({}),
-    [DocumentCategory.MAILING]: z.object({
+    [DocumentCategory.SMS]: z.object({
         legalInformation: z.string().optional(),
         additionalInformation: z.string().optional(),
+    }),
+    [DocumentCategory.MAILING]: z.object({
+        cta: z.string().describe("קריאה לפעולה"),
     }),
     [DocumentCategory.WEB]: z.object({
         cta: z.string().optional(),
@@ -179,38 +182,139 @@ export const DocumentTypeFactory = {
         category: DocumentCategory.SOCIAL_MEDIA,
     },
     // MAILING
+    [DocumentEntityType.CART_ABANDONMENT_EMAIL]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.MAILING])
+            .extend({
+            incentives: z
+                .string()
+                .describe("תמריצים לשכנוע לקוחות לחזור ולהשלים את הרכישה"),
+            cartItems: z.string().describe("הפריטים שנותרו בעגלה"),
+            customerSupport: z.string().describe("דרכים ליצירת קשר לתמיכה"),
+        }),
+        output: z.object({
+            subject: z.string(),
+            mailBody: z.string(),
+        }),
+        category: DocumentCategory.MAILING,
+    },
+    [DocumentEntityType.TRAFFIC_EMAIL]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.MAILING])
+            .extend({
+            contentTopic: z.string().describe("נושא התוכן שתרצו לשתף"),
+        }),
+        output: z.object({
+            subject: z.string(),
+            mailBody: z.string(),
+        }),
+        category: DocumentCategory.MAILING,
+    },
+    [DocumentEntityType.PUSH_NOTIFICATION]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.MAILING])
+            .extend({
+            notificationGoal: z.string().describe("מטרת הודעת הפוש"),
+            mainMessage: z
+                .string()
+                .optional()
+                .describe("המסר המרכזי של הודעת הפוש"),
+        }),
+        output: z.object({
+            message: z.string(),
+            title: z.string(),
+        }),
+        category: DocumentCategory.MAILING,
+    },
+    [DocumentEntityType.NEWSLETTER_EMAIL]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.MAILING])
+            .extend({
+            mainTopic: z.string().describe("הנושא העיקרי של המייל"),
+            cta: z.string().describe("קריאה לפעולה"),
+        }),
+        output: z.object({
+            subject: z.string(),
+            mailBody: z.string(),
+        }),
+        category: DocumentCategory.MAILING,
+    },
+    [DocumentEntityType.PRODUCT_UPDATE_EMAIL]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.MAILING])
+            .extend({
+            productUpdates: z
+                .string()
+                .describe("העדכונים העיקריים והתכונות החדשות של המוצר"),
+            updateBenefits: z
+                .string()
+                .describe("יתרונות העדכון וכיצד הם מועילים ללקוחות"),
+        }),
+        output: z.object({
+            subject: z.string(),
+            mailBody: z.string(),
+        }),
+        category: DocumentCategory.MAILING,
+    },
+    [DocumentEntityType.WELCOME_EMAIL]: {
+        inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.MAILING]),
+        output: z.object({
+            subject: z.string(),
+            mailBody: z.string(),
+        }),
+        category: DocumentCategory.MAILING,
+    },
     [DocumentEntityType.EMAIL_CONTENT]: {
         inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.MAILING]),
         output: z.object({
             subject: z.string(),
-            content: z.string(),
+            mailBody: z.string(),
         }),
         category: DocumentCategory.MAILING,
     },
-    [DocumentEntityType.EMAIL_IDEA]: {
-        inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.MAILING]),
-        output: z.object({
-            emailIdea: z.string(),
-        }),
-        category: DocumentCategory.MAILING,
-    },
-    [DocumentEntityType.SMS_CONTENT]: {
+    //SMS
+    [DocumentEntityType.FLASH_SALE_SMS]: {
         inputParams: baseInputParams
             .merge(categoryInputParams[DocumentCategory.MAILING])
             .extend({
-            content: z.string(),
+            promotionDetails: z.string().describe("פרטי המבצע שברצונכם לקדם"),
+            redemptionMethod: z.string().describe("אופן מימוש המבצע"),
+            duration: z.string().optional().describe("משך זמן המבצע"),
+            cta: z.string().describe("קריאה לפעולה"),
         }),
         output: z.object({
             smsContent: z.string(),
         }),
-        category: DocumentCategory.MAILING,
+        category: DocumentCategory.SMS,
+    },
+    [DocumentEntityType.NOTIFICATION_SMS]: {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[DocumentCategory.SMS])
+            .extend({
+            notificationType: z.string().describe("סוג ההתראה"),
+            notificationDetails: z.string().describe("פרטי ההתראה"),
+            supportContact: z
+                .string()
+                .describe("כיצד לקוחות יכולים לפנות אם יש להם שאלות או זקוקים לסיוע"),
+        }),
+        output: z.object({
+            message: z.string(),
+        }),
+        category: DocumentCategory.SMS,
+    },
+    [DocumentEntityType.SMS_CONTENT]: {
+        inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SMS]),
+        output: z.object({
+            smsContent: z.string(),
+        }),
+        category: DocumentCategory.SMS,
     },
     [DocumentEntityType.SMS_IDEA]: {
-        inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.MAILING]),
+        inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SMS]),
         output: z.object({
             smsIdea: z.string(),
         }),
-        category: DocumentCategory.MAILING,
+        category: DocumentCategory.SMS,
     },
     [DocumentEntityType.PHONE_CALL_SCRIPT]: {
         inputParams: baseInputParams
@@ -243,15 +347,13 @@ export const DocumentTypeFactory = {
         }),
         category: DocumentCategory.PAID,
     },
-    [DocumentEntityType.SOCIAL_AD_LINKEDIN]: {
+    [DocumentEntityType.SOCIAL_AD]: {
         inputParams: baseInputParams
             .merge(categoryInputParams[DocumentCategory.PAID])
             .extend({
             adGoal: z.string(),
             mainMessage: z.string(),
-            introductoryText: z.string(),
-            headline: z.string(),
-            callToAction: z.string(),
+            cta: z.string(),
         }),
         output: z.object({
             primaryText: z.string(),
@@ -261,22 +363,17 @@ export const DocumentTypeFactory = {
         }),
         category: DocumentCategory.PAID,
     },
-    [DocumentEntityType.SOCIAL_AD_FACEBOOK_INSTAGRAM_TWITTER]: {
+    [DocumentEntityType.EMAIL_AD_PROMO]: {
         inputParams: baseInputParams
             .merge(categoryInputParams[DocumentCategory.PAID])
             .extend({
-            adGoal: z.string(),
-            mainMessage: z.string(),
-            primaryText: z.string(),
-            headline: z.string(),
-            description: z.string(),
-            callToActionButton: z.string(),
+            offerPromotion: z.string(),
+            cta: z.string(),
+            personalization: z.string(),
         }),
         output: z.object({
-            primaryText: z.string(),
-            headline: z.string(),
-            description: z.string(),
-            callToActionButton: z.string(),
+            subject: z.string(),
+            content: z.string(),
         }),
         category: DocumentCategory.PAID,
     },

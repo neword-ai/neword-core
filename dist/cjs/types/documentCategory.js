@@ -8,5 +8,6 @@ var DocumentCategory;
     DocumentCategory["MAILING"] = "MAILING";
     DocumentCategory["PAID"] = "PAID";
     DocumentCategory["BLOG"] = "BLOG";
+    DocumentCategory["SMS"] = "SMS";
 })(DocumentCategory || (exports.DocumentCategory = DocumentCategory = {}));
 //# sourceMappingURL=documentCategory.js.map

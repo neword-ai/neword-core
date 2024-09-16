@@ -4,4 +4,5 @@ export enum DocumentCategory {
   MAILING = "MAILING",
   PAID = "PAID",
   BLOG = "BLOG",
+  SMS = "SMS",
 }
