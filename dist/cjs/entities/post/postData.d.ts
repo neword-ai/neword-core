@@ -369,12 +369,12 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.o
         duration: z.ZodNumber;
         cover: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        url: string;
         duration: number;
+        url: string;
         cover: string;
     }, {
-        url: string;
         duration: number;
+        url: string;
         cover: string;
     }>;
 }>, "strip", z.ZodTypeAny, {
@@ -390,8 +390,8 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.o
         play_count: number;
     };
     video: {
-        url: string;
         duration: number;
+        url: string;
         cover: string;
     };
     content?: string | undefined;
@@ -409,8 +409,8 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.o
         play_count: number;
     };
     video: {
-        url: string;
         duration: number;
+        url: string;
         cover: string;
     };
     content?: string | undefined;
