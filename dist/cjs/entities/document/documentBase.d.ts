@@ -788,11 +788,11 @@ export declare const DocumentTypeFactory: {
             additionalInformation?: string | undefined;
         }>;
         output: z.ZodObject<{
-            message: z.ZodString;
+            smsContent: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            message: string;
+            smsContent: string;
         }, {
-            message: string;
+            smsContent: string;
         }>;
         category: DocumentCategory;
     };

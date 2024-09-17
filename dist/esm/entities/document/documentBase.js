@@ -298,7 +298,7 @@ export const DocumentTypeFactory = {
                 .describe("כיצד לקוחות יכולים לפנות אם יש להם שאלות או זקוקים לסיוע"),
         }),
         output: z.object({
-            message: z.string(),
+            smsContent: z.string(),
         }),
         category: DocumentCategory.SMS,
     },

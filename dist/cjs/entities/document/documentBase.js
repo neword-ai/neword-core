@@ -302,7 +302,7 @@ exports.DocumentTypeFactory = (_b = {},
                 .describe("כיצד לקוחות יכולים לפנות אם יש להם שאלות או זקוקים לסיוע"),
         }),
         output: zod_1.z.object({
-            message: zod_1.z.string(),
+            smsContent: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.SMS,
     },
