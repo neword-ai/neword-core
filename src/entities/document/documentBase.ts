@@ -331,7 +331,9 @@ export const DocumentTypeFactory = {
 
   [DocumentEntityType.SMS_CONTENT]: {
     inputParams: baseInputParams.merge(
-      categoryInputParams[DocumentCategory.SMS]
+      categoryInputParams[DocumentCategory.SMS].extend({
+        cta: z.string().describe("קריאה לפעולה"),
+      })
     ),
     output: z.object({
       smsContent: z.string(),

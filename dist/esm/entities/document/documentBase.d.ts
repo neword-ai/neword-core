@@ -802,12 +802,15 @@ export declare const DocumentTypeFactory: {
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-        }, {
+        }, z.objectUtil.extendShape<{
             legalInformation: z.ZodOptional<z.ZodString>;
             additionalInformation: z.ZodOptional<z.ZodString>;
-        }>, "strip", z.ZodTypeAny, {
+        }, {
+            cta: z.ZodString;
+        }>>, "strip", z.ZodTypeAny, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;
@@ -815,6 +818,7 @@ export declare const DocumentTypeFactory: {
         }, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
             legalInformation?: string | undefined;

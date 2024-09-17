@@ -307,7 +307,9 @@ exports.DocumentTypeFactory = (_b = {},
         category: documentCategory_1.DocumentCategory.SMS,
     },
     _b[DocumentEntityType_1.DocumentEntityType.SMS_CONTENT] = {
-        inputParams: baseInputParams.merge(categoryInputParams[documentCategory_1.DocumentCategory.SMS]),
+        inputParams: baseInputParams.merge(categoryInputParams[documentCategory_1.DocumentCategory.SMS].extend({
+            cta: zod_1.z.string().describe("קריאה לפעולה"),
+        })),
         output: zod_1.z.object({
             smsContent: zod_1.z.string(),
         }),
