@@ -275,7 +275,7 @@ export const DocumentTypeFactory = {
     //SMS
     [DocumentEntityType.FLASH_SALE_SMS]: {
         inputParams: baseInputParams
-            .merge(categoryInputParams[DocumentCategory.MAILING])
+            .merge(categoryInputParams[DocumentCategory.SMS])
             .extend({
             promotionDetails: z.string().describe("פרטי המבצע שברצונכם לקדם"),
             redemptionMethod: z.string().describe("אופן מימוש המבצע"),

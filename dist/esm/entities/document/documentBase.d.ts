@@ -714,7 +714,8 @@ export declare const DocumentTypeFactory: {
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
         }, {
-            cta: z.ZodString;
+            legalInformation: z.ZodOptional<z.ZodString>;
+            additionalInformation: z.ZodOptional<z.ZodString>;
         }>, {
             promotionDetails: z.ZodString;
             redemptionMethod: z.ZodString;
@@ -728,6 +729,8 @@ export declare const DocumentTypeFactory: {
             redemptionMethod: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
+            legalInformation?: string | undefined;
+            additionalInformation?: string | undefined;
             duration?: string | undefined;
         }, {
             audienceId: string;
@@ -737,6 +740,8 @@ export declare const DocumentTypeFactory: {
             redemptionMethod: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
+            legalInformation?: string | undefined;
+            additionalInformation?: string | undefined;
             duration?: string | undefined;
         }>;
         output: z.ZodObject<{

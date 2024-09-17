@@ -279,7 +279,7 @@ exports.DocumentTypeFactory = (_b = {},
     //SMS
     _b[DocumentEntityType_1.DocumentEntityType.FLASH_SALE_SMS] = {
         inputParams: baseInputParams
-            .merge(categoryInputParams[documentCategory_1.DocumentCategory.MAILING])
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.SMS])
             .extend({
             promotionDetails: zod_1.z.string().describe("פרטי המבצע שברצונכם לקדם"),
             redemptionMethod: zod_1.z.string().describe("אופן מימוש המבצע"),
