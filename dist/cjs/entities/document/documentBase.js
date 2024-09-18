@@ -42,6 +42,7 @@ exports.DocumentTypeFactory = (_b = {},
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
             .extend({
             hashtags: zod_1.z.array(zod_1.z.string()),
+            postGoal: zod_1.z.string().describe("מטרת הפוסט"),
         }),
         output: zod_1.z.object({
             captionText: zod_1.z.string(),
@@ -51,6 +52,7 @@ exports.DocumentTypeFactory = (_b = {},
     _b[DocumentEntityType_1.DocumentEntityType.INSTAGRAM_POST_IDEA] = {
         inputParams: baseInputParams.merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA].extend({
             hashtags: zod_1.z.array(zod_1.z.string()),
+            postGoal: zod_1.z.string().describe("מטרת הפוסט"),
         })),
         output: zod_1.z.object({
             ideaDescription: zod_1.z.string(),
@@ -100,6 +102,7 @@ exports.DocumentTypeFactory = (_b = {},
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
             .extend({
             hashtags: zod_1.z.array(zod_1.z.string()),
+            postGoal: zod_1.z.string().describe("מטרת הפוסט"),
         }),
         output: zod_1.z.object({
             postCaption: zod_1.z.string(),
@@ -132,6 +135,7 @@ exports.DocumentTypeFactory = (_b = {},
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
             .extend({
             hashtags: zod_1.z.array(zod_1.z.string()),
+            postGoal: zod_1.z.string().describe("מטרת הפוסט"),
         }),
         output: zod_1.z.object({
             postCaption: zod_1.z.string(),
@@ -143,6 +147,7 @@ exports.DocumentTypeFactory = (_b = {},
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
             .extend({
             hashtags: zod_1.z.array(zod_1.z.string()),
+            postGoal: zod_1.z.string().describe("מטרת הפוסט"),
         }),
         output: zod_1.z.object({
             postIdea: zod_1.z.string(),
