@@ -215,10 +215,8 @@ export const DocumentTypeFactory = {
             .merge(categoryInputParams[DocumentCategory.MAILING])
             .extend({
             notificationGoal: z.string().describe("מטרת הודעת הפוש"),
-            mainMessage: z
-                .string()
-                .optional()
-                .describe("המסר המרכזי של הודעת הפוש"),
+            mainMessage: z.string().describe("המסר המרכזי של הודעת הפוש"),
+            cta: z.string().describe("קריאה לפעולה"),
         }),
         output: z.object({
             message: z.string(),

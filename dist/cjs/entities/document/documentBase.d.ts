@@ -533,23 +533,24 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodString;
         }>, {
             notificationGoal: z.ZodString;
-            mainMessage: z.ZodOptional<z.ZodString>;
+            mainMessage: z.ZodString;
+            cta: z.ZodString;
         }>, "strip", z.ZodTypeAny, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
             notificationGoal: string;
+            mainMessage: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
-            mainMessage?: string | undefined;
         }, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
             notificationGoal: string;
+            mainMessage: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
-            mainMessage?: string | undefined;
         }>;
         output: z.ZodObject<{
             message: z.ZodString;
