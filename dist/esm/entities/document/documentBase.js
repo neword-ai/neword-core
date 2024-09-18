@@ -9,7 +9,10 @@ const baseInputParams = z.object({
     tone: ZDocumentToneType,
 });
 const categoryInputParams = {
-    [DocumentCategory.SOCIAL_MEDIA]: z.object({}),
+    [DocumentCategory.SOCIAL_MEDIA]: z.object({
+        cta: z.string().describe("קריאה לפעולה"),
+        additionalInformation: z.string().optional(),
+    }),
     [DocumentCategory.PAID]: z.object({}),
     [DocumentCategory.SMS]: z.object({
         legalInformation: z.string().optional(),

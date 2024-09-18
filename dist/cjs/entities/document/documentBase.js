@@ -13,7 +13,10 @@ var baseInputParams = zod_1.z.object({
     tone: DocumentToneType_1.ZDocumentToneType,
 });
 var categoryInputParams = (_a = {},
-    _a[documentCategory_1.DocumentCategory.SOCIAL_MEDIA] = zod_1.z.object({}),
+    _a[documentCategory_1.DocumentCategory.SOCIAL_MEDIA] = zod_1.z.object({
+        cta: zod_1.z.string().describe("קריאה לפעולה"),
+        additionalInformation: zod_1.z.string().optional(),
+    }),
     _a[documentCategory_1.DocumentCategory.PAID] = zod_1.z.object({}),
     _a[documentCategory_1.DocumentCategory.SMS] = zod_1.z.object({
         legalInformation: zod_1.z.string().optional(),
