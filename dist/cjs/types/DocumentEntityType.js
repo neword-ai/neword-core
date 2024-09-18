@@ -37,6 +37,10 @@ var DocumentEntityType;
     DocumentEntityType["SOCIAL_AD"] = "SOCIAL_AD";
     // LINKEDIN_AD = "LINKEDIN_AD",
     DocumentEntityType["SEARCH_AD"] = "SEARCH_AD";
+    DocumentEntityType["INSTAGRAM_SPONSORED_AD"] = "INSTAGRAM_SPONSORED_AD";
+    DocumentEntityType["TWITTER_SPONSORED_AD"] = "TWITTER_SPONSORED_AD";
+    DocumentEntityType["FACEBOOK_SPONSORED_AD"] = "FACEBOOK_SPONSORED_AD";
+    DocumentEntityType["LINKEDIN_SPONSORED_AD"] = "LINKEDIN_SPONSORED_AD";
     DocumentEntityType["EMAIL_CONTENT"] = "EMAIL_CONTENT";
     DocumentEntityType["CART_ABANDONMENT_EMAIL"] = "CART_ABANDONMENT_EMAIL";
     DocumentEntityType["TRAFFIC_EMAIL"] = "TRAFFIC_EMAIL";

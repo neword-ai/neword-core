@@ -339,6 +339,64 @@ exports.DocumentTypeFactory = (_b = {},
         category: documentCategory_1.DocumentCategory.MAILING,
     },
     // PAID
+    _b[DocumentEntityType_1.DocumentEntityType.LINKEDIN_SPONSORED_AD] = {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.PAID])
+            .extend({
+            adGoal: zod_1.z.string().describe("מטרת הפרסומת"),
+            mainMessage: zod_1.z.string().describe("המסר המרכזי בפרסומת"),
+        }),
+        output: zod_1.z.object({
+            introductoryText: zod_1.z.string(),
+            headline: zod_1.z.string(),
+            description: zod_1.z.string(),
+            callToActionButton: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.PAID,
+    },
+    _b[DocumentEntityType_1.DocumentEntityType.FACEBOOK_SPONSORED_AD] = {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.PAID])
+            .extend({
+            adGoal: zod_1.z.string().describe("מטרת הפרסומת"),
+            mainMessage: zod_1.z.string().describe("המסר המרכזי בפרסומת"),
+        }),
+        output: zod_1.z.object({
+            introductoryText: zod_1.z.string(),
+            headline: zod_1.z.string(),
+            description: zod_1.z.string(),
+            callToActionButton: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.PAID,
+    },
+    _b[DocumentEntityType_1.DocumentEntityType.INSTAGRAM_SPONSORED_AD] = {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.PAID])
+            .extend({
+            adGoal: zod_1.z.string().describe("מטרת הפרסומת"),
+            mainMessage: zod_1.z.string().describe("המסר המרכזי בפרסומת"),
+        }),
+        output: zod_1.z.object({
+            primaryText: zod_1.z.string(),
+            callToAction: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.PAID,
+    },
+    _b[DocumentEntityType_1.DocumentEntityType.TWITTER_SPONSORED_AD] = {
+        inputParams: baseInputParams
+            .merge(categoryInputParams[documentCategory_1.DocumentCategory.PAID])
+            .extend({
+            adGoal: zod_1.z.string().describe("מטרת הפרסומת"),
+            mainMessage: zod_1.z.string().describe("המסר המרכזי בפרסומת"),
+        }),
+        output: zod_1.z.object({
+            introductoryText: zod_1.z.string(),
+            headline: zod_1.z.string(),
+            description: zod_1.z.string(),
+            callToActionButton: zod_1.z.string(),
+        }),
+        category: documentCategory_1.DocumentCategory.PAID,
+    },
     _b[DocumentEntityType_1.DocumentEntityType.GOOGLE_ADS_KEYWORDS] = {
         inputParams: baseInputParams
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.PAID])

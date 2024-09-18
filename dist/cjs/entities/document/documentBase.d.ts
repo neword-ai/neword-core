@@ -1009,6 +1009,168 @@ export declare const DocumentTypeFactory: {
         }>;
         category: DocumentCategory;
     };
+    LINKEDIN_SPONSORED_AD: {
+        inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+            description: z.ZodOptional<z.ZodString>;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+        }, {}>, {
+            adGoal: z.ZodString;
+            mainMessage: z.ZodString;
+        }>, "strip", z.ZodTypeAny, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            mainMessage: string;
+            adGoal: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+        }, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            mainMessage: string;
+            adGoal: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+        }>;
+        output: z.ZodObject<{
+            introductoryText: z.ZodString;
+            headline: z.ZodString;
+            description: z.ZodString;
+            callToActionButton: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            description: string;
+            introductoryText: string;
+            headline: string;
+            callToActionButton: string;
+        }, {
+            description: string;
+            introductoryText: string;
+            headline: string;
+            callToActionButton: string;
+        }>;
+        category: DocumentCategory;
+    };
+    FACEBOOK_SPONSORED_AD: {
+        inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+            description: z.ZodOptional<z.ZodString>;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+        }, {}>, {
+            adGoal: z.ZodString;
+            mainMessage: z.ZodString;
+        }>, "strip", z.ZodTypeAny, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            mainMessage: string;
+            adGoal: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+        }, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            mainMessage: string;
+            adGoal: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+        }>;
+        output: z.ZodObject<{
+            introductoryText: z.ZodString;
+            headline: z.ZodString;
+            description: z.ZodString;
+            callToActionButton: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            description: string;
+            introductoryText: string;
+            headline: string;
+            callToActionButton: string;
+        }, {
+            description: string;
+            introductoryText: string;
+            headline: string;
+            callToActionButton: string;
+        }>;
+        category: DocumentCategory;
+    };
+    INSTAGRAM_SPONSORED_AD: {
+        inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+            description: z.ZodOptional<z.ZodString>;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+        }, {}>, {
+            adGoal: z.ZodString;
+            mainMessage: z.ZodString;
+        }>, "strip", z.ZodTypeAny, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            mainMessage: string;
+            adGoal: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+        }, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            mainMessage: string;
+            adGoal: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+        }>;
+        output: z.ZodObject<{
+            primaryText: z.ZodString;
+            callToAction: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            primaryText: string;
+            callToAction: string;
+        }, {
+            primaryText: string;
+            callToAction: string;
+        }>;
+        category: DocumentCategory;
+    };
+    TWITTER_SPONSORED_AD: {
+        inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+            description: z.ZodOptional<z.ZodString>;
+            imageUrl: z.ZodOptional<z.ZodString>;
+            audienceId: z.ZodString;
+            tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+        }, {}>, {
+            adGoal: z.ZodString;
+            mainMessage: z.ZodString;
+        }>, "strip", z.ZodTypeAny, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            mainMessage: string;
+            adGoal: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+        }, {
+            audienceId: string;
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            mainMessage: string;
+            adGoal: string;
+            description?: string | undefined;
+            imageUrl?: string | undefined;
+        }>;
+        output: z.ZodObject<{
+            introductoryText: z.ZodString;
+            headline: z.ZodString;
+            description: z.ZodString;
+            callToActionButton: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            description: string;
+            introductoryText: string;
+            headline: string;
+            callToActionButton: string;
+        }, {
+            description: string;
+            introductoryText: string;
+            headline: string;
+            callToActionButton: string;
+        }>;
+        category: DocumentCategory;
+    };
     GOOGLE_ADS_KEYWORDS: {
         inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
             description: z.ZodOptional<z.ZodString>;
@@ -1102,14 +1264,14 @@ export declare const DocumentTypeFactory: {
             callToActionButton: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
-            primaryText: string;
             headline: string;
             callToActionButton: string;
+            primaryText: string;
         }, {
             description: string;
-            primaryText: string;
             headline: string;
             callToActionButton: string;
+            primaryText: string;
         }>;
         category: DocumentCategory;
     };

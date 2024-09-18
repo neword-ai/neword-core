@@ -367,6 +367,68 @@ export const DocumentTypeFactory = {
   },
 
   // PAID
+  [DocumentEntityType.LINKEDIN_SPONSORED_AD]: {
+    inputParams: baseInputParams
+      .merge(categoryInputParams[DocumentCategory.PAID])
+      .extend({
+        adGoal: z.string().describe("מטרת הפרסומת"),
+        mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
+      }),
+    output: z.object({
+      introductoryText: z.string(),
+      headline: z.string(),
+      description: z.string(),
+      callToActionButton: z.string(),
+    }),
+    category: DocumentCategory.PAID,
+  },
+
+  [DocumentEntityType.FACEBOOK_SPONSORED_AD]: {
+    inputParams: baseInputParams
+      .merge(categoryInputParams[DocumentCategory.PAID])
+      .extend({
+        adGoal: z.string().describe("מטרת הפרסומת"),
+        mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
+      }),
+    output: z.object({
+      introductoryText: z.string(),
+      headline: z.string(),
+      description: z.string(),
+      callToActionButton: z.string(),
+    }),
+    category: DocumentCategory.PAID,
+  },
+
+  [DocumentEntityType.INSTAGRAM_SPONSORED_AD]: {
+    inputParams: baseInputParams
+      .merge(categoryInputParams[DocumentCategory.PAID])
+      .extend({
+        adGoal: z.string().describe("מטרת הפרסומת"),
+        mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
+      }),
+    output: z.object({
+      primaryText: z.string(),
+      callToAction: z.string(),
+    }),
+    category: DocumentCategory.PAID,
+  },
+
+  [DocumentEntityType.TWITTER_SPONSORED_AD]: {
+    inputParams: baseInputParams
+      .merge(categoryInputParams[DocumentCategory.PAID])
+      .extend({
+        adGoal: z.string().describe("מטרת הפרסומת"),
+        mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
+      }),
+    output: z.object({
+      introductoryText: z.string(),
+      headline: z.string(),
+      description: z.string(),
+      callToActionButton: z.string(),
+    }),
+    category: DocumentCategory.PAID,
+  },
+
   [DocumentEntityType.GOOGLE_ADS_KEYWORDS]: {
     inputParams: baseInputParams
       .merge(categoryInputParams[DocumentCategory.PAID])
