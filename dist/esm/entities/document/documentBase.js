@@ -37,8 +37,7 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams
             .merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA])
             .extend({
-            useEmoji: z.boolean(),
-            useHashtag: z.boolean(),
+            hashtags: z.array(z.string()),
         }),
         output: z.object({
             captionText: z.string(),
@@ -46,7 +45,9 @@ export const DocumentTypeFactory = {
         category: DocumentCategory.SOCIAL_MEDIA,
     },
     [DocumentEntityType.INSTAGRAM_POST_IDEA]: {
-        inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA]),
+        inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA].extend({
+            hashtags: z.array(z.string()),
+        })),
         output: z.object({
             ideaDescription: z.string(),
             imageDescription: z.string(),
@@ -94,8 +95,7 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams
             .merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA])
             .extend({
-            useEmoji: z.boolean(),
-            useHashtag: z.boolean(),
+            hashtags: z.array(z.string()),
         }),
         output: z.object({
             postCaption: z.string(),
@@ -127,8 +127,7 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams
             .merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA])
             .extend({
-            useEmoji: z.boolean(),
-            useHashtag: z.boolean(),
+            hashtags: z.array(z.string()),
         }),
         output: z.object({
             postCaption: z.string(),
@@ -139,7 +138,7 @@ export const DocumentTypeFactory = {
         inputParams: baseInputParams
             .merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA])
             .extend({
-            imageIdea: z.string().describe("Image idea for the post"),
+            hashtags: z.array(z.string()),
         }),
         output: z.object({
             postIdea: z.string(),

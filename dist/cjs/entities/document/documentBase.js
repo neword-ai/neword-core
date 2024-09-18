@@ -41,8 +41,7 @@ exports.DocumentTypeFactory = (_b = {},
         inputParams: baseInputParams
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
             .extend({
-            useEmoji: zod_1.z.boolean(),
-            useHashtag: zod_1.z.boolean(),
+            hashtags: zod_1.z.array(zod_1.z.string()),
         }),
         output: zod_1.z.object({
             captionText: zod_1.z.string(),
@@ -50,7 +49,9 @@ exports.DocumentTypeFactory = (_b = {},
         category: documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     },
     _b[DocumentEntityType_1.DocumentEntityType.INSTAGRAM_POST_IDEA] = {
-        inputParams: baseInputParams.merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA]),
+        inputParams: baseInputParams.merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA].extend({
+            hashtags: zod_1.z.array(zod_1.z.string()),
+        })),
         output: zod_1.z.object({
             ideaDescription: zod_1.z.string(),
             imageDescription: zod_1.z.string(),
@@ -98,8 +99,7 @@ exports.DocumentTypeFactory = (_b = {},
         inputParams: baseInputParams
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
             .extend({
-            useEmoji: zod_1.z.boolean(),
-            useHashtag: zod_1.z.boolean(),
+            hashtags: zod_1.z.array(zod_1.z.string()),
         }),
         output: zod_1.z.object({
             postCaption: zod_1.z.string(),
@@ -131,8 +131,7 @@ exports.DocumentTypeFactory = (_b = {},
         inputParams: baseInputParams
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
             .extend({
-            useEmoji: zod_1.z.boolean(),
-            useHashtag: zod_1.z.boolean(),
+            hashtags: zod_1.z.array(zod_1.z.string()),
         }),
         output: zod_1.z.object({
             postCaption: zod_1.z.string(),
@@ -143,7 +142,7 @@ exports.DocumentTypeFactory = (_b = {},
         inputParams: baseInputParams
             .merge(categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
             .extend({
-            imageIdea: zod_1.z.string().describe("Image idea for the post"),
+            hashtags: zod_1.z.array(zod_1.z.string()),
         }),
         output: zod_1.z.object({
             postIdea: zod_1.z.string(),

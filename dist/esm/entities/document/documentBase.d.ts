@@ -11,14 +11,12 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodString;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, {
-            useEmoji: z.ZodBoolean;
-            useHashtag: z.ZodBoolean;
+            hashtags: z.ZodArray<z.ZodString, "many">;
         }>, "strip", z.ZodTypeAny, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
-            useEmoji: boolean;
-            useHashtag: boolean;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -26,8 +24,7 @@ export declare const DocumentTypeFactory: {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
-            useEmoji: boolean;
-            useHashtag: boolean;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -47,13 +44,16 @@ export declare const DocumentTypeFactory: {
             imageUrl: z.ZodOptional<z.ZodString>;
             audienceId: z.ZodString;
             tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-        }, {
+        }, z.objectUtil.extendShape<{
             cta: z.ZodString;
             additionalInformation: z.ZodOptional<z.ZodString>;
-        }>, "strip", z.ZodTypeAny, {
+        }, {
+            hashtags: z.ZodArray<z.ZodString, "many">;
+        }>>, "strip", z.ZodTypeAny, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -61,6 +61,7 @@ export declare const DocumentTypeFactory: {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -235,14 +236,12 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodString;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, {
-            useEmoji: z.ZodBoolean;
-            useHashtag: z.ZodBoolean;
+            hashtags: z.ZodArray<z.ZodString, "many">;
         }>, "strip", z.ZodTypeAny, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
-            useEmoji: boolean;
-            useHashtag: boolean;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -250,8 +249,7 @@ export declare const DocumentTypeFactory: {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
-            useEmoji: boolean;
-            useHashtag: boolean;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -351,14 +349,12 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodString;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, {
-            useEmoji: z.ZodBoolean;
-            useHashtag: z.ZodBoolean;
+            hashtags: z.ZodArray<z.ZodString, "many">;
         }>, "strip", z.ZodTypeAny, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
-            useEmoji: boolean;
-            useHashtag: boolean;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -366,8 +362,7 @@ export declare const DocumentTypeFactory: {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
-            useEmoji: boolean;
-            useHashtag: boolean;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -391,12 +386,12 @@ export declare const DocumentTypeFactory: {
             cta: z.ZodString;
             additionalInformation: z.ZodOptional<z.ZodString>;
         }>, {
-            imageIdea: z.ZodString;
+            hashtags: z.ZodArray<z.ZodString, "many">;
         }>, "strip", z.ZodTypeAny, {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
-            imageIdea: string;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -404,7 +399,7 @@ export declare const DocumentTypeFactory: {
             audienceId: string;
             tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
             cta: string;
-            imageIdea: string;
+            hashtags: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
