@@ -16,7 +16,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./types/documentCategory"), exports);
 __exportStar(require("./types/DocumentEntityType"), exports);
-__exportStar(require("./entities/document/documentBase"), exports);
 __exportStar(require("./entities/document/documentEntity"), exports);
 __exportStar(require("./types/DocumentToneType"), exports);
 __exportStar(require("./entities/post/postEntity"), exports);

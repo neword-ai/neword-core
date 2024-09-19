@@ -173,11 +173,11 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.o
         id: z.ZodString;
         name: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        id: string;
         name: string;
+        id: string;
     }, {
-        id: string;
         name: string;
+        id: string;
     }>>;
     likes: z.ZodOptional<z.ZodObject<{
         summary: z.ZodObject<{
@@ -279,8 +279,8 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.o
     content?: string | undefined;
     media_url?: string | undefined;
     from?: {
-        id: string;
         name: string;
+        id: string;
     } | undefined;
     likes?: {
         summary: {
@@ -314,8 +314,8 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.o
     content?: string | undefined;
     media_url?: string | undefined;
     from?: {
-        id: string;
         name: string;
+        id: string;
     } | undefined;
     likes?: {
         summary: {
