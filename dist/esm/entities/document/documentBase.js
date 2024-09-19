@@ -486,8 +486,7 @@ export const DocumentTypeFactory = {
     [DocumentEntityType.ARTICLE]: {
         inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.WEB]),
         output: z.object({
-            title: z.string(),
-            body: z.string(),
+            blogHtml: z.string(),
         }),
         category: DocumentCategory.WEB,
     },
@@ -508,8 +507,7 @@ export const DocumentTypeFactory = {
             blogBrief: z.string().min(1),
         }),
         output: z.object({
-            title: z.string(),
-            body: z.string(),
+            blogHtml: z.string(),
         }),
         category: DocumentCategory.BLOG,
     },
@@ -520,8 +518,7 @@ export const DocumentTypeFactory = {
             blogTopic: z.string(),
         }),
         output: z.object({
-            title: z.string(),
-            body: z.string(),
+            blogHtml: z.string(),
         }),
         category: DocumentCategory.BLOG,
     },
@@ -532,8 +529,7 @@ export const DocumentTypeFactory = {
             blogTopic: z.string(),
         }),
         output: z.object({
-            title: z.string(),
-            body: z.string(),
+            blogHtml: z.string(),
         }),
         category: DocumentCategory.BLOG,
     },
@@ -545,8 +541,7 @@ export const DocumentTypeFactory = {
             comparisonFocusPoints: z.string(),
         }),
         output: z.object({
-            title: z.string(),
-            body: z.string(),
+            blogHtml: z.string(),
         }),
         category: DocumentCategory.BLOG,
     },
@@ -558,8 +553,7 @@ export const DocumentTypeFactory = {
             results: z.string(),
         }),
         output: z.object({
-            title: z.string(),
-            body: z.string(),
+            blogHtml: z.string(),
         }),
         category: DocumentCategory.BLOG,
     },
@@ -570,8 +564,7 @@ export const DocumentTypeFactory = {
             blogTopic: z.string(),
         }),
         output: z.object({
-            title: z.string(),
-            body: z.string(),
+            blogHtml: z.string(),
         }),
         category: DocumentCategory.BLOG,
     },

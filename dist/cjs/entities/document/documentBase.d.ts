@@ -1499,14 +1499,11 @@ export declare const DocumentTypeFactory: {
             additionalInformation?: string | undefined;
         }>;
         output: z.ZodObject<{
-            title: z.ZodString;
-            body: z.ZodString;
+            blogHtml: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }>;
         category: DocumentCategory;
     };
@@ -1584,14 +1581,11 @@ export declare const DocumentTypeFactory: {
             internalLinks?: string[] | undefined;
         }>;
         output: z.ZodObject<{
-            title: z.ZodString;
-            body: z.ZodString;
+            blogHtml: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }>;
         category: DocumentCategory;
     };
@@ -1627,14 +1621,11 @@ export declare const DocumentTypeFactory: {
             internalLinks?: string[] | undefined;
         }>;
         output: z.ZodObject<{
-            title: z.ZodString;
-            body: z.ZodString;
+            blogHtml: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }>;
         category: DocumentCategory;
     };
@@ -1670,14 +1661,11 @@ export declare const DocumentTypeFactory: {
             internalLinks?: string[] | undefined;
         }>;
         output: z.ZodObject<{
-            title: z.ZodString;
-            body: z.ZodString;
+            blogHtml: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }>;
         category: DocumentCategory;
     };
@@ -1716,14 +1704,11 @@ export declare const DocumentTypeFactory: {
             internalLinks?: string[] | undefined;
         }>;
         output: z.ZodObject<{
-            title: z.ZodString;
-            body: z.ZodString;
+            blogHtml: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }>;
         category: DocumentCategory;
     };
@@ -1762,14 +1747,11 @@ export declare const DocumentTypeFactory: {
             internalLinks?: string[] | undefined;
         }>;
         output: z.ZodObject<{
-            title: z.ZodString;
-            body: z.ZodString;
+            blogHtml: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }>;
         category: DocumentCategory;
     };
@@ -1805,14 +1787,11 @@ export declare const DocumentTypeFactory: {
             internalLinks?: string[] | undefined;
         }>;
         output: z.ZodObject<{
-            title: z.ZodString;
-            body: z.ZodString;
+            blogHtml: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }, {
-            title: string;
-            body: string;
+            blogHtml: string;
         }>;
         category: DocumentCategory;
     };
