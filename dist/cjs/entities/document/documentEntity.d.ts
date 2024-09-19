@@ -4,6 +4,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_CAPTION>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -61,6 +62,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -83,6 +85,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -104,6 +107,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_POST_IDEA>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -164,6 +168,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -187,6 +192,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -209,6 +215,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_BIO_DESCRIPTION>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -259,6 +266,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -279,6 +287,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -298,6 +307,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_STORY_IDEA>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -354,6 +364,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -376,6 +387,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -397,6 +409,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_REEL_IDEA>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -453,6 +466,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -475,6 +489,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -496,6 +511,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_REEL_SCRIPT>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -550,6 +566,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -571,6 +588,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -591,6 +609,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.LINKEDIN_POST_CAPTION>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -648,6 +667,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -670,6 +690,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -691,6 +712,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.LINKEDIN_POST_IDEA>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -751,6 +773,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -774,6 +797,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -796,6 +820,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.LINKEDIN_PAGE_ABOUT>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -846,6 +871,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -866,6 +892,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -885,6 +912,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.FACEBOOK_POST_CAPTION>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -942,6 +970,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -964,6 +993,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -985,6 +1015,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.FACEBOOK_POST_IDEA>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1045,6 +1076,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1068,6 +1100,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1090,6 +1123,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.FACEBOOK_PAGE_ABOUT>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1147,6 +1181,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1169,6 +1204,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1190,6 +1226,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.TWITTER_TWIT>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1247,6 +1284,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1269,6 +1307,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1290,6 +1329,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.THREADS_TWIT>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1347,6 +1387,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1369,6 +1410,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1390,6 +1432,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.CART_ABANDONMENT_EMAIL>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1450,6 +1493,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1473,6 +1517,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1495,6 +1540,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.TRAFFIC_EMAIL>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1549,6 +1595,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1570,6 +1617,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1590,6 +1638,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.PUSH_NOTIFICATION>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1648,6 +1697,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         message: string;
         audienceId: string;
@@ -1670,6 +1720,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         message: string;
         audienceId: string;
@@ -1691,6 +1742,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.NEWSLETTER_EMAIL>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1746,6 +1798,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1767,6 +1820,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1787,6 +1841,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.PRODUCT_UPDATE_EMAIL>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1844,6 +1899,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1866,6 +1922,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1887,6 +1944,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WELCOME_EMAIL>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -1937,6 +1995,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1957,6 +2016,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -1976,6 +2036,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.EMAIL_CONTENT>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2026,6 +2087,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2046,6 +2108,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2065,6 +2128,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.FLASH_SALE_SMS>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2128,6 +2192,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2152,6 +2217,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2175,6 +2241,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.NOTIFICATION_SMS>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2235,6 +2302,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2258,6 +2326,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2280,6 +2349,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.SMS_CONTENT>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2334,6 +2404,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2355,6 +2426,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2375,6 +2447,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.SMS_IDEA>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2425,6 +2498,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2445,6 +2519,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2464,6 +2539,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.GOOGLE_ADS_KEYWORDS>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2514,6 +2590,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2534,6 +2611,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2553,6 +2631,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.GOOGLE_ADS_IDEA>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2596,6 +2675,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2614,6 +2694,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2631,6 +2712,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.SOCIAL_AD>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2691,6 +2773,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         description: string;
         audienceId: string;
@@ -2714,6 +2797,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         description: string;
         audienceId: string;
@@ -2736,6 +2820,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.EMAIL_AD_PROMO>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2792,6 +2877,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2814,6 +2900,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2835,6 +2922,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.SEARCH_AD>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2891,6 +2979,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2913,6 +3002,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -2934,6 +3024,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_ABOUT>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -2984,6 +3075,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3004,6 +3096,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3023,6 +3116,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_FAQ>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3095,6 +3189,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3120,6 +3215,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3144,6 +3240,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_TESTEMONIAL>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3194,6 +3291,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3214,6 +3312,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3233,6 +3332,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.ARTICLE>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3283,6 +3383,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3303,6 +3404,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3322,6 +3424,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3373,6 +3476,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         description: string;
         audienceId: string;
@@ -3393,6 +3497,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         description: string;
         audienceId: string;
@@ -3412,6 +3517,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_OPINION>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3475,6 +3581,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3499,6 +3606,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3522,6 +3630,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_TIPS>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3579,6 +3688,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3601,6 +3711,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3622,6 +3733,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_GUIDE>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3679,6 +3791,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3701,6 +3814,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3722,6 +3836,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_COMPARISON>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3782,6 +3897,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3805,6 +3921,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3827,6 +3944,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_CASE_STUDY>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3887,6 +4005,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3910,6 +4029,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3932,6 +4052,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: z.ZodString;
     companyId: z.ZodString;
     name: z.ZodString;
+    id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_GENERAL>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
@@ -3989,6 +4110,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -4011,6 +4133,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     websiteId: string;
     companyId: string;
     name: string;
+    id: string;
     output: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";

@@ -11,6 +11,7 @@ var ZDocumentEntityBase = zod_1.z.object({
     websiteId: zod_1.z.string(),
     companyId: zod_1.z.string(),
     name: zod_1.z.string(),
+    id: zod_1.z.string(),
 });
 // Base Output Schema
 var baseOutputSchema = zod_1.z.object({
