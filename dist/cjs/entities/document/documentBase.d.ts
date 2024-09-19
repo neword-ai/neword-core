@@ -1076,20 +1076,20 @@ export declare const DocumentTypeFactory: {
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
-            introductoryText: z.ZodString;
-            headline: z.ZodString;
-            description: z.ZodString;
+            AdText: z.ZodString;
+            AdHeadline: z.ZodString;
+            captionText: z.ZodString;
             callToActionButton: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            description: string;
+            captionText: string;
+            AdText: string;
+            AdHeadline: string;
             callToActionButton: string;
-            introductoryText: string;
-            headline: string;
         }, {
-            description: string;
+            captionText: string;
+            AdText: string;
+            AdHeadline: string;
             callToActionButton: string;
-            introductoryText: string;
-            headline: string;
         }>;
         category: DocumentCategory;
     };
@@ -1265,13 +1265,13 @@ export declare const DocumentTypeFactory: {
         }, "strip", z.ZodTypeAny, {
             description: string;
             callToActionButton: string;
-            headline: string;
             primaryText: string;
+            headline: string;
         }, {
             description: string;
             callToActionButton: string;
-            headline: string;
             primaryText: string;
+            headline: string;
         }>;
         category: DocumentCategory;
     };
