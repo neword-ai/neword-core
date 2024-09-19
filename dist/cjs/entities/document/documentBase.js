@@ -349,7 +349,7 @@ exports.DocumentTypeFactory = (_b = {},
         output: zod_1.z.object({
             AdText: zod_1.z.string(),
             AdHeadline: zod_1.z.string(),
-            captionTwxt: zod_1.z.string(),
+            captionText: zod_1.z.string(),
             callToActionButton: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.PAID,

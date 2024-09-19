@@ -377,7 +377,7 @@ export const DocumentTypeFactory = {
     output: z.object({
       AdText: z.string(),
       AdHeadline: z.string(),
-      captionTwxt: z.string(),
+      captionText: z.string(),
       callToActionButton: z.string(),
     }),
     category: DocumentCategory.PAID,

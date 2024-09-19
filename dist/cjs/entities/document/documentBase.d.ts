@@ -1036,17 +1036,17 @@ export declare const DocumentTypeFactory: {
         output: z.ZodObject<{
             AdText: z.ZodString;
             AdHeadline: z.ZodString;
-            captionTwxt: z.ZodString;
+            captionText: z.ZodString;
             callToActionButton: z.ZodString;
         }, "strip", z.ZodTypeAny, {
+            captionText: string;
             AdText: string;
             AdHeadline: string;
-            captionTwxt: string;
             callToActionButton: string;
         }, {
+            captionText: string;
             AdText: string;
             AdHeadline: string;
-            captionTwxt: string;
             callToActionButton: string;
         }>;
         category: DocumentCategory;
