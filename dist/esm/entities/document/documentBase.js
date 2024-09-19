@@ -343,9 +343,9 @@ export const DocumentTypeFactory = {
             mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
         }),
         output: z.object({
-            introductoryText: z.string(),
-            headline: z.string(),
-            description: z.string(),
+            AdText: z.string(),
+            AdHeadline: z.string(),
+            captionTwxt: z.string(),
             callToActionButton: z.string(),
         }),
         category: DocumentCategory.PAID,

@@ -1034,19 +1034,19 @@ export declare const DocumentTypeFactory: {
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
-            introductoryText: z.ZodString;
-            headline: z.ZodString;
-            description: z.ZodString;
+            AdText: z.ZodString;
+            AdHeadline: z.ZodString;
+            captionTwxt: z.ZodString;
             callToActionButton: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            description: string;
-            introductoryText: string;
-            headline: string;
+            AdText: string;
+            AdHeadline: string;
+            captionTwxt: string;
             callToActionButton: string;
         }, {
-            description: string;
-            introductoryText: string;
-            headline: string;
+            AdText: string;
+            AdHeadline: string;
+            captionTwxt: string;
             callToActionButton: string;
         }>;
         category: DocumentCategory;
@@ -1082,14 +1082,14 @@ export declare const DocumentTypeFactory: {
             callToActionButton: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            callToActionButton: string;
             introductoryText: string;
             headline: string;
-            callToActionButton: string;
         }, {
             description: string;
+            callToActionButton: string;
             introductoryText: string;
             headline: string;
-            callToActionButton: string;
         }>;
         category: DocumentCategory;
     };
@@ -1160,14 +1160,14 @@ export declare const DocumentTypeFactory: {
             callToActionButton: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
+            callToActionButton: string;
             introductoryText: string;
             headline: string;
-            callToActionButton: string;
         }, {
             description: string;
+            callToActionButton: string;
             introductoryText: string;
             headline: string;
-            callToActionButton: string;
         }>;
         category: DocumentCategory;
     };
@@ -1264,13 +1264,13 @@ export declare const DocumentTypeFactory: {
             callToActionButton: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             description: string;
-            headline: string;
             callToActionButton: string;
+            headline: string;
             primaryText: string;
         }, {
             description: string;
-            headline: string;
             callToActionButton: string;
+            headline: string;
             primaryText: string;
         }>;
         category: DocumentCategory;
