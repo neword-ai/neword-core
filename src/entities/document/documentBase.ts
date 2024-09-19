@@ -490,7 +490,7 @@ export const DocumentTypeFactory = {
         cta: z.string(),
       }),
     output: z.object({
-      headlines: z.array(z.string()),
+      headlines: z.string(),
       descriptions: z.string(),
     }),
     category: DocumentCategory.PAID,

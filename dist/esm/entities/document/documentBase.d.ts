@@ -1342,13 +1342,13 @@ export declare const DocumentTypeFactory: {
             imageUrl?: string | undefined;
         }>;
         output: z.ZodObject<{
-            headlines: z.ZodArray<z.ZodString, "many">;
+            headlines: z.ZodString;
             descriptions: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            headlines: string[];
+            headlines: string;
             descriptions: string;
         }, {
-            headlines: string[];
+            headlines: string;
             descriptions: string;
         }>;
         category: DocumentCategory;
