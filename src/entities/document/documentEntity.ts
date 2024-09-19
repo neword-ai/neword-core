@@ -8,6 +8,7 @@ const ZDocumentEntityBase = z.object({
   websiteId: z.string(),
   companyId: z.string(),
   name: z.string(),
+  id: z.string(),
 });
 
 // Base Output Schema
