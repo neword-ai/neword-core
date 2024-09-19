@@ -456,7 +456,7 @@ exports.DocumentTypeFactory = (_b = {},
         }),
         output: zod_1.z.object({
             headlines: zod_1.z.array(zod_1.z.string()),
-            descriptions: zod_1.z.array(zod_1.z.string()),
+            descriptions: zod_1.z.string(),
         }),
         category: documentCategory_1.DocumentCategory.PAID,
     },

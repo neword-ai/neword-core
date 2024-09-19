@@ -1343,13 +1343,13 @@ export declare const DocumentTypeFactory: {
         }>;
         output: z.ZodObject<{
             headlines: z.ZodArray<z.ZodString, "many">;
-            descriptions: z.ZodArray<z.ZodString, "many">;
+            descriptions: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             headlines: string[];
-            descriptions: string[];
+            descriptions: string;
         }, {
             headlines: string[];
-            descriptions: string[];
+            descriptions: string;
         }>;
         category: DocumentCategory;
     };
