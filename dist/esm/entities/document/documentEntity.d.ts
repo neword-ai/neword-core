@@ -3054,21 +3054,24 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
     }, {
         cta: z.ZodOptional<z.ZodString>;
-        additionalInformation: z.ZodOptional<z.ZodString>;
+        keywords: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+        internalLinks: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     }>, "strip", z.ZodTypeAny, {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         description?: string | undefined;
         imageUrl?: string | undefined;
         cta?: string | undefined;
-        additionalInformation?: string | undefined;
+        keywords?: string[] | undefined;
+        internalLinks?: string[] | undefined;
     }, {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         description?: string | undefined;
         imageUrl?: string | undefined;
         cta?: string | undefined;
-        additionalInformation?: string | undefined;
+        keywords?: string[] | undefined;
+        internalLinks?: string[] | undefined;
     }>;
 }>, "strip", z.ZodTypeAny, {
     type: DocumentEntityType.WEBSITE_ABOUT;
@@ -3089,7 +3092,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         description?: string | undefined;
         imageUrl?: string | undefined;
         cta?: string | undefined;
-        additionalInformation?: string | undefined;
+        keywords?: string[] | undefined;
+        internalLinks?: string[] | undefined;
     };
 }, {
     type: DocumentEntityType.WEBSITE_ABOUT;
@@ -3110,7 +3114,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         description?: string | undefined;
         imageUrl?: string | undefined;
         cta?: string | undefined;
-        additionalInformation?: string | undefined;
+        keywords?: string[] | undefined;
+        internalLinks?: string[] | undefined;
     };
 }>, z.ZodObject<z.objectUtil.extendShape<{
     websiteId: z.ZodString;
@@ -3334,98 +3339,6 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: z.ZodString;
     id: z.ZodString;
 }, {
-    type: z.ZodLiteral<DocumentEntityType.ARTICLE>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
-        blogHtml: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
-        blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
-    }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
-        blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
-    }>, "many">;
-    inputParams: z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
-        cta: z.ZodOptional<z.ZodString>;
-        additionalInformation: z.ZodOptional<z.ZodString>;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
-        description?: string | undefined;
-        imageUrl?: string | undefined;
-        cta?: string | undefined;
-        additionalInformation?: string | undefined;
-    }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
-        description?: string | undefined;
-        imageUrl?: string | undefined;
-        cta?: string | undefined;
-        additionalInformation?: string | undefined;
-    }>;
-}>, "strip", z.ZodTypeAny, {
-    type: DocumentEntityType.ARTICLE;
-    websiteId: string;
-    companyId: string;
-    name: string;
-    id: string;
-    output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
-        blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
-    }[];
-    inputParams: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
-        description?: string | undefined;
-        imageUrl?: string | undefined;
-        cta?: string | undefined;
-        additionalInformation?: string | undefined;
-    };
-}, {
-    type: DocumentEntityType.ARTICLE;
-    websiteId: string;
-    companyId: string;
-    name: string;
-    id: string;
-    output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
-        blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
-    }[];
-    inputParams: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
-        description?: string | undefined;
-        imageUrl?: string | undefined;
-        cta?: string | undefined;
-        additionalInformation?: string | undefined;
-    };
-}>, z.ZodObject<z.objectUtil.extendShape<{
-    websiteId: z.ZodString;
-    companyId: z.ZodString;
-    name: z.ZodString;
-    id: z.ZodString;
-}, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION>;
     output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3503,6 +3416,98 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         productName: string;
+        imageUrl?: string | undefined;
+    }[];
+    inputParams: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+        cta?: string | undefined;
+        additionalInformation?: string | undefined;
+    };
+}>, z.ZodObject<z.objectUtil.extendShape<{
+    websiteId: z.ZodString;
+    companyId: z.ZodString;
+    name: z.ZodString;
+    id: z.ZodString;
+}, {
+    type: z.ZodLiteral<DocumentEntityType.ARTICLE>;
+    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
+        description: z.ZodOptional<z.ZodString>;
+        imageUrl: z.ZodOptional<z.ZodString>;
+        audienceId: z.ZodString;
+        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+    }, {
+        blogHtml: z.ZodString;
+    }>, "strip", z.ZodTypeAny, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        blogHtml: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        blogHtml: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }>, "many">;
+    inputParams: z.ZodObject<z.objectUtil.extendShape<{
+        description: z.ZodOptional<z.ZodString>;
+        imageUrl: z.ZodOptional<z.ZodString>;
+        audienceId: z.ZodString;
+        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+    }, {
+        cta: z.ZodOptional<z.ZodString>;
+        additionalInformation: z.ZodOptional<z.ZodString>;
+    }>, "strip", z.ZodTypeAny, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+        cta?: string | undefined;
+        additionalInformation?: string | undefined;
+    }, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+        cta?: string | undefined;
+        additionalInformation?: string | undefined;
+    }>;
+}>, "strip", z.ZodTypeAny, {
+    type: DocumentEntityType.ARTICLE;
+    websiteId: string;
+    companyId: string;
+    name: string;
+    id: string;
+    output: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        blogHtml: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }[];
+    inputParams: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+        cta?: string | undefined;
+        additionalInformation?: string | undefined;
+    };
+}, {
+    type: DocumentEntityType.ARTICLE;
+    websiteId: string;
+    companyId: string;
+    name: string;
+    id: string;
+    output: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        blogHtml: string;
+        description?: string | undefined;
         imageUrl?: string | undefined;
     }[];
     inputParams: {

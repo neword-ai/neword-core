@@ -32,10 +32,10 @@ export const DocumentTypeToCategory: Record<
   [DocumentEntityType.EMAIL_CONTENT]: DocumentCategory.MAILING,
 
   // SMS
-  [DocumentEntityType.FLASH_SALE_SMS]: DocumentCategory.SMS,
-  [DocumentEntityType.NOTIFICATION_SMS]: DocumentCategory.SMS,
-  [DocumentEntityType.SMS_CONTENT]: DocumentCategory.SMS,
-  [DocumentEntityType.SMS_IDEA]: DocumentCategory.SMS,
+  [DocumentEntityType.FLASH_SALE_SMS]: DocumentCategory.MAILING,
+  [DocumentEntityType.NOTIFICATION_SMS]: DocumentCategory.MAILING,
+  [DocumentEntityType.SMS_CONTENT]: DocumentCategory.MAILING,
+  [DocumentEntityType.SMS_IDEA]: DocumentCategory.MAILING,
 
   // PAID
   [DocumentEntityType.GOOGLE_ADS_KEYWORDS]: DocumentCategory.PAID,
@@ -48,11 +48,11 @@ export const DocumentTypeToCategory: Record<
   [DocumentEntityType.WEBSITE_ABOUT]: DocumentCategory.WEB,
   [DocumentEntityType.WEBSITE_FAQ]: DocumentCategory.WEB,
   [DocumentEntityType.WEBSITE_TESTEMONIAL]: DocumentCategory.WEB,
-  [DocumentEntityType.ARTICLE]: DocumentCategory.WEB,
   [DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION]: DocumentCategory.WEB,
 
   // BLOG
   [DocumentEntityType.BLOG_POST_OPINION]: DocumentCategory.BLOG,
+  [DocumentEntityType.ARTICLE]: DocumentCategory.BLOG,
   [DocumentEntityType.BLOG_POST_TIPS]: DocumentCategory.BLOG,
   [DocumentEntityType.BLOG_POST_GUIDE]: DocumentCategory.BLOG,
   [DocumentEntityType.BLOG_POST_COMPARISON]: DocumentCategory.BLOG,

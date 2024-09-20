@@ -483,7 +483,7 @@ var websiteAboutSchema = ZDocumentEntityBase.extend({
     output: zod_1.z.array(baseOutputSchema.extend({
         aboutContent: zod_1.z.string(),
     })),
-    inputParams: baseInputParams.merge(categoryInputParams[documentCategory_1.DocumentCategory.WEB]),
+    inputParams: baseInputParams.merge(categoryInputParams[documentCategory_1.DocumentCategory.BLOG]),
 });
 var websiteFaqSchema = ZDocumentEntityBase.extend({
     type: zod_1.z.literal(DocumentEntityType_1.DocumentEntityType.WEBSITE_FAQ),
@@ -561,9 +561,9 @@ exports.ZDocumentEntity = zod_1.z.discriminatedUnion("type", [
     websiteAboutSchema,
     websiteFaqSchema,
     websiteTestimonialSchema,
-    articleSchema,
     websiteProductDescriptionSchema,
     // BLOG
+    articleSchema,
     blogPostOpinionSchema,
     blogPostTipsSchema,
     blogPostGuideSchema,

@@ -612,7 +612,9 @@ const websiteAboutSchema = ZDocumentEntityBase.extend({
       aboutContent: z.string(),
     })
   ),
-  inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.WEB]),
+  inputParams: baseInputParams.merge(
+    categoryInputParams[DocumentCategory.BLOG]
+  ),
 });
 
 const websiteFaqSchema = ZDocumentEntityBase.extend({
@@ -712,10 +714,10 @@ export const ZDocumentEntity = z.discriminatedUnion("type", [
   websiteAboutSchema,
   websiteFaqSchema,
   websiteTestimonialSchema,
-  articleSchema,
   websiteProductDescriptionSchema,
 
   // BLOG
+  articleSchema,
   blogPostOpinionSchema,
   blogPostTipsSchema,
   blogPostGuideSchema,
