@@ -55,6 +55,7 @@ const FacebookPostSchema = z.object({
   type: z.literal("FACEBOOK_POST"), // Literal type for identification
   message: z.string().optional(), // Facebook-specific field
   published: z.boolean(), // Facebook-specific field
+  imageUrl: z.string().optional(), // Facebook-specific field
 });
 
 // TikTok Post Schema

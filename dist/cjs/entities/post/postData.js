@@ -49,6 +49,7 @@ var FacebookPostSchema = zod_1.z.object({
     type: zod_1.z.literal("FACEBOOK_POST"), // Literal type for identification
     message: zod_1.z.string().optional(), // Facebook-specific field
     published: zod_1.z.boolean(), // Facebook-specific field
+    imageUrl: zod_1.z.string().optional(), // Facebook-specific field
 });
 // TikTok Post Schema
 var TiktokPostSchema = zod_1.z.object({

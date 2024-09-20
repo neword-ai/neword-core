@@ -131,14 +131,17 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: z.ZodLiteral<"FACEBOOK_POST">;
     message: z.ZodOptional<z.ZodString>;
     published: z.ZodBoolean;
+    imageUrl: z.ZodOptional<z.ZodString>;
 }, "strip", z.ZodTypeAny, {
     type: "FACEBOOK_POST";
     published: boolean;
     message?: string | undefined;
+    imageUrl?: string | undefined;
 }, {
     type: "FACEBOOK_POST";
     published: boolean;
     message?: string | undefined;
+    imageUrl?: string | undefined;
 }>, z.ZodObject<{
     type: z.ZodLiteral<"TIKTOK_POST">;
     description: z.ZodString;
