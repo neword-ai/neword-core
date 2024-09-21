@@ -60,7 +60,7 @@ const instagramCaptionSchema = ZDocumentEntityBase.extend({
         postGoal: z.string().describe("מטרת הפוסט"),
     }),
 });
-const instagramSponsoredAdSchema = z.object({
+const instagramSponsoredAdSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_SPONSORED_AD),
     inputParams: baseInputParams
         .merge(categoryInputParams[DocumentCategory.PAID])
@@ -529,7 +529,7 @@ const websiteProductDescriptionSchema = ZDocumentEntityBase.extend({
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.WEB]),
 });
-const linkedinSponsoredAdSchema = z.object({
+const linkedinSponsoredAdSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.LINKEDIN_SPONSORED_AD),
     inputParams: baseInputParams
         .merge(categoryInputParams[DocumentCategory.PAID])
@@ -546,7 +546,7 @@ const linkedinSponsoredAdSchema = z.object({
     category: z.literal(DocumentCategory.PAID),
 });
 // FACEBOOK_SPONSORED_AD Schema
-const facebookSponsoredAdSchema = z.object({
+const facebookSponsoredAdSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.FACEBOOK_SPONSORED_AD),
     inputParams: baseInputParams
         .merge(categoryInputParams[DocumentCategory.PAID])

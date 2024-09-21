@@ -3021,7 +3021,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         description?: string | undefined;
         imageUrl?: string | undefined;
     };
-}>, z.ZodObject<{
+}>, z.ZodObject<z.objectUtil.extendShape<{
+    websiteId: z.ZodString;
+    companyId: z.ZodString;
+    name: z.ZodString;
+    id: z.ZodString;
+}, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_SPONSORED_AD>;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3057,8 +3062,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         callToAction: string;
     }>;
     category: z.ZodLiteral<DocumentCategory.PAID>;
-}, "strip", z.ZodTypeAny, {
+}>, "strip", z.ZodTypeAny, {
     type: DocumentEntityType.INSTAGRAM_SPONSORED_AD;
+    websiteId: string;
+    companyId: string;
+    name: string;
+    id: string;
     output: {
         primaryText: string;
         callToAction: string;
@@ -3074,6 +3083,10 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     category: DocumentCategory.PAID;
 }, {
     type: DocumentEntityType.INSTAGRAM_SPONSORED_AD;
+    websiteId: string;
+    companyId: string;
+    name: string;
+    id: string;
     output: {
         primaryText: string;
         callToAction: string;
@@ -3087,7 +3100,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         imageUrl?: string | undefined;
     };
     category: DocumentCategory.PAID;
-}>, z.ZodObject<{
+}>, z.ZodObject<z.objectUtil.extendShape<{
+    websiteId: z.ZodString;
+    companyId: z.ZodString;
+    name: z.ZodString;
+    id: z.ZodString;
+}, {
     type: z.ZodLiteral<DocumentEntityType.LINKEDIN_SPONSORED_AD>;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3129,8 +3147,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         AdHeadline: string;
     }>;
     category: z.ZodLiteral<DocumentCategory.PAID>;
-}, "strip", z.ZodTypeAny, {
+}>, "strip", z.ZodTypeAny, {
     type: DocumentEntityType.LINKEDIN_SPONSORED_AD;
+    websiteId: string;
+    companyId: string;
+    name: string;
+    id: string;
     output: {
         captionText: string;
         callToActionButton: string;
@@ -3148,6 +3170,10 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     category: DocumentCategory.PAID;
 }, {
     type: DocumentEntityType.LINKEDIN_SPONSORED_AD;
+    websiteId: string;
+    companyId: string;
+    name: string;
+    id: string;
     output: {
         captionText: string;
         callToActionButton: string;
@@ -3163,7 +3189,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         imageUrl?: string | undefined;
     };
     category: DocumentCategory.PAID;
-}>, z.ZodObject<{
+}>, z.ZodObject<z.objectUtil.extendShape<{
+    websiteId: z.ZodString;
+    companyId: z.ZodString;
+    name: z.ZodString;
+    id: z.ZodString;
+}, {
     type: z.ZodLiteral<DocumentEntityType.FACEBOOK_SPONSORED_AD>;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3205,8 +3236,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         AdHeadline: string;
     }>;
     category: z.ZodLiteral<DocumentCategory.PAID>;
-}, "strip", z.ZodTypeAny, {
+}>, "strip", z.ZodTypeAny, {
     type: DocumentEntityType.FACEBOOK_SPONSORED_AD;
+    websiteId: string;
+    companyId: string;
+    name: string;
+    id: string;
     output: {
         captionText: string;
         callToActionButton: string;
@@ -3224,6 +3259,10 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     category: DocumentCategory.PAID;
 }, {
     type: DocumentEntityType.FACEBOOK_SPONSORED_AD;
+    websiteId: string;
+    companyId: string;
+    name: string;
+    id: string;
     output: {
         captionText: string;
         callToActionButton: string;
