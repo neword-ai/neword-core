@@ -9,13 +9,6 @@ const ZDocumentEntityBase = z.object({
     name: z.string(),
     id: z.string(),
 });
-// Base Output Schema
-const baseOutputSchema = z.object({
-    description: z.string().optional(),
-    imageUrl: z.string().optional(),
-    audienceId: z.string(),
-    tone: ZDocumentToneType,
-});
 // Base Input Params
 const baseInputParams = z.object({
     description: z.string().optional(),
@@ -50,7 +43,7 @@ const categoryInputParams = {
 // SOCIAL MEDIA Schemas
 const instagramCaptionSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_CAPTION),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         captionText: z.string(),
     })),
     inputParams: baseInputParams
@@ -68,15 +61,15 @@ const instagramSponsoredAdSchema = ZDocumentEntityBase.extend({
         adGoal: z.string().describe("מטרת הפרסומת"),
         mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
     }),
-    output: z.object({
+    output: z.array(z.object({
         primaryText: z.string(),
         callToAction: z.string(),
-    }),
+    })),
     category: z.literal(DocumentCategory.PAID),
 });
 const instagramPostIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_POST_IDEA),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         ideaDescription: z.string(),
         imageDescription: z.string(),
     })),
@@ -89,14 +82,14 @@ const instagramPostIdeaSchema = ZDocumentEntityBase.extend({
 });
 const instagramBioDescriptionSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_BIO_DESCRIPTION),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         bioDescription: z.string(),
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA]),
 });
 const instagramStoryIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_STORY_IDEA),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         storyIdea: z.string(),
         storyDescription: z.string(),
         storyWidgets: z.string(),
@@ -105,7 +98,7 @@ const instagramStoryIdeaSchema = ZDocumentEntityBase.extend({
 });
 const instagramReelIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_REEL_IDEA),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         reelIdea: z.string(),
         reelDescription: z.string(),
         reelWidgets: z.string(),
@@ -114,7 +107,7 @@ const instagramReelIdeaSchema = ZDocumentEntityBase.extend({
 });
 const instagramReelScriptSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_REEL_SCRIPT),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         reelScript: z.string(),
     })),
     inputParams: baseInputParams
@@ -126,7 +119,7 @@ const instagramReelScriptSchema = ZDocumentEntityBase.extend({
 // LinkedIn Types
 const linkedInPostCaptionSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.LINKEDIN_POST_CAPTION),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         postCaption: z.string(),
     })),
     inputParams: baseInputParams
@@ -138,7 +131,7 @@ const linkedInPostCaptionSchema = ZDocumentEntityBase.extend({
 });
 const linkedInPostIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.LINKEDIN_POST_IDEA),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         postIdea: z.string(),
         imageDescription: z.string(),
     })),
@@ -151,7 +144,7 @@ const linkedInPostIdeaSchema = ZDocumentEntityBase.extend({
 });
 const linkedInPageAboutSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.LINKEDIN_PAGE_ABOUT),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         pageAbout: z.string(),
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA]),
@@ -159,7 +152,7 @@ const linkedInPageAboutSchema = ZDocumentEntityBase.extend({
 // Facebook Types
 const facebookPostCaptionSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.FACEBOOK_POST_CAPTION),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         postCaption: z.string(),
     })),
     inputParams: baseInputParams
@@ -171,7 +164,7 @@ const facebookPostCaptionSchema = ZDocumentEntityBase.extend({
 });
 const facebookPostIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.FACEBOOK_POST_IDEA),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         postIdea: z.string(),
         imageIdea: z.string().describe("Image idea for the post"),
     })),
@@ -184,7 +177,7 @@ const facebookPostIdeaSchema = ZDocumentEntityBase.extend({
 });
 const facebookPageAboutSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.FACEBOOK_PAGE_ABOUT),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         pageAbout: z.string(),
     })),
     inputParams: baseInputParams
@@ -197,7 +190,7 @@ const facebookPageAboutSchema = ZDocumentEntityBase.extend({
 // Twitter & Threads Types
 const twitterTwitSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.TWITTER_TWIT),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         tweetContent: z.string(),
     })),
     inputParams: baseInputParams
@@ -209,7 +202,7 @@ const twitterTwitSchema = ZDocumentEntityBase.extend({
 });
 const threadsTwitSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.THREADS_TWIT),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         threadContent: z.string(),
     })),
     inputParams: baseInputParams
@@ -222,7 +215,7 @@ const threadsTwitSchema = ZDocumentEntityBase.extend({
 // MAILING Types
 const cartAbandonmentEmailSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.CART_ABANDONMENT_EMAIL),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         subject: z.string(),
         mailBody: z.string(),
     })),
@@ -238,7 +231,7 @@ const cartAbandonmentEmailSchema = ZDocumentEntityBase.extend({
 });
 const trafficEmailSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.TRAFFIC_EMAIL),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         subject: z.string(),
         mailBody: z.string(),
     })),
@@ -250,7 +243,7 @@ const trafficEmailSchema = ZDocumentEntityBase.extend({
 });
 const pushNotificationSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.PUSH_NOTIFICATION),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         message: z.string(),
         title: z.string(),
     })),
@@ -264,7 +257,7 @@ const pushNotificationSchema = ZDocumentEntityBase.extend({
 });
 const newsletterEmailSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.NEWSLETTER_EMAIL),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         subject: z.string(),
         mailBody: z.string(),
     })),
@@ -278,7 +271,7 @@ const newsletterEmailSchema = ZDocumentEntityBase.extend({
 // PAID Schemas
 const googleAdsKeywordsSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.GOOGLE_ADS_KEYWORDS),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         keywordsType: z.string(),
         adKeywords: z.array(z.string()),
     })),
@@ -291,7 +284,7 @@ const googleAdsKeywordsSchema = ZDocumentEntityBase.extend({
 // BLOG Schemas
 const blogPostOpinionSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.BLOG_POST_OPINION),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         blogHtml: z.string(),
     })),
     inputParams: baseInputParams
@@ -304,7 +297,7 @@ const blogPostOpinionSchema = ZDocumentEntityBase.extend({
 });
 const productUpdateEmailSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.PRODUCT_UPDATE_EMAIL),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         subject: z.string(),
         mailBody: z.string(),
     })),
@@ -321,7 +314,7 @@ const productUpdateEmailSchema = ZDocumentEntityBase.extend({
 });
 const welcomeEmailSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.WELCOME_EMAIL),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         subject: z.string(),
         mailBody: z.string(),
     })),
@@ -329,7 +322,7 @@ const welcomeEmailSchema = ZDocumentEntityBase.extend({
 });
 const emailContentSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.EMAIL_CONTENT),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         subject: z.string(),
         mailBody: z.string(),
     })),
@@ -337,7 +330,7 @@ const emailContentSchema = ZDocumentEntityBase.extend({
 });
 const flashSaleSmsSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.FLASH_SALE_SMS),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         smsContent: z.string(),
     })),
     inputParams: baseInputParams
@@ -351,7 +344,7 @@ const flashSaleSmsSchema = ZDocumentEntityBase.extend({
 });
 const notificationSmsSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.NOTIFICATION_SMS),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         smsContent: z.string(),
     })),
     inputParams: baseInputParams
@@ -366,7 +359,7 @@ const notificationSmsSchema = ZDocumentEntityBase.extend({
 });
 const smsContentSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.SMS_CONTENT),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         smsContent: z.string(),
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SMS].extend({
@@ -375,21 +368,21 @@ const smsContentSchema = ZDocumentEntityBase.extend({
 });
 const smsIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.SMS_IDEA),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         smsIdea: z.string(),
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SMS]),
 });
 const googleAdsIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.GOOGLE_ADS_IDEA),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         adIdea: z.string(),
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.PAID]),
 });
 const socialAdSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.SOCIAL_AD),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         primaryText: z.string(),
         headline: z.string(),
         description: z.string(),
@@ -405,7 +398,7 @@ const socialAdSchema = ZDocumentEntityBase.extend({
 });
 const emailAdPromoSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.EMAIL_AD_PROMO),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         subject: z.string(),
         content: z.string(),
     })),
@@ -419,7 +412,7 @@ const emailAdPromoSchema = ZDocumentEntityBase.extend({
 });
 const searchAdSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.SEARCH_AD),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         headlines: z.string(),
         descriptions: z.string(),
     })),
@@ -433,7 +426,7 @@ const searchAdSchema = ZDocumentEntityBase.extend({
 });
 const blogPostTipsSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.BLOG_POST_TIPS),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         blogHtml: z.string(),
     })),
     inputParams: baseInputParams
@@ -444,7 +437,7 @@ const blogPostTipsSchema = ZDocumentEntityBase.extend({
 });
 const blogPostGuideSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.BLOG_POST_GUIDE),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         blogHtml: z.string(),
     })),
     inputParams: baseInputParams
@@ -455,7 +448,7 @@ const blogPostGuideSchema = ZDocumentEntityBase.extend({
 });
 const blogPostComparisonSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.BLOG_POST_COMPARISON),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         blogHtml: z.string(),
     })),
     inputParams: baseInputParams
@@ -467,7 +460,7 @@ const blogPostComparisonSchema = ZDocumentEntityBase.extend({
 });
 const blogPostCaseStudySchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.BLOG_POST_CASE_STUDY),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         blogHtml: z.string(),
     })),
     inputParams: baseInputParams
@@ -479,7 +472,7 @@ const blogPostCaseStudySchema = ZDocumentEntityBase.extend({
 });
 const blogPostGeneralSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.BLOG_POST_GENERAL),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         blogHtml: z.string(),
     })),
     inputParams: baseInputParams
@@ -490,14 +483,14 @@ const blogPostGeneralSchema = ZDocumentEntityBase.extend({
 });
 const websiteAboutSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.WEBSITE_ABOUT),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         aboutContent: z.string(),
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.BLOG]),
 });
 const websiteFaqSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.WEBSITE_FAQ),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         faqEntries: z.array(z.object({ question: z.string(), answer: z.string() })),
     })),
     inputParams: baseInputParams
@@ -509,21 +502,21 @@ const websiteFaqSchema = ZDocumentEntityBase.extend({
 });
 const websiteTestimonialSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.WEBSITE_TESTEMONIAL),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         testimonial: z.string(),
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.WEB]),
 });
 const articleSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.ARTICLE),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         blogHtml: z.string(),
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.WEB]),
 });
 const websiteProductDescriptionSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION),
-    output: z.array(baseOutputSchema.extend({
+    output: z.array(z.object({
         productName: z.string(),
         description: z.string(),
     })),
@@ -537,12 +530,12 @@ const linkedinSponsoredAdSchema = ZDocumentEntityBase.extend({
         adGoal: z.string().describe("מטרת הפרסומת"),
         mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
     }),
-    output: z.object({
+    output: z.array(z.object({
         AdText: z.string(),
         AdHeadline: z.string(),
         captionText: z.string(),
         callToActionButton: z.string(),
-    }),
+    })),
     category: z.literal(DocumentCategory.PAID),
 });
 // FACEBOOK_SPONSORED_AD Schema
@@ -554,12 +547,12 @@ const facebookSponsoredAdSchema = ZDocumentEntityBase.extend({
         adGoal: z.string().describe("מטרת הפרסומת"),
         mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
     }),
-    output: z.object({
+    output: z.array(z.object({
         AdText: z.string(),
         AdHeadline: z.string(),
         captionText: z.string(),
         callToActionButton: z.string(),
-    }),
+    })),
     category: z.literal(DocumentCategory.PAID),
 });
 export const ZDocumentEntity = z.discriminatedUnion("type", [

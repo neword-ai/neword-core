@@ -8,25 +8,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_CAPTION>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         captionText: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         captionText: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         captionText: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -65,11 +52,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         captionText: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -88,11 +71,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         captionText: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -111,28 +90,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_POST_IDEA>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         ideaDescription: z.ZodString;
         imageDescription: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         ideaDescription: string;
         imageDescription: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         ideaDescription: string;
         imageDescription: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -171,12 +137,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         ideaDescription: string;
         imageDescription: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -195,12 +157,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         ideaDescription: string;
         imageDescription: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -219,25 +177,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_BIO_DESCRIPTION>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         bioDescription: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         bioDescription: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         bioDescription: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -269,11 +214,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         bioDescription: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -290,11 +231,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         bioDescription: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -311,31 +248,18 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_STORY_IDEA>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         storyIdea: z.ZodString;
         storyDescription: z.ZodString;
         storyWidgets: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         storyIdea: string;
         storyDescription: string;
         storyWidgets: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         storyIdea: string;
         storyDescription: string;
         storyWidgets: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -367,13 +291,9 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         storyIdea: string;
         storyDescription: string;
         storyWidgets: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -390,13 +310,9 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         storyIdea: string;
         storyDescription: string;
         storyWidgets: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -413,31 +329,18 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_REEL_IDEA>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         reelIdea: z.ZodString;
         reelDescription: z.ZodString;
         reelWidgets: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         reelIdea: string;
         reelDescription: string;
         reelWidgets: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         reelIdea: string;
         reelDescription: string;
         reelWidgets: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -469,13 +372,9 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         reelIdea: string;
         reelDescription: string;
         reelWidgets: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -492,13 +391,9 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         reelIdea: string;
         reelDescription: string;
         reelWidgets: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -515,25 +410,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_REEL_SCRIPT>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         reelScript: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         reelScript: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         reelScript: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -569,11 +451,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         reelScript: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -591,11 +469,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         reelScript: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -613,25 +487,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.LINKEDIN_POST_CAPTION>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         postCaption: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         postCaption: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postCaption: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -670,11 +531,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postCaption: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -693,11 +550,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postCaption: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -716,28 +569,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.LINKEDIN_POST_IDEA>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         postIdea: z.ZodString;
         imageDescription: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         imageDescription: string;
         postIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         imageDescription: string;
         postIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -776,12 +616,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         imageDescription: string;
         postIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -800,12 +636,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         imageDescription: string;
         postIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -824,25 +656,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.LINKEDIN_PAGE_ABOUT>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         pageAbout: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         pageAbout: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         pageAbout: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -874,11 +693,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         pageAbout: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -895,11 +710,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         pageAbout: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -916,25 +727,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.FACEBOOK_POST_CAPTION>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         postCaption: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         postCaption: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postCaption: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -973,11 +771,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postCaption: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -996,11 +790,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postCaption: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1019,28 +809,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.FACEBOOK_POST_IDEA>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         postIdea: z.ZodString;
         imageIdea: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         postIdea: string;
         imageIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postIdea: string;
         imageIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1079,12 +856,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postIdea: string;
         imageIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1103,12 +876,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         postIdea: string;
         imageIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1127,25 +896,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.FACEBOOK_PAGE_ABOUT>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         pageAbout: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         pageAbout: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         pageAbout: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1184,11 +940,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         pageAbout: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1207,11 +959,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         pageAbout: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1230,25 +978,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.TWITTER_TWIT>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         tweetContent: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         tweetContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         tweetContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1287,11 +1022,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         tweetContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1310,11 +1041,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         tweetContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1333,25 +1060,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.THREADS_TWIT>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         threadContent: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         threadContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         threadContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1390,11 +1104,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         threadContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1413,11 +1123,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         threadContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1436,28 +1142,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.CART_ABANDONMENT_EMAIL>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         subject: z.ZodString;
         mailBody: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1496,12 +1189,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1520,12 +1209,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1544,28 +1229,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.TRAFFIC_EMAIL>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         subject: z.ZodString;
         mailBody: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1598,12 +1270,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1620,12 +1288,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1642,28 +1306,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.PUSH_NOTIFICATION>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         message: z.ZodString;
         title: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
+    }, "strip", z.ZodTypeAny, {
         message: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         title: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
         message: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         title: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1701,11 +1352,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: string;
     output: {
         message: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         title: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1724,11 +1371,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: string;
     output: {
         message: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         title: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1746,28 +1389,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.NEWSLETTER_EMAIL>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         subject: z.ZodString;
         mailBody: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1801,12 +1431,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1823,12 +1449,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1845,28 +1467,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.PRODUCT_UPDATE_EMAIL>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         subject: z.ZodString;
         mailBody: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1902,12 +1511,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1925,12 +1530,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -1948,28 +1549,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WELCOME_EMAIL>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         subject: z.ZodString;
         mailBody: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -1998,12 +1586,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2019,12 +1603,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2040,28 +1620,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.EMAIL_CONTENT>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         subject: z.ZodString;
         mailBody: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2090,12 +1657,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2111,12 +1674,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         mailBody: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2132,25 +1691,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.FLASH_SALE_SMS>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         smsContent: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2195,11 +1741,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2220,11 +1762,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2245,25 +1783,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.NOTIFICATION_SMS>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         smsContent: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2305,11 +1830,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2329,11 +1850,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2353,25 +1870,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.SMS_CONTENT>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         smsContent: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2407,11 +1911,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2429,11 +1929,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2451,25 +1947,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.SMS_IDEA>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         smsIdea: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         smsIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2501,11 +1984,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2522,11 +2001,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         smsIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2543,28 +2018,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.GOOGLE_ADS_KEYWORDS>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         keywordsType: z.ZodString;
         adKeywords: z.ZodArray<z.ZodString, "many">;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         keywordsType: string;
         adKeywords: string[];
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         keywordsType: string;
         adKeywords: string[];
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2593,12 +2055,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         keywordsType: string;
         adKeywords: string[];
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2614,12 +2072,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         keywordsType: string;
         adKeywords: string[];
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2635,25 +2089,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.GOOGLE_ADS_IDEA>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         adIdea: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         adIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         adIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2678,11 +2119,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         adIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2697,11 +2134,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         adIdea: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2716,32 +2149,21 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.SOCIAL_AD>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         primaryText: z.ZodString;
         headline: z.ZodString;
         description: z.ZodString;
         callToActionButton: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
+    }, "strip", z.ZodTypeAny, {
         description: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         primaryText: string;
         headline: string;
         callToActionButton: string;
-        imageUrl?: string | undefined;
     }, {
         description: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         primaryText: string;
         headline: string;
         callToActionButton: string;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2777,12 +2199,9 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: string;
     output: {
         description: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         primaryText: string;
         headline: string;
         callToActionButton: string;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2801,12 +2220,9 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: string;
     output: {
         description: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         primaryText: string;
         headline: string;
         callToActionButton: string;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2824,28 +2240,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.EMAIL_AD_PROMO>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         subject: z.ZodString;
         content: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         subject: string;
         content: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         content: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2880,12 +2283,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         content: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2903,12 +2302,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         subject: string;
         content: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -2926,28 +2321,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.SEARCH_AD>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         headlines: z.ZodString;
         descriptions: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         headlines: string;
         descriptions: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         headlines: string;
         descriptions: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -2982,12 +2364,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         headlines: string;
         descriptions: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3005,12 +2383,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         headlines: string;
         descriptions: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3051,7 +2425,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         description?: string | undefined;
         imageUrl?: string | undefined;
     }>;
-    output: z.ZodObject<{
+    output: z.ZodArray<z.ZodObject<{
         primaryText: z.ZodString;
         callToAction: z.ZodString;
     }, "strip", z.ZodTypeAny, {
@@ -3060,7 +2434,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     }, {
         primaryText: string;
         callToAction: string;
-    }>;
+    }>, "many">;
     category: z.ZodLiteral<DocumentCategory.PAID>;
 }>, "strip", z.ZodTypeAny, {
     type: DocumentEntityType.INSTAGRAM_SPONSORED_AD;
@@ -3071,7 +2445,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     output: {
         primaryText: string;
         callToAction: string;
-    };
+    }[];
     inputParams: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3090,7 +2464,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     output: {
         primaryText: string;
         callToAction: string;
-    };
+    }[];
     inputParams: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3130,7 +2504,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         description?: string | undefined;
         imageUrl?: string | undefined;
     }>;
-    output: z.ZodObject<{
+    output: z.ZodArray<z.ZodObject<{
         AdText: z.ZodString;
         AdHeadline: z.ZodString;
         captionText: z.ZodString;
@@ -3145,7 +2519,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         callToActionButton: string;
         AdText: string;
         AdHeadline: string;
-    }>;
+    }>, "many">;
     category: z.ZodLiteral<DocumentCategory.PAID>;
 }>, "strip", z.ZodTypeAny, {
     type: DocumentEntityType.LINKEDIN_SPONSORED_AD;
@@ -3158,7 +2532,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         callToActionButton: string;
         AdText: string;
         AdHeadline: string;
-    };
+    }[];
     inputParams: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3179,7 +2553,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         callToActionButton: string;
         AdText: string;
         AdHeadline: string;
-    };
+    }[];
     inputParams: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3219,7 +2593,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         description?: string | undefined;
         imageUrl?: string | undefined;
     }>;
-    output: z.ZodObject<{
+    output: z.ZodArray<z.ZodObject<{
         AdText: z.ZodString;
         AdHeadline: z.ZodString;
         captionText: z.ZodString;
@@ -3234,7 +2608,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         callToActionButton: string;
         AdText: string;
         AdHeadline: string;
-    }>;
+    }>, "many">;
     category: z.ZodLiteral<DocumentCategory.PAID>;
 }>, "strip", z.ZodTypeAny, {
     type: DocumentEntityType.FACEBOOK_SPONSORED_AD;
@@ -3247,7 +2621,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         callToActionButton: string;
         AdText: string;
         AdHeadline: string;
-    };
+    }[];
     inputParams: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3268,7 +2642,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         callToActionButton: string;
         AdText: string;
         AdHeadline: string;
-    };
+    }[];
     inputParams: {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
@@ -3285,25 +2659,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_ABOUT>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         aboutContent: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         aboutContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         aboutContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3338,11 +2699,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         aboutContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3360,11 +2717,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         aboutContent: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3382,12 +2735,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_FAQ>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         faqEntries: z.ZodArray<z.ZodObject<{
             question: z.ZodString;
             answer: z.ZodString;
@@ -3398,24 +2746,16 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
             question: string;
             answer: string;
         }>, "many">;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         faqEntries: {
             question: string;
             answer: string;
         }[];
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         faqEntries: {
             question: string;
             answer: string;
         }[];
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3454,14 +2794,10 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         faqEntries: {
             question: string;
             answer: string;
         }[];
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3480,14 +2816,10 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         faqEntries: {
             question: string;
             answer: string;
         }[];
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3506,25 +2838,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_TESTEMONIAL>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         testimonial: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         testimonial: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         testimonial: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3556,11 +2875,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         testimonial: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3577,11 +2892,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         testimonial: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3598,26 +2909,15 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.WEBSITE_PRODUCT_DESCRIPTION>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         productName: z.ZodString;
         description: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
+    }, "strip", z.ZodTypeAny, {
         description: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         productName: string;
-        imageUrl?: string | undefined;
     }, {
         description: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         productName: string;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3650,10 +2950,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: string;
     output: {
         description: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         productName: string;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3671,10 +2968,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: string;
     output: {
         description: string;
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         productName: string;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3691,25 +2985,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.ARTICLE>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         blogHtml: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3741,11 +3022,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3762,11 +3039,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3783,25 +3056,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_OPINION>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         blogHtml: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3846,11 +3106,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3871,11 +3127,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3896,25 +3148,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_TIPS>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         blogHtml: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -3953,11 +3192,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3976,11 +3211,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -3999,25 +3230,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_GUIDE>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         blogHtml: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -4056,11 +3274,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -4079,11 +3293,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -4102,25 +3312,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_COMPARISON>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         blogHtml: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -4162,11 +3359,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -4186,11 +3379,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -4210,25 +3399,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_CASE_STUDY>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         blogHtml: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -4270,11 +3446,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -4294,11 +3466,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -4318,25 +3486,12 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     id: z.ZodString;
 }, {
     type: z.ZodLiteral<DocumentEntityType.BLOG_POST_GENERAL>;
-    output: z.ZodArray<z.ZodObject<z.objectUtil.extendShape<{
-        description: z.ZodOptional<z.ZodString>;
-        imageUrl: z.ZodOptional<z.ZodString>;
-        audienceId: z.ZodString;
-        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
-    }, {
+    output: z.ZodArray<z.ZodObject<{
         blogHtml: z.ZodString;
-    }>, "strip", z.ZodTypeAny, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+    }, "strip", z.ZodTypeAny, {
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }, {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }>, "many">;
     inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
         description: z.ZodOptional<z.ZodString>;
@@ -4375,11 +3530,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
@@ -4398,11 +3549,7 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     name: string;
     id: string;
     output: {
-        audienceId: string;
-        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         blogHtml: string;
-        description?: string | undefined;
-        imageUrl?: string | undefined;
     }[];
     inputParams: {
         audienceId: string;
