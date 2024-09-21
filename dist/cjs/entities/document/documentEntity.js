@@ -64,6 +64,20 @@ var instagramCaptionSchema = ZDocumentEntityBase.extend({
         postGoal: zod_1.z.string().describe("מטרת הפוסט"),
     }),
 });
+var instagramSponsoredAdSchema = zod_1.z.object({
+    type: zod_1.z.literal(DocumentEntityType_1.DocumentEntityType.INSTAGRAM_SPONSORED_AD),
+    inputParams: baseInputParams
+        .merge(categoryInputParams[documentCategory_1.DocumentCategory.PAID])
+        .extend({
+        adGoal: zod_1.z.string().describe("מטרת הפרסומת"),
+        mainMessage: zod_1.z.string().describe("המסר המרכזי בפרסומת"),
+    }),
+    output: zod_1.z.object({
+        primaryText: zod_1.z.string(),
+        callToAction: zod_1.z.string(),
+    }),
+    category: zod_1.z.literal(documentCategory_1.DocumentCategory.PAID),
+});
 var instagramPostIdeaSchema = ZDocumentEntityBase.extend({
     type: zod_1.z.literal(DocumentEntityType_1.DocumentEntityType.INSTAGRAM_POST_IDEA),
     output: zod_1.z.array(baseOutputSchema.extend({
@@ -519,6 +533,39 @@ var websiteProductDescriptionSchema = ZDocumentEntityBase.extend({
     })),
     inputParams: baseInputParams.merge(categoryInputParams[documentCategory_1.DocumentCategory.WEB]),
 });
+var linkedinSponsoredAdSchema = zod_1.z.object({
+    type: zod_1.z.literal(DocumentEntityType_1.DocumentEntityType.LINKEDIN_SPONSORED_AD),
+    inputParams: baseInputParams
+        .merge(categoryInputParams[documentCategory_1.DocumentCategory.PAID])
+        .extend({
+        adGoal: zod_1.z.string().describe("מטרת הפרסומת"),
+        mainMessage: zod_1.z.string().describe("המסר המרכזי בפרסומת"),
+    }),
+    output: zod_1.z.object({
+        AdText: zod_1.z.string(),
+        AdHeadline: zod_1.z.string(),
+        captionText: zod_1.z.string(),
+        callToActionButton: zod_1.z.string(),
+    }),
+    category: zod_1.z.literal(documentCategory_1.DocumentCategory.PAID),
+});
+// FACEBOOK_SPONSORED_AD Schema
+var facebookSponsoredAdSchema = zod_1.z.object({
+    type: zod_1.z.literal(DocumentEntityType_1.DocumentEntityType.FACEBOOK_SPONSORED_AD),
+    inputParams: baseInputParams
+        .merge(categoryInputParams[documentCategory_1.DocumentCategory.PAID])
+        .extend({
+        adGoal: zod_1.z.string().describe("מטרת הפרסומת"),
+        mainMessage: zod_1.z.string().describe("המסר המרכזי בפרסומת"),
+    }),
+    output: zod_1.z.object({
+        AdText: zod_1.z.string(),
+        AdHeadline: zod_1.z.string(),
+        captionText: zod_1.z.string(),
+        callToActionButton: zod_1.z.string(),
+    }),
+    category: zod_1.z.literal(documentCategory_1.DocumentCategory.PAID),
+});
 exports.ZDocumentEntity = zod_1.z.discriminatedUnion("type", [
     // SOCIAL MEDIA
     instagramCaptionSchema,
@@ -557,6 +604,9 @@ exports.ZDocumentEntity = zod_1.z.discriminatedUnion("type", [
     socialAdSchema,
     emailAdPromoSchema,
     searchAdSchema,
+    instagramSponsoredAdSchema,
+    linkedinSponsoredAdSchema,
+    facebookSponsoredAdSchema,
     // WEB
     websiteAboutSchema,
     websiteFaqSchema,

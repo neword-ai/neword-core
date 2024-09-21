@@ -60,6 +60,20 @@ const instagramCaptionSchema = ZDocumentEntityBase.extend({
         postGoal: z.string().describe("מטרת הפוסט"),
     }),
 });
+const instagramSponsoredAdSchema = z.object({
+    type: z.literal(DocumentEntityType.INSTAGRAM_SPONSORED_AD),
+    inputParams: baseInputParams
+        .merge(categoryInputParams[DocumentCategory.PAID])
+        .extend({
+        adGoal: z.string().describe("מטרת הפרסומת"),
+        mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
+    }),
+    output: z.object({
+        primaryText: z.string(),
+        callToAction: z.string(),
+    }),
+    category: z.literal(DocumentCategory.PAID),
+});
 const instagramPostIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_POST_IDEA),
     output: z.array(baseOutputSchema.extend({
@@ -515,6 +529,39 @@ const websiteProductDescriptionSchema = ZDocumentEntityBase.extend({
     })),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.WEB]),
 });
+const linkedinSponsoredAdSchema = z.object({
+    type: z.literal(DocumentEntityType.LINKEDIN_SPONSORED_AD),
+    inputParams: baseInputParams
+        .merge(categoryInputParams[DocumentCategory.PAID])
+        .extend({
+        adGoal: z.string().describe("מטרת הפרסומת"),
+        mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
+    }),
+    output: z.object({
+        AdText: z.string(),
+        AdHeadline: z.string(),
+        captionText: z.string(),
+        callToActionButton: z.string(),
+    }),
+    category: z.literal(DocumentCategory.PAID),
+});
+// FACEBOOK_SPONSORED_AD Schema
+const facebookSponsoredAdSchema = z.object({
+    type: z.literal(DocumentEntityType.FACEBOOK_SPONSORED_AD),
+    inputParams: baseInputParams
+        .merge(categoryInputParams[DocumentCategory.PAID])
+        .extend({
+        adGoal: z.string().describe("מטרת הפרסומת"),
+        mainMessage: z.string().describe("המסר המרכזי בפרסומת"),
+    }),
+    output: z.object({
+        AdText: z.string(),
+        AdHeadline: z.string(),
+        captionText: z.string(),
+        callToActionButton: z.string(),
+    }),
+    category: z.literal(DocumentCategory.PAID),
+});
 export const ZDocumentEntity = z.discriminatedUnion("type", [
     // SOCIAL MEDIA
     instagramCaptionSchema,
@@ -553,6 +600,9 @@ export const ZDocumentEntity = z.discriminatedUnion("type", [
     socialAdSchema,
     emailAdPromoSchema,
     searchAdSchema,
+    instagramSponsoredAdSchema,
+    linkedinSponsoredAdSchema,
+    facebookSponsoredAdSchema,
     // WEB
     websiteAboutSchema,
     websiteFaqSchema,

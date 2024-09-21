@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { DocumentEntityType } from "../../types/DocumentEntityType";
+import { DocumentCategory } from "../../types/documentCategory";
 export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.objectUtil.extendShape<{
     websiteId: z.ZodString;
     companyId: z.ZodString;
@@ -1679,16 +1680,16 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         cta: string;
-        notificationGoal: string;
         mainMessage: string;
+        notificationGoal: string;
         description?: string | undefined;
         imageUrl?: string | undefined;
     }, {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         cta: string;
-        notificationGoal: string;
         mainMessage: string;
+        notificationGoal: string;
         description?: string | undefined;
         imageUrl?: string | undefined;
     }>;
@@ -1710,8 +1711,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         cta: string;
-        notificationGoal: string;
         mainMessage: string;
+        notificationGoal: string;
         description?: string | undefined;
         imageUrl?: string | undefined;
     };
@@ -1733,8 +1734,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         cta: string;
-        notificationGoal: string;
         mainMessage: string;
+        notificationGoal: string;
         description?: string | undefined;
         imageUrl?: string | undefined;
     };
@@ -2755,16 +2756,16 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         cta: string;
-        mainMessage: string;
         adGoal: string;
+        mainMessage: string;
         description?: string | undefined;
         imageUrl?: string | undefined;
     }, {
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         cta: string;
-        mainMessage: string;
         adGoal: string;
+        mainMessage: string;
         description?: string | undefined;
         imageUrl?: string | undefined;
     }>;
@@ -2787,8 +2788,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         cta: string;
-        mainMessage: string;
         adGoal: string;
+        mainMessage: string;
         description?: string | undefined;
         imageUrl?: string | undefined;
     };
@@ -2811,8 +2812,8 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         audienceId: string;
         tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
         cta: string;
-        mainMessage: string;
         adGoal: string;
+        mainMessage: string;
         description?: string | undefined;
         imageUrl?: string | undefined;
     };
@@ -3020,6 +3021,224 @@ export declare const ZDocumentEntity: z.ZodDiscriminatedUnion<"type", [z.ZodObje
         description?: string | undefined;
         imageUrl?: string | undefined;
     };
+}>, z.ZodObject<{
+    type: z.ZodLiteral<DocumentEntityType.INSTAGRAM_SPONSORED_AD>;
+    inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+        description: z.ZodOptional<z.ZodString>;
+        imageUrl: z.ZodOptional<z.ZodString>;
+        audienceId: z.ZodString;
+        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+    }, {}>, {
+        adGoal: z.ZodString;
+        mainMessage: z.ZodString;
+    }>, "strip", z.ZodTypeAny, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }>;
+    output: z.ZodObject<{
+        primaryText: z.ZodString;
+        callToAction: z.ZodString;
+    }, "strip", z.ZodTypeAny, {
+        primaryText: string;
+        callToAction: string;
+    }, {
+        primaryText: string;
+        callToAction: string;
+    }>;
+    category: z.ZodLiteral<DocumentCategory.PAID>;
+}, "strip", z.ZodTypeAny, {
+    type: DocumentEntityType.INSTAGRAM_SPONSORED_AD;
+    output: {
+        primaryText: string;
+        callToAction: string;
+    };
+    inputParams: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    };
+    category: DocumentCategory.PAID;
+}, {
+    type: DocumentEntityType.INSTAGRAM_SPONSORED_AD;
+    output: {
+        primaryText: string;
+        callToAction: string;
+    };
+    inputParams: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    };
+    category: DocumentCategory.PAID;
+}>, z.ZodObject<{
+    type: z.ZodLiteral<DocumentEntityType.LINKEDIN_SPONSORED_AD>;
+    inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+        description: z.ZodOptional<z.ZodString>;
+        imageUrl: z.ZodOptional<z.ZodString>;
+        audienceId: z.ZodString;
+        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+    }, {}>, {
+        adGoal: z.ZodString;
+        mainMessage: z.ZodString;
+    }>, "strip", z.ZodTypeAny, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }>;
+    output: z.ZodObject<{
+        AdText: z.ZodString;
+        AdHeadline: z.ZodString;
+        captionText: z.ZodString;
+        callToActionButton: z.ZodString;
+    }, "strip", z.ZodTypeAny, {
+        captionText: string;
+        callToActionButton: string;
+        AdText: string;
+        AdHeadline: string;
+    }, {
+        captionText: string;
+        callToActionButton: string;
+        AdText: string;
+        AdHeadline: string;
+    }>;
+    category: z.ZodLiteral<DocumentCategory.PAID>;
+}, "strip", z.ZodTypeAny, {
+    type: DocumentEntityType.LINKEDIN_SPONSORED_AD;
+    output: {
+        captionText: string;
+        callToActionButton: string;
+        AdText: string;
+        AdHeadline: string;
+    };
+    inputParams: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    };
+    category: DocumentCategory.PAID;
+}, {
+    type: DocumentEntityType.LINKEDIN_SPONSORED_AD;
+    output: {
+        captionText: string;
+        callToActionButton: string;
+        AdText: string;
+        AdHeadline: string;
+    };
+    inputParams: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    };
+    category: DocumentCategory.PAID;
+}>, z.ZodObject<{
+    type: z.ZodLiteral<DocumentEntityType.FACEBOOK_SPONSORED_AD>;
+    inputParams: z.ZodObject<z.objectUtil.extendShape<z.objectUtil.extendShape<{
+        description: z.ZodOptional<z.ZodString>;
+        imageUrl: z.ZodOptional<z.ZodString>;
+        audienceId: z.ZodString;
+        tone: z.ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+    }, {}>, {
+        adGoal: z.ZodString;
+        mainMessage: z.ZodString;
+    }>, "strip", z.ZodTypeAny, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }, {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    }>;
+    output: z.ZodObject<{
+        AdText: z.ZodString;
+        AdHeadline: z.ZodString;
+        captionText: z.ZodString;
+        callToActionButton: z.ZodString;
+    }, "strip", z.ZodTypeAny, {
+        captionText: string;
+        callToActionButton: string;
+        AdText: string;
+        AdHeadline: string;
+    }, {
+        captionText: string;
+        callToActionButton: string;
+        AdText: string;
+        AdHeadline: string;
+    }>;
+    category: z.ZodLiteral<DocumentCategory.PAID>;
+}, "strip", z.ZodTypeAny, {
+    type: DocumentEntityType.FACEBOOK_SPONSORED_AD;
+    output: {
+        captionText: string;
+        callToActionButton: string;
+        AdText: string;
+        AdHeadline: string;
+    };
+    inputParams: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    };
+    category: DocumentCategory.PAID;
+}, {
+    type: DocumentEntityType.FACEBOOK_SPONSORED_AD;
+    output: {
+        captionText: string;
+        callToActionButton: string;
+        AdText: string;
+        AdHeadline: string;
+    };
+    inputParams: {
+        audienceId: string;
+        tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+        adGoal: string;
+        mainMessage: string;
+        description?: string | undefined;
+        imageUrl?: string | undefined;
+    };
+    category: DocumentCategory.PAID;
 }>, z.ZodObject<z.objectUtil.extendShape<{
     websiteId: z.ZodString;
     companyId: z.ZodString;
