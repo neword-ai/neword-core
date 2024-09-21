@@ -43,6 +43,10 @@ export const DocumentTypeToCategory: Record<
   [DocumentEntityType.SOCIAL_AD]: DocumentCategory.PAID,
   [DocumentEntityType.EMAIL_AD_PROMO]: DocumentCategory.PAID,
   [DocumentEntityType.SEARCH_AD]: DocumentCategory.PAID,
+  [DocumentEntityType.INSTAGRAM_SPONSORED_AD]: DocumentCategory.PAID,
+  [DocumentEntityType.TWITTER_SPONSORED_AD]: DocumentCategory.PAID,
+  [DocumentEntityType.FACEBOOK_SPONSORED_AD]: DocumentCategory.PAID,
+  [DocumentEntityType.LINKEDIN_SPONSORED_AD]: DocumentCategory.PAID,
 
   // WEB
   [DocumentEntityType.WEBSITE_ABOUT]: DocumentCategory.WEB,
@@ -59,8 +63,4 @@ export const DocumentTypeToCategory: Record<
   [DocumentEntityType.BLOG_POST_CASE_STUDY]: DocumentCategory.BLOG,
   [DocumentEntityType.BLOG_POST_GENERAL]: DocumentCategory.BLOG,
   [DocumentEntityType.PHONE_CALL_SCRIPT]: DocumentCategory.SOCIAL_MEDIA,
-  [DocumentEntityType.INSTAGRAM_SPONSORED_AD]: DocumentCategory.SOCIAL_MEDIA,
-  [DocumentEntityType.TWITTER_SPONSORED_AD]: DocumentCategory.SOCIAL_MEDIA,
-  [DocumentEntityType.FACEBOOK_SPONSORED_AD]: DocumentCategory.SOCIAL_MEDIA,
-  [DocumentEntityType.LINKEDIN_SPONSORED_AD]: DocumentCategory.SOCIAL_MEDIA,
 };
