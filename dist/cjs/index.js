@@ -22,4 +22,5 @@ __exportStar(require("./entities/post/postEntity"), exports);
 __exportStar(require("./entities/post/postEntityType"), exports);
 __exportStar(require("./entities/post/postStatusType"), exports);
 __exportStar(require("./entities/document/docTypeToCategory"), exports);
+__exportStar(require("./entities/document/schemaPerDocType"), exports);
 //# sourceMappingURL=index.js.map
