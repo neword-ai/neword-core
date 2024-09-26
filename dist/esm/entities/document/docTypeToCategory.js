@@ -37,7 +37,6 @@ export const DocumentTypeToCategory = {
     [DocumentEntityType.EMAIL_AD_PROMO]: DocumentCategory.PAID,
     [DocumentEntityType.SEARCH_AD]: DocumentCategory.PAID,
     [DocumentEntityType.INSTAGRAM_SPONSORED_AD]: DocumentCategory.PAID,
-    [DocumentEntityType.TWITTER_SPONSORED_AD]: DocumentCategory.PAID,
     [DocumentEntityType.FACEBOOK_SPONSORED_AD]: DocumentCategory.PAID,
     [DocumentEntityType.LINKEDIN_SPONSORED_AD]: DocumentCategory.PAID,
     // WEB
@@ -53,6 +52,5 @@ export const DocumentTypeToCategory = {
     [DocumentEntityType.BLOG_POST_COMPARISON]: DocumentCategory.BLOG,
     [DocumentEntityType.BLOG_POST_CASE_STUDY]: DocumentCategory.BLOG,
     [DocumentEntityType.BLOG_POST_GENERAL]: DocumentCategory.BLOG,
-    [DocumentEntityType.PHONE_CALL_SCRIPT]: DocumentCategory.SOCIAL_MEDIA,
 };
 //# sourceMappingURL=docTypeToCategory.js.map

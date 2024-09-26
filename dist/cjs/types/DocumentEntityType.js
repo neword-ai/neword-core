@@ -19,7 +19,6 @@ var DocumentEntityType;
     DocumentEntityType["THREADS_TWIT"] = "THREADS_TWIT";
     DocumentEntityType["SMS_CONTENT"] = "SMS_CONTENT";
     DocumentEntityType["SMS_IDEA"] = "SMS_IDEA";
-    DocumentEntityType["PHONE_CALL_SCRIPT"] = "PHONE_CALL_SCRIPT";
     DocumentEntityType["GOOGLE_ADS_KEYWORDS"] = "GOOGLE_ADS_KEYWORDS";
     DocumentEntityType["GOOGLE_ADS_IDEA"] = "GOOGLE_ADS_IDEA";
     DocumentEntityType["ARTICLE"] = "ARTICLE";
@@ -38,7 +37,6 @@ var DocumentEntityType;
     // LINKEDIN_AD = "LINKEDIN_AD",
     DocumentEntityType["SEARCH_AD"] = "SEARCH_AD";
     DocumentEntityType["INSTAGRAM_SPONSORED_AD"] = "INSTAGRAM_SPONSORED_AD";
-    DocumentEntityType["TWITTER_SPONSORED_AD"] = "TWITTER_SPONSORED_AD";
     DocumentEntityType["FACEBOOK_SPONSORED_AD"] = "FACEBOOK_SPONSORED_AD";
     DocumentEntityType["LINKEDIN_SPONSORED_AD"] = "LINKEDIN_SPONSORED_AD";
     DocumentEntityType["EMAIL_CONTENT"] = "EMAIL_CONTENT";

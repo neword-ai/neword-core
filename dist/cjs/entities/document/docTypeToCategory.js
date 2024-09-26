@@ -41,7 +41,6 @@ exports.DocumentTypeToCategory = (_a = {},
     _a[DocumentEntityType_1.DocumentEntityType.EMAIL_AD_PROMO] = documentCategory_1.DocumentCategory.PAID,
     _a[DocumentEntityType_1.DocumentEntityType.SEARCH_AD] = documentCategory_1.DocumentCategory.PAID,
     _a[DocumentEntityType_1.DocumentEntityType.INSTAGRAM_SPONSORED_AD] = documentCategory_1.DocumentCategory.PAID,
-    _a[DocumentEntityType_1.DocumentEntityType.TWITTER_SPONSORED_AD] = documentCategory_1.DocumentCategory.PAID,
     _a[DocumentEntityType_1.DocumentEntityType.FACEBOOK_SPONSORED_AD] = documentCategory_1.DocumentCategory.PAID,
     _a[DocumentEntityType_1.DocumentEntityType.LINKEDIN_SPONSORED_AD] = documentCategory_1.DocumentCategory.PAID,
     // WEB
@@ -57,6 +56,5 @@ exports.DocumentTypeToCategory = (_a = {},
     _a[DocumentEntityType_1.DocumentEntityType.BLOG_POST_COMPARISON] = documentCategory_1.DocumentCategory.BLOG,
     _a[DocumentEntityType_1.DocumentEntityType.BLOG_POST_CASE_STUDY] = documentCategory_1.DocumentCategory.BLOG,
     _a[DocumentEntityType_1.DocumentEntityType.BLOG_POST_GENERAL] = documentCategory_1.DocumentCategory.BLOG,
-    _a[DocumentEntityType_1.DocumentEntityType.PHONE_CALL_SCRIPT] = documentCategory_1.DocumentCategory.SOCIAL_MEDIA,
     _a);
 //# sourceMappingURL=docTypeToCategory.js.map
