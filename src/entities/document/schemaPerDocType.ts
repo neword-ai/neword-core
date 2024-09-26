@@ -45,13 +45,10 @@ import {
   blogPostGeneralSchema,
   linkedinSponsoredAdSchema,
   facebookSponsoredAdSchema,
+  DocumentEntity,
 } from "./documentEntity";
 
-type TSchemaPerDocType = {
-  [key in DocumentEntityType]: ZodObject<any, any, any>;
-};
-
-export const schemaPerDocType: TSchemaPerDocType = {
+export const schemaPerDocType = {
   [DocumentEntityType.INSTAGRAM_CAPTION]: instagramCaptionSchema,
   [DocumentEntityType.INSTAGRAM_SPONSORED_AD]: instagramSponsoredAdSchema,
   [DocumentEntityType.INSTAGRAM_POST_IDEA]: instagramPostIdeaSchema,
