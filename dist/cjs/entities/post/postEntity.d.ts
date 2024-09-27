@@ -1,6 +1,7 @@
 import { EntityBase } from "../entityBase";
 import { PostStatusType } from "./postStatusType";
 import { PostData } from "./postData";
+import { PostEntityType } from "./postEntityType";
 export interface PostEntity extends EntityBase {
     externalId: string;
     data: PostData;
@@ -10,4 +11,5 @@ export interface PostEntity extends EntityBase {
     websiteId: string;
     isDeleted: boolean;
     scheduleDate: Date;
+    type: PostEntityType;
 }
