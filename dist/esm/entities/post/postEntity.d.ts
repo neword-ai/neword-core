@@ -9,7 +9,6 @@ export interface PostEntity extends EntityBase {
     status: PostStatusType;
     companyId: string;
     websiteId: string;
-    isDeleted: boolean;
     scheduleDate: Date;
     type: PostEntityType;
 }
