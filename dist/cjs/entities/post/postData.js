@@ -4,6 +4,7 @@ exports.ZPostData = void 0;
 var zod_1 = require("zod");
 // Instagram Post Schema
 var InstagramPostSchema = zod_1.z.object({
+    imageUrl: zod_1.z.string().optional(),
     type: zod_1.z.literal("INSTAGRAM_POST"), // Literal type for identification
     media_type: zod_1.z.enum(["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]), // Required media type
     media_ids: zod_1.z.array(zod_1.z.string()), // Media IDs (must be obtained after uploading media to Instagram API)
@@ -31,6 +32,7 @@ var TwitterTweetSchema = zod_1.z.object({
 });
 // Facebook Post Schema
 var FacebookPostSchema = zod_1.z.object({
+    imageUrl: zod_1.z.string().optional(),
     type: zod_1.z.literal("FACEBOOK_POST"), // Literal type for identification
     message: zod_1.z.string().optional(), // Optional message for the post
     link: zod_1.z.string().optional(), // Optional link to be shared in the post

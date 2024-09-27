@@ -1,6 +1,7 @@
 import { z } from "zod";
 // Instagram Post Schema
 const InstagramPostSchema = z.object({
+    imageUrl: z.string().optional(),
     type: z.literal("INSTAGRAM_POST"), // Literal type for identification
     media_type: z.enum(["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]), // Required media type
     media_ids: z.array(z.string()), // Media IDs (must be obtained after uploading media to Instagram API)
@@ -28,6 +29,7 @@ const TwitterTweetSchema = z.object({
 });
 // Facebook Post Schema
 const FacebookPostSchema = z.object({
+    imageUrl: z.string().optional(),
     type: z.literal("FACEBOOK_POST"), // Literal type for identification
     message: z.string().optional(), // Optional message for the post
     link: z.string().optional(), // Optional link to be shared in the post
