@@ -19,7 +19,7 @@ var InstagramPostSchema = zod_1.z.object({
 });
 // Twitter Tweet Schema
 var TwitterTweetSchema = zod_1.z.object({
-    type: zod_1.z.literal("TWITTER_TWEET"), // Literal type for identification
+    type: zod_1.z.literal("TWITTER_TWIT"), // Literal type for identification
     text: zod_1.z.string().optional(), // Optional: The text content of the tweet
     media_ids: zod_1.z.array(zod_1.z.string()).optional(), // Optional: Media IDs for images or videos (uploaded beforehand)
     link: zod_1.z.string().optional(), // Optional: URL to include in the tweet

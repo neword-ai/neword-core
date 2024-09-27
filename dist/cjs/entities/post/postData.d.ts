@@ -37,7 +37,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         media_ids: string[];
     } | undefined;
 }>, z.ZodObject<{
-    type: z.ZodLiteral<"TWITTER_TWEET">;
+    type: z.ZodLiteral<"TWITTER_TWIT">;
     text: z.ZodOptional<z.ZodString>;
     media_ids: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     link: z.ZodOptional<z.ZodString>;
@@ -46,7 +46,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     reply_settings: z.ZodOptional<z.ZodEnum<["everyone", "mentioned_users", "following"]>>;
     scheduled_publish_time: z.ZodOptional<z.ZodNumber>;
 }, "strip", z.ZodTypeAny, {
-    type: "TWITTER_TWEET";
+    type: "TWITTER_TWIT";
     media_ids?: string[] | undefined;
     text?: string | undefined;
     link?: string | undefined;
@@ -55,7 +55,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     reply_settings?: "everyone" | "mentioned_users" | "following" | undefined;
     scheduled_publish_time?: number | undefined;
 }, {
-    type: "TWITTER_TWEET";
+    type: "TWITTER_TWIT";
     media_ids?: string[] | undefined;
     text?: string | undefined;
     link?: string | undefined;
