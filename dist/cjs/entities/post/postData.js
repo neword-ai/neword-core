@@ -5,51 +5,38 @@ var zod_1 = require("zod");
 // Instagram Post Schema
 var InstagramPostSchema = zod_1.z.object({
     type: zod_1.z.literal("INSTAGRAM_POST"), // Literal type for identification
-    media_type: zod_1.z.enum(["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]), // Instagram-specific field
-    like_count: zod_1.z.number(), // Instagram-specific field
-    comments_count: zod_1.z.number().optional(), // Instagram-specific field
-    permalink: zod_1.z.string(), // Instagram-specific field
+    media_type: zod_1.z.enum(["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]), // Required media type
+    media_ids: zod_1.z.array(zod_1.z.string()), // Media IDs (must be obtained after uploading media to Instagram API)
+    caption: zod_1.z.string().optional(), // Optional caption for the post
+    location: zod_1.z.string().optional(), // Optional location tag
+    disable_comments: zod_1.z.boolean().optional(), // Optional flag to disable comments
     children: zod_1.z
         .object({
-        data: zod_1.z
-            .array(zod_1.z.object({
-            media_url: zod_1.z.string(),
-        }))
-            .optional(),
+        media_ids: zod_1.z.array(zod_1.z.string()), // Media IDs for carousel
     })
-        .optional(), // Instagram-specific carousel field
+        .optional(), // Only required for CAROUSEL_ALBUM
 });
 // Twitter Tweet Schema
 var TwitterTweetSchema = zod_1.z.object({
-    type: zod_1.z.literal("TWITTER_TWEET"), // Literal type for identification
-    text: zod_1.z.string().max(280), // Twitter-specific field (max 280 characters)
-    public_metrics: zod_1.z.object({
-        retweet_count: zod_1.z.number(),
-        reply_count: zod_1.z.number(),
-        like_count: zod_1.z.number(),
-        quote_count: zod_1.z.number(),
-    }), // Twitter-specific field
-    entities: zod_1.z
-        .object({
-        hashtags: zod_1.z
-            .array(zod_1.z.object({
-            tag: zod_1.z.string(),
-        }))
-            .optional(),
-        mentions: zod_1.z
-            .array(zod_1.z.object({
-            username: zod_1.z.string(),
-        }))
-            .optional(),
-    })
-        .optional(), // Twitter-specific field
+    type: zod_1.z.literal("TWITTER_POST"), // Literal type for identification
+    text: zod_1.z.string().optional(), // Optional: The text content of the tweet
+    media_ids: zod_1.z.array(zod_1.z.string()).optional(), // Optional: Media IDs for images or videos (uploaded beforehand)
+    link: zod_1.z.string().optional(), // Optional: URL to include in the tweet
+    in_reply_to_status_id: zod_1.z.string().optional(), // Optional: ID of the tweet being replied to
+    possibly_sensitive: zod_1.z.boolean().optional(), // Optional: Flag to mark content as potentially sensitive
+    reply_settings: zod_1.z
+        .enum(["everyone", "mentioned_users", "following"])
+        .optional(), // Optional: Who can reply to the tweet
+    scheduled_publish_time: zod_1.z.number().optional(), // Optional: Scheduled time to publish the tweet (Unix timestamp)
 });
 // Facebook Post Schema
 var FacebookPostSchema = zod_1.z.object({
     type: zod_1.z.literal("FACEBOOK_POST"), // Literal type for identification
-    message: zod_1.z.string().optional(), // Facebook-specific field
-    published: zod_1.z.boolean(), // Facebook-specific field
-    imageUrl: zod_1.z.string().optional(), // Facebook-specific field
+    message: zod_1.z.string().optional(), // Optional message for the post
+    link: zod_1.z.string().optional(), // Optional link to be shared in the post
+    media_ids: zod_1.z.array(zod_1.z.string()).optional(), // Media IDs for image/video, optional
+    scheduled_publish_time: zod_1.z.number().optional(), // Optional time for scheduled publishing (Unix timestamp)
+    published: zod_1.z.boolean(), // Whether the post is published immediately or as a draft
 });
 // TikTok Post Schema
 var TiktokPostSchema = zod_1.z.object({

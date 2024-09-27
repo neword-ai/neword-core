@@ -2,146 +2,85 @@ import { z } from "zod";
 export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: z.ZodLiteral<"INSTAGRAM_POST">;
     media_type: z.ZodEnum<["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]>;
-    like_count: z.ZodNumber;
-    comments_count: z.ZodOptional<z.ZodNumber>;
-    permalink: z.ZodString;
+    media_ids: z.ZodArray<z.ZodString, "many">;
+    caption: z.ZodOptional<z.ZodString>;
+    location: z.ZodOptional<z.ZodString>;
+    disable_comments: z.ZodOptional<z.ZodBoolean>;
     children: z.ZodOptional<z.ZodObject<{
-        data: z.ZodOptional<z.ZodArray<z.ZodObject<{
-            media_url: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
-            media_url: string;
-        }, {
-            media_url: string;
-        }>, "many">>;
+        media_ids: z.ZodArray<z.ZodString, "many">;
     }, "strip", z.ZodTypeAny, {
-        data?: {
-            media_url: string;
-        }[] | undefined;
+        media_ids: string[];
     }, {
-        data?: {
-            media_url: string;
-        }[] | undefined;
+        media_ids: string[];
     }>>;
 }, "strip", z.ZodTypeAny, {
     type: "INSTAGRAM_POST";
     media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
-    like_count: number;
-    permalink: string;
-    comments_count?: number | undefined;
+    media_ids: string[];
+    caption?: string | undefined;
+    location?: string | undefined;
+    disable_comments?: boolean | undefined;
     children?: {
-        data?: {
-            media_url: string;
-        }[] | undefined;
+        media_ids: string[];
     } | undefined;
 }, {
     type: "INSTAGRAM_POST";
     media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
-    like_count: number;
-    permalink: string;
-    comments_count?: number | undefined;
+    media_ids: string[];
+    caption?: string | undefined;
+    location?: string | undefined;
+    disable_comments?: boolean | undefined;
     children?: {
-        data?: {
-            media_url: string;
-        }[] | undefined;
+        media_ids: string[];
     } | undefined;
 }>, z.ZodObject<{
-    type: z.ZodLiteral<"TWITTER_TWEET">;
-    text: z.ZodString;
-    public_metrics: z.ZodObject<{
-        retweet_count: z.ZodNumber;
-        reply_count: z.ZodNumber;
-        like_count: z.ZodNumber;
-        quote_count: z.ZodNumber;
-    }, "strip", z.ZodTypeAny, {
-        like_count: number;
-        retweet_count: number;
-        reply_count: number;
-        quote_count: number;
-    }, {
-        like_count: number;
-        retweet_count: number;
-        reply_count: number;
-        quote_count: number;
-    }>;
-    entities: z.ZodOptional<z.ZodObject<{
-        hashtags: z.ZodOptional<z.ZodArray<z.ZodObject<{
-            tag: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
-            tag: string;
-        }, {
-            tag: string;
-        }>, "many">>;
-        mentions: z.ZodOptional<z.ZodArray<z.ZodObject<{
-            username: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
-            username: string;
-        }, {
-            username: string;
-        }>, "many">>;
-    }, "strip", z.ZodTypeAny, {
-        hashtags?: {
-            tag: string;
-        }[] | undefined;
-        mentions?: {
-            username: string;
-        }[] | undefined;
-    }, {
-        hashtags?: {
-            tag: string;
-        }[] | undefined;
-        mentions?: {
-            username: string;
-        }[] | undefined;
-    }>>;
+    type: z.ZodLiteral<"TWITTER_POST">;
+    text: z.ZodOptional<z.ZodString>;
+    media_ids: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+    link: z.ZodOptional<z.ZodString>;
+    in_reply_to_status_id: z.ZodOptional<z.ZodString>;
+    possibly_sensitive: z.ZodOptional<z.ZodBoolean>;
+    reply_settings: z.ZodOptional<z.ZodEnum<["everyone", "mentioned_users", "following"]>>;
+    scheduled_publish_time: z.ZodOptional<z.ZodNumber>;
 }, "strip", z.ZodTypeAny, {
-    type: "TWITTER_TWEET";
-    text: string;
-    public_metrics: {
-        like_count: number;
-        retweet_count: number;
-        reply_count: number;
-        quote_count: number;
-    };
-    entities?: {
-        hashtags?: {
-            tag: string;
-        }[] | undefined;
-        mentions?: {
-            username: string;
-        }[] | undefined;
-    } | undefined;
+    type: "TWITTER_POST";
+    media_ids?: string[] | undefined;
+    text?: string | undefined;
+    link?: string | undefined;
+    in_reply_to_status_id?: string | undefined;
+    possibly_sensitive?: boolean | undefined;
+    reply_settings?: "everyone" | "mentioned_users" | "following" | undefined;
+    scheduled_publish_time?: number | undefined;
 }, {
-    type: "TWITTER_TWEET";
-    text: string;
-    public_metrics: {
-        like_count: number;
-        retweet_count: number;
-        reply_count: number;
-        quote_count: number;
-    };
-    entities?: {
-        hashtags?: {
-            tag: string;
-        }[] | undefined;
-        mentions?: {
-            username: string;
-        }[] | undefined;
-    } | undefined;
+    type: "TWITTER_POST";
+    media_ids?: string[] | undefined;
+    text?: string | undefined;
+    link?: string | undefined;
+    in_reply_to_status_id?: string | undefined;
+    possibly_sensitive?: boolean | undefined;
+    reply_settings?: "everyone" | "mentioned_users" | "following" | undefined;
+    scheduled_publish_time?: number | undefined;
 }>, z.ZodObject<{
     type: z.ZodLiteral<"FACEBOOK_POST">;
     message: z.ZodOptional<z.ZodString>;
+    link: z.ZodOptional<z.ZodString>;
+    media_ids: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+    scheduled_publish_time: z.ZodOptional<z.ZodNumber>;
     published: z.ZodBoolean;
-    imageUrl: z.ZodOptional<z.ZodString>;
 }, "strip", z.ZodTypeAny, {
     type: "FACEBOOK_POST";
     published: boolean;
     message?: string | undefined;
-    imageUrl?: string | undefined;
+    media_ids?: string[] | undefined;
+    link?: string | undefined;
+    scheduled_publish_time?: number | undefined;
 }, {
     type: "FACEBOOK_POST";
     published: boolean;
     message?: string | undefined;
-    imageUrl?: string | undefined;
+    media_ids?: string[] | undefined;
+    link?: string | undefined;
+    scheduled_publish_time?: number | undefined;
 }>, z.ZodObject<{
     type: z.ZodLiteral<"TIKTOK_POST">;
     description: z.ZodString;
