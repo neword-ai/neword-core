@@ -10,4 +10,5 @@ export interface PostEntity extends EntityBase {
   companyId: string;
   websiteId: string;
   isDeleted: boolean;
+  scheduleDate: Date;
 }
