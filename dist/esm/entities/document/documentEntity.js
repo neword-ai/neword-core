@@ -98,11 +98,13 @@ export const instagramStoryIdeaSchema = ZDocumentEntityBase.extend({
 });
 export const instagramReelIdeaSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.INSTAGRAM_REEL_IDEA),
-    output: z.array(z.object({
+    output: z
+        .array(z.object({
         reelIdea: z.string(),
         reelDescription: z.string(),
         reelWidgets: z.string(),
-    })),
+    }))
+        .length(1),
     inputParams: baseInputParams.merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA]),
 });
 export const instagramReelScriptSchema = ZDocumentEntityBase.extend({
@@ -119,9 +121,11 @@ export const instagramReelScriptSchema = ZDocumentEntityBase.extend({
 // LinkedIn Types
 export const linkedInPostCaptionSchema = ZDocumentEntityBase.extend({
     type: z.literal(DocumentEntityType.LINKEDIN_POST_CAPTION),
-    output: z.array(z.object({
+    output: z
+        .array(z.object({
         postCaption: z.string(),
-    })),
+    }))
+        .length(1),
     inputParams: baseInputParams
         .merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA])
         .extend({

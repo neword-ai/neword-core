@@ -102,11 +102,13 @@ exports.instagramStoryIdeaSchema = exports.ZDocumentEntityBase.extend({
 });
 exports.instagramReelIdeaSchema = exports.ZDocumentEntityBase.extend({
     type: zod_1.z.literal(DocumentEntityType_1.DocumentEntityType.INSTAGRAM_REEL_IDEA),
-    output: zod_1.z.array(zod_1.z.object({
+    output: zod_1.z
+        .array(zod_1.z.object({
         reelIdea: zod_1.z.string(),
         reelDescription: zod_1.z.string(),
         reelWidgets: zod_1.z.string(),
-    })),
+    }))
+        .length(1),
     inputParams: exports.baseInputParams.merge(exports.categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA]),
 });
 exports.instagramReelScriptSchema = exports.ZDocumentEntityBase.extend({
@@ -123,9 +125,11 @@ exports.instagramReelScriptSchema = exports.ZDocumentEntityBase.extend({
 // LinkedIn Types
 exports.linkedInPostCaptionSchema = exports.ZDocumentEntityBase.extend({
     type: zod_1.z.literal(DocumentEntityType_1.DocumentEntityType.LINKEDIN_POST_CAPTION),
-    output: zod_1.z.array(zod_1.z.object({
+    output: zod_1.z
+        .array(zod_1.z.object({
         postCaption: zod_1.z.string(),
-    })),
+    }))
+        .length(1),
     inputParams: exports.baseInputParams
         .merge(exports.categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
         .extend({
