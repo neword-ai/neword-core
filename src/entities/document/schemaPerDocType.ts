@@ -45,7 +45,6 @@ import {
   blogPostGeneralSchema,
   linkedinSponsoredAdSchema,
   facebookSponsoredAdSchema,
-  DocumentEntity,
 } from "./documentEntity";
 
 export const schemaPerDocType = {
