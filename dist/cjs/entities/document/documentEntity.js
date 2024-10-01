@@ -129,7 +129,7 @@ exports.linkedInPostCaptionSchema = exports.ZDocumentEntityBase.extend({
         .array(zod_1.z.object({
         postCaption: zod_1.z.string(),
     }))
-        .length(1),
+        .length(3),
     inputParams: exports.baseInputParams
         .merge(exports.categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
         .extend({

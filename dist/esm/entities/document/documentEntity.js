@@ -125,7 +125,7 @@ export const linkedInPostCaptionSchema = ZDocumentEntityBase.extend({
         .array(z.object({
         postCaption: z.string(),
     }))
-        .length(1),
+        .length(3),
     inputParams: baseInputParams
         .merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA])
         .extend({
