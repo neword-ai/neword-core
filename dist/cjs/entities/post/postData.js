@@ -8,7 +8,7 @@ var InstagramPostSchema = zod_1.z.object({
     type: zod_1.z.literal("INSTAGRAM_POST"), // Literal type for identification
     media_type: zod_1.z.enum(["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]), // Required media type
     media_ids: zod_1.z.array(zod_1.z.string()), // Media IDs (must be obtained after uploading media to Instagram API)
-    caption: zod_1.z.string().optional(), // Optional caption for the post
+    message: zod_1.z.string().optional(), // Optional caption for the post
     location: zod_1.z.string().optional(), // Optional location tag
     disable_comments: zod_1.z.boolean().optional(), // Optional flag to disable comments
     children: zod_1.z
@@ -43,7 +43,8 @@ var FacebookPostSchema = zod_1.z.object({
 // TikTok Post Schema
 var TiktokPostSchema = zod_1.z.object({
     type: zod_1.z.literal("TIKTOK_POST"), // Literal type for identification
-    description: zod_1.z.string(), // TikTok-specific field
+    message: zod_1.z.string(), // TikTok-specific field
+    imageUrl: zod_1.z.string().optional(),
     statistics: zod_1.z.object({
         like_count: zod_1.z.number(),
         comment_count: zod_1.z.number(),

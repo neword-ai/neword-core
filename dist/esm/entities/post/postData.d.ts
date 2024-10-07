@@ -4,7 +4,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: z.ZodLiteral<"INSTAGRAM_POST">;
     media_type: z.ZodEnum<["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]>;
     media_ids: z.ZodArray<z.ZodString, "many">;
-    caption: z.ZodOptional<z.ZodString>;
+    message: z.ZodOptional<z.ZodString>;
     location: z.ZodOptional<z.ZodString>;
     disable_comments: z.ZodOptional<z.ZodBoolean>;
     children: z.ZodOptional<z.ZodObject<{
@@ -18,8 +18,8 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: "INSTAGRAM_POST";
     media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
     media_ids: string[];
+    message?: string | undefined;
     imageUrl?: string | undefined;
-    caption?: string | undefined;
     location?: string | undefined;
     disable_comments?: boolean | undefined;
     children?: {
@@ -29,8 +29,8 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: "INSTAGRAM_POST";
     media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
     media_ids: string[];
+    message?: string | undefined;
     imageUrl?: string | undefined;
-    caption?: string | undefined;
     location?: string | undefined;
     disable_comments?: boolean | undefined;
     children?: {
@@ -89,7 +89,8 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     scheduled_publish_time?: number | undefined;
 }>, z.ZodObject<{
     type: z.ZodLiteral<"TIKTOK_POST">;
-    description: z.ZodString;
+    message: z.ZodString;
+    imageUrl: z.ZodOptional<z.ZodString>;
     statistics: z.ZodObject<{
         like_count: z.ZodNumber;
         comment_count: z.ZodNumber;
@@ -120,8 +121,8 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         cover: string;
     }>;
 }, "strip", z.ZodTypeAny, {
+    message: string;
     type: "TIKTOK_POST";
-    description: string;
     statistics: {
         like_count: number;
         comment_count: number;
@@ -133,9 +134,10 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         url: string;
         cover: string;
     };
+    imageUrl?: string | undefined;
 }, {
+    message: string;
     type: "TIKTOK_POST";
-    description: string;
     statistics: {
         like_count: number;
         comment_count: number;
@@ -147,5 +149,6 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         url: string;
         cover: string;
     };
+    imageUrl?: string | undefined;
 }>]>;
 export type PostData = z.infer<typeof ZPostData>;

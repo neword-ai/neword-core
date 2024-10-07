@@ -6,7 +6,7 @@ const InstagramPostSchema = z.object({
   type: z.literal("INSTAGRAM_POST"), // Literal type for identification
   media_type: z.enum(["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]), // Required media type
   media_ids: z.array(z.string()), // Media IDs (must be obtained after uploading media to Instagram API)
-  caption: z.string().optional(), // Optional caption for the post
+  message: z.string().optional(), // Optional caption for the post
   location: z.string().optional(), // Optional location tag
   disable_comments: z.boolean().optional(), // Optional flag to disable comments
   children: z
@@ -43,7 +43,8 @@ const FacebookPostSchema = z.object({
 // TikTok Post Schema
 const TiktokPostSchema = z.object({
   type: z.literal("TIKTOK_POST"), // Literal type for identification
-  description: z.string(), // TikTok-specific field
+  message: z.string(), // TikTok-specific field
+  imageUrl: z.string().optional(),
   statistics: z.object({
     like_count: z.number(),
     comment_count: z.number(),
