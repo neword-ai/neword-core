@@ -20,6 +20,8 @@ const InstagramPostSchema = z.object({
 const TwitterTweetSchema = z.object({
   type: z.literal("TWITTER_TWIT"), // Literal type for identification
   message: z.string(), // Optional: The text content of the tweet
+  imageUrl: z.string().optional(),
+
   media_ids: z.array(z.string()).optional(), // Optional: Media IDs for images or videos (uploaded beforehand)
   link: z.string().optional(), // Optional: URL to include in the tweet
   in_reply_to_status_id: z.string().optional(), // Optional: ID of the tweet being replied to

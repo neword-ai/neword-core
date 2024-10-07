@@ -21,6 +21,7 @@ var InstagramPostSchema = zod_1.z.object({
 var TwitterTweetSchema = zod_1.z.object({
     type: zod_1.z.literal("TWITTER_TWIT"), // Literal type for identification
     message: zod_1.z.string(), // Optional: The text content of the tweet
+    imageUrl: zod_1.z.string().optional(),
     media_ids: zod_1.z.array(zod_1.z.string()).optional(), // Optional: Media IDs for images or videos (uploaded beforehand)
     link: zod_1.z.string().optional(), // Optional: URL to include in the tweet
     in_reply_to_status_id: zod_1.z.string().optional(), // Optional: ID of the tweet being replied to

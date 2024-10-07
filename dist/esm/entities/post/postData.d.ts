@@ -39,6 +39,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
 }>, z.ZodObject<{
     type: z.ZodLiteral<"TWITTER_TWIT">;
     message: z.ZodString;
+    imageUrl: z.ZodOptional<z.ZodString>;
     media_ids: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     link: z.ZodOptional<z.ZodString>;
     in_reply_to_status_id: z.ZodOptional<z.ZodString>;
@@ -48,6 +49,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     message: string;
     type: "TWITTER_TWIT";
+    imageUrl?: string | undefined;
     media_ids?: string[] | undefined;
     link?: string | undefined;
     in_reply_to_status_id?: string | undefined;
@@ -57,6 +59,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
 }, {
     message: string;
     type: "TWITTER_TWIT";
+    imageUrl?: string | undefined;
     media_ids?: string[] | undefined;
     link?: string | undefined;
     in_reply_to_status_id?: string | undefined;
