@@ -43,7 +43,7 @@ var FacebookPostSchema = zod_1.z.object({
 });
 var LinkedInPostSchema = zod_1.z.object({
     message: zod_1.z.string(),
-    imageUrl: zod_1.z.string().url("Invalid URL format").optional(), // Optional field for image
+    imageUrl: zod_1.z.string().optional(), // Optional field for image
     hashtags: zod_1.z
         .array(zod_1.z.string().min(1, "Hashtag cannot be empty"))
         .max(30, "Cannot have more than 30 hashtags") // LinkedIn max hashtags is 30
