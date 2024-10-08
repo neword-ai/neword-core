@@ -44,10 +44,6 @@ const FacebookPostSchema = z.object({
 
 const LinkedInPostSchema = z.object({
   message: z.string(),
-  content: z
-    .string()
-    .min(1, "Content cannot be empty")
-    .max(1300, "Content exceeds the maximum length of 1300 characters"), // LinkedIn content max length is 1300 characters
   imageUrl: z.string().url("Invalid URL format").optional(), // Optional field for image
   hashtags: z
     .array(z.string().min(1, "Hashtag cannot be empty"))

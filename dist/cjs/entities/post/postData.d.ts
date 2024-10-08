@@ -155,7 +155,6 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     imageUrl?: string | undefined;
 }>, z.ZodObject<{
     message: z.ZodString;
-    content: z.ZodString;
     imageUrl: z.ZodOptional<z.ZodString>;
     hashtags: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     mentions: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
@@ -163,14 +162,12 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     message: string;
     type: "LINKEDIN_POST";
-    content: string;
     imageUrl?: string | undefined;
     hashtags?: string[] | undefined;
     mentions?: string[] | undefined;
 }, {
     message: string;
     type: "LINKEDIN_POST";
-    content: string;
     imageUrl?: string | undefined;
     hashtags?: string[] | undefined;
     mentions?: string[] | undefined;
