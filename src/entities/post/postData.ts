@@ -84,6 +84,7 @@ export const ZPostData = z.discriminatedUnion("type", [
   TwitterTweetSchema,
   FacebookPostSchema,
   TiktokPostSchema,
+  LinkedInPostSchema,
 ]);
 
 // Typescript types for inference

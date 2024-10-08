@@ -81,5 +81,6 @@ exports.ZPostData = zod_1.z.discriminatedUnion("type", [
     TwitterTweetSchema,
     FacebookPostSchema,
     TiktokPostSchema,
+    LinkedInPostSchema,
 ]);
 //# sourceMappingURL=postData.js.map

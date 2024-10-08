@@ -78,5 +78,6 @@ export const ZPostData = z.discriminatedUnion("type", [
     TwitterTweetSchema,
     FacebookPostSchema,
     TiktokPostSchema,
+    LinkedInPostSchema,
 ]);
 //# sourceMappingURL=postData.js.map

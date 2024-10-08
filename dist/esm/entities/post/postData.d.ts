@@ -153,5 +153,26 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         cover: string;
     };
     imageUrl?: string | undefined;
+}>, z.ZodObject<{
+    message: z.ZodString;
+    content: z.ZodString;
+    imageUrl: z.ZodOptional<z.ZodString>;
+    hashtags: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+    mentions: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+    type: z.ZodLiteral<"LINKEDIN_POST">;
+}, "strip", z.ZodTypeAny, {
+    message: string;
+    type: "LINKEDIN_POST";
+    content: string;
+    imageUrl?: string | undefined;
+    hashtags?: string[] | undefined;
+    mentions?: string[] | undefined;
+}, {
+    message: string;
+    type: "LINKEDIN_POST";
+    content: string;
+    imageUrl?: string | undefined;
+    hashtags?: string[] | undefined;
+    mentions?: string[] | undefined;
 }>]>;
 export type PostData = z.infer<typeof ZPostData>;
