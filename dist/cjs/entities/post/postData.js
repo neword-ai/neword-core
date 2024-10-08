@@ -4,12 +4,12 @@ exports.ZPostData = void 0;
 var zod_1 = require("zod");
 // Instagram Post Schema
 var InstagramPostSchema = zod_1.z.object({
-    imageUrl: zod_1.z.string().optional(),
+    imageUrl: zod_1.z.string().nullable().optional(), // Now nullable
     type: zod_1.z.literal("INSTAGRAM_POST"), // Literal type for identification
     media_type: zod_1.z.enum(["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]), // Required media type
     media_ids: zod_1.z.array(zod_1.z.string()), // Media IDs (must be obtained after uploading media to Instagram API)
     message: zod_1.z.string(), // Optional caption for the post
-    location: zod_1.z.string().optional(), // Optional location tag
+    location: zod_1.z.string().nullable().optional(), // Optional location tag
     disable_comments: zod_1.z.boolean().optional(), // Optional flag to disable comments
     children: zod_1.z
         .object({
@@ -21,7 +21,7 @@ var InstagramPostSchema = zod_1.z.object({
 var TwitterTweetSchema = zod_1.z.object({
     type: zod_1.z.literal("TWITTER_TWIT"), // Literal type for identification
     message: zod_1.z.string(), // Optional: The text content of the tweet
-    imageUrl: zod_1.z.string().optional(),
+    imageUrl: zod_1.z.string().nullable().optional(), // Now nullable
     media_ids: zod_1.z.array(zod_1.z.string()).optional(), // Optional: Media IDs for images or videos (uploaded beforehand)
     link: zod_1.z.string().optional(), // Optional: URL to include in the tweet
     in_reply_to_status_id: zod_1.z.string().optional(), // Optional: ID of the tweet being replied to
@@ -33,7 +33,7 @@ var TwitterTweetSchema = zod_1.z.object({
 });
 // Facebook Post Schema
 var FacebookPostSchema = zod_1.z.object({
-    imageUrl: zod_1.z.string().optional(),
+    imageUrl: zod_1.z.string().nullable().optional(), // Now nullable
     type: zod_1.z.literal("FACEBOOK_POST"), // Literal type for identification
     message: zod_1.z.string(), // Optional message for the post
     link: zod_1.z.string().optional(), // Optional link to be shared in the post
@@ -41,9 +41,10 @@ var FacebookPostSchema = zod_1.z.object({
     scheduled_publish_time: zod_1.z.number().optional(), // Optional time for scheduled publishing (Unix timestamp)
     published: zod_1.z.boolean(), // Whether the post is published immediately or as a draft
 });
+// LinkedIn Post Schema
 var LinkedInPostSchema = zod_1.z.object({
     message: zod_1.z.string(),
-    imageUrl: zod_1.z.string().optional(), // Optional field for image
+    imageUrl: zod_1.z.string().nullable().optional(), // Now nullable
     hashtags: zod_1.z
         .array(zod_1.z.string().min(1, "Hashtag cannot be empty"))
         .max(30, "Cannot have more than 30 hashtags") // LinkedIn max hashtags is 30
@@ -58,7 +59,7 @@ var LinkedInPostSchema = zod_1.z.object({
 var TiktokPostSchema = zod_1.z.object({
     type: zod_1.z.literal("TIKTOK_POST"), // Literal type for identification
     message: zod_1.z.string(), // TikTok-specific field
-    imageUrl: zod_1.z.string().optional(),
+    imageUrl: zod_1.z.string().nullable().optional(), // Now nullable
     statistics: zod_1.z.object({
         like_count: zod_1.z.number(),
         comment_count: zod_1.z.number(),
