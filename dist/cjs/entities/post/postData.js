@@ -41,6 +41,23 @@ var FacebookPostSchema = zod_1.z.object({
     scheduled_publish_time: zod_1.z.number().optional(), // Optional time for scheduled publishing (Unix timestamp)
     published: zod_1.z.boolean(), // Whether the post is published immediately or as a draft
 });
+var LinkedInPostSchema = zod_1.z.object({
+    message: zod_1.z.string(),
+    content: zod_1.z
+        .string()
+        .min(1, "Content cannot be empty")
+        .max(1300, "Content exceeds the maximum length of 1300 characters"), // LinkedIn content max length is 1300 characters
+    imageUrl: zod_1.z.string().url("Invalid URL format").optional(), // Optional field for image
+    hashtags: zod_1.z
+        .array(zod_1.z.string().min(1, "Hashtag cannot be empty"))
+        .max(30, "Cannot have more than 30 hashtags") // LinkedIn max hashtags is 30
+        .optional(),
+    mentions: zod_1.z
+        .array(zod_1.z.string().min(1, "Mention cannot be empty"))
+        .max(20, "Cannot have more than 20 mentions") // Limit number of mentions
+        .optional(),
+    type: zod_1.z.literal("LINKEDIN_POST"), // Post type must be one of the LinkedInPostType values
+});
 // TikTok Post Schema
 var TiktokPostSchema = zod_1.z.object({
     type: zod_1.z.literal("TIKTOK_POST"), // Literal type for identification
