@@ -73,10 +73,12 @@ exports.instagramSponsoredAdSchema = exports.ZDocumentEntityBase.extend({
 });
 exports.instagramPostIdeaSchema = exports.ZDocumentEntityBase.extend({
     type: zod_1.z.literal(DocumentEntityType_1.DocumentEntityType.INSTAGRAM_POST_IDEA),
-    output: zod_1.z.array(zod_1.z.object({
+    output: zod_1.z
+        .array(zod_1.z.object({
         ideaDescription: zod_1.z.string(),
         imageDescription: zod_1.z.string(),
-    })),
+    }))
+        .length(3),
     inputParams: exports.baseInputParams
         .merge(exports.categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA])
         .extend({
@@ -108,7 +110,7 @@ exports.instagramReelIdeaSchema = exports.ZDocumentEntityBase.extend({
         reelDescription: zod_1.z.string(),
         reelWidgets: zod_1.z.string(),
     }))
-        .length(1),
+        .length(3),
     inputParams: exports.baseInputParams.merge(exports.categoryInputParams[documentCategory_1.DocumentCategory.SOCIAL_MEDIA]),
 });
 exports.instagramReelScriptSchema = exports.ZDocumentEntityBase.extend({

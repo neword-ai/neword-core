@@ -79,12 +79,14 @@ export const instagramSponsoredAdSchema = ZDocumentEntityBase.extend({
 
 export const instagramPostIdeaSchema = ZDocumentEntityBase.extend({
   type: z.literal(DocumentEntityType.INSTAGRAM_POST_IDEA),
-  output: z.array(
-    z.object({
-      ideaDescription: z.string(),
-      imageDescription: z.string(),
-    })
-  ),
+  output: z
+    .array(
+      z.object({
+        ideaDescription: z.string(),
+        imageDescription: z.string(),
+      })
+    )
+    .length(3),
   inputParams: baseInputParams
     .merge(categoryInputParams[DocumentCategory.SOCIAL_MEDIA])
     .extend({
@@ -129,7 +131,7 @@ export const instagramReelIdeaSchema = ZDocumentEntityBase.extend({
         reelWidgets: z.string(),
       })
     )
-    .length(1),
+    .length(3),
   inputParams: baseInputParams.merge(
     categoryInputParams[DocumentCategory.SOCIAL_MEDIA]
   ),
