@@ -4,7 +4,6 @@ import { PostData } from "./postData";
 import { PostEntityType } from "./postEntityType";
 
 export interface PostEntity extends EntityBase {
-  name: string;
   externalId: string;
   data: PostData;
   externalLink?: string | null;
