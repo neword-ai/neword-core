@@ -2,5 +2,6 @@ export declare enum PostStatusType {
     PUBLISHED = "PUBLISHED",
     PENDING = "PENDING",
     APPROVED = "APPROVED",
-    REJECTED = "REJECTED"
+    REJECTED = "REJECTED",
+    PUBLISH_FAILED = "PUBLISH_FAILED"
 }
