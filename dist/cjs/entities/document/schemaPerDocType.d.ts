@@ -19,7 +19,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -28,7 +28,7 @@ export declare const schemaPerDocType: {
             postGoal: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -37,7 +37,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -56,7 +56,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -75,7 +75,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -95,20 +95,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {}>, {
             adGoal: import("zod").ZodString;
             mainMessage: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
@@ -137,7 +137,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
@@ -156,7 +156,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
@@ -185,7 +185,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -194,7 +194,7 @@ export declare const schemaPerDocType: {
             postGoal: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -203,7 +203,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -223,7 +223,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -243,7 +243,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -270,20 +270,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -300,7 +300,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -317,7 +317,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -348,20 +348,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -380,7 +380,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -399,7 +399,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -430,20 +430,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -462,7 +462,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -481,7 +481,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -506,7 +506,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -514,7 +514,7 @@ export declare const schemaPerDocType: {
             script: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             script: string;
             description?: string | undefined;
@@ -522,7 +522,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             script: string;
             description?: string | undefined;
@@ -540,7 +540,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             script: string;
             description?: string | undefined;
@@ -558,7 +558,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             script: string;
             description?: string | undefined;
@@ -584,7 +584,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -593,7 +593,7 @@ export declare const schemaPerDocType: {
             postGoal: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -602,7 +602,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -621,7 +621,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -640,7 +640,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -670,7 +670,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -679,7 +679,7 @@ export declare const schemaPerDocType: {
             useHashtag: import("zod").ZodBoolean;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -688,7 +688,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -708,7 +708,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -728,7 +728,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -755,20 +755,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -785,7 +785,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -802,7 +802,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -827,7 +827,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -836,7 +836,7 @@ export declare const schemaPerDocType: {
             postGoal: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -845,7 +845,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -864,7 +864,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -883,7 +883,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -913,7 +913,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -922,7 +922,7 @@ export declare const schemaPerDocType: {
             postGoal: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -931,7 +931,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -951,7 +951,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -971,7 +971,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             hashtags: string[];
             postGoal: string;
@@ -998,7 +998,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -1007,7 +1007,7 @@ export declare const schemaPerDocType: {
             useHashtag: import("zod").ZodBoolean;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1016,7 +1016,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1035,7 +1035,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1054,7 +1054,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1081,7 +1081,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -1090,7 +1090,7 @@ export declare const schemaPerDocType: {
             useHashtag: import("zod").ZodBoolean;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1099,7 +1099,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1118,7 +1118,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1137,7 +1137,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1164,7 +1164,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -1173,7 +1173,7 @@ export declare const schemaPerDocType: {
             useHashtag: import("zod").ZodBoolean;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1182,7 +1182,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1201,7 +1201,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1220,7 +1220,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             useEmoji: boolean;
             useHashtag: boolean;
@@ -1250,7 +1250,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
         }>, {
@@ -1259,7 +1259,7 @@ export declare const schemaPerDocType: {
             customerSupport: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             incentives: string;
             cartItems: string;
@@ -1268,7 +1268,7 @@ export declare const schemaPerDocType: {
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             incentives: string;
             cartItems: string;
@@ -1288,7 +1288,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             incentives: string;
             cartItems: string;
@@ -1308,7 +1308,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             incentives: string;
             cartItems: string;
@@ -1338,21 +1338,21 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
         }>, {
             contentTopic: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             contentTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             contentTopic: string;
             description?: string | undefined;
@@ -1370,7 +1370,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             contentTopic: string;
             description?: string | undefined;
@@ -1388,7 +1388,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             contentTopic: string;
             description?: string | undefined;
@@ -1416,7 +1416,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
         }>, {
@@ -1425,7 +1425,7 @@ export declare const schemaPerDocType: {
             cta: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             mainMessage: string;
             notificationGoal: string;
@@ -1433,7 +1433,7 @@ export declare const schemaPerDocType: {
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             mainMessage: string;
             notificationGoal: string;
@@ -1452,7 +1452,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             mainMessage: string;
             notificationGoal: string;
@@ -1471,7 +1471,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             mainMessage: string;
             notificationGoal: string;
@@ -1500,7 +1500,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
         }>, {
@@ -1508,14 +1508,14 @@ export declare const schemaPerDocType: {
             cta: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             mainTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             mainTopic: string;
             description?: string | undefined;
@@ -1533,7 +1533,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             mainTopic: string;
             description?: string | undefined;
@@ -1551,7 +1551,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             mainTopic: string;
             description?: string | undefined;
@@ -1579,7 +1579,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
         }>, {
@@ -1587,7 +1587,7 @@ export declare const schemaPerDocType: {
             updateBenefits: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             productUpdates: string;
             updateBenefits: string;
@@ -1595,7 +1595,7 @@ export declare const schemaPerDocType: {
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             productUpdates: string;
             updateBenefits: string;
@@ -1614,7 +1614,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             productUpdates: string;
             updateBenefits: string;
@@ -1633,7 +1633,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             productUpdates: string;
             updateBenefits: string;
@@ -1662,18 +1662,18 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -1690,7 +1690,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -1707,7 +1707,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -1734,18 +1734,18 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -1762,7 +1762,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -1779,7 +1779,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -1803,7 +1803,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             legalInformation: import("zod").ZodOptional<import("zod").ZodString>;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -1814,7 +1814,7 @@ export declare const schemaPerDocType: {
             cta: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             promotionDetails: string;
             redemptionMethod: string;
@@ -1825,7 +1825,7 @@ export declare const schemaPerDocType: {
             duration?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             promotionDetails: string;
             redemptionMethod: string;
@@ -1846,7 +1846,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             promotionDetails: string;
             redemptionMethod: string;
@@ -1867,7 +1867,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             promotionDetails: string;
             redemptionMethod: string;
@@ -1896,7 +1896,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             legalInformation: import("zod").ZodOptional<import("zod").ZodString>;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -1906,7 +1906,7 @@ export declare const schemaPerDocType: {
             supportContact: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             notificationType: string;
             notificationDetails: string;
             supportContact: string;
@@ -1916,7 +1916,7 @@ export declare const schemaPerDocType: {
             legalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             notificationType: string;
             notificationDetails: string;
             supportContact: string;
@@ -1936,7 +1936,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             notificationType: string;
             notificationDetails: string;
             supportContact: string;
@@ -1956,7 +1956,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             notificationType: string;
             notificationDetails: string;
             supportContact: string;
@@ -1984,7 +1984,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, import("zod").objectUtil.extendShape<{
             legalInformation: import("zod").ZodOptional<import("zod").ZodString>;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -1992,7 +1992,7 @@ export declare const schemaPerDocType: {
             cta: import("zod").ZodString;
         }>>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -2000,7 +2000,7 @@ export declare const schemaPerDocType: {
             legalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -2018,7 +2018,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -2036,7 +2036,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -2062,20 +2062,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             legalInformation: import("zod").ZodOptional<import("zod").ZodString>;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
             legalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -2092,7 +2092,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -2109,7 +2109,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             additionalInformation?: string | undefined;
@@ -2137,18 +2137,18 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {}>, {
             keywords: import("zod").ZodArray<import("zod").ZodString, "many">;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             keywords: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             keywords: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -2165,7 +2165,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             keywords: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -2182,7 +2182,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             keywords: string[];
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -2206,15 +2206,15 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {}>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
         }>;
@@ -2229,7 +2229,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
         };
@@ -2244,7 +2244,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
         };
@@ -2276,14 +2276,14 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {}>, {
             adGoal: import("zod").ZodString;
             mainMessage: import("zod").ZodString;
             cta: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             adGoal: string;
             mainMessage: string;
@@ -2291,7 +2291,7 @@ export declare const schemaPerDocType: {
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             adGoal: string;
             mainMessage: string;
@@ -2312,7 +2312,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             adGoal: string;
             mainMessage: string;
@@ -2333,7 +2333,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             adGoal: string;
             mainMessage: string;
@@ -2362,14 +2362,14 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {}>, {
             offerPromotion: import("zod").ZodString;
             cta: import("zod").ZodString;
             personalization: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             offerPromotion: string;
             personalization: string;
@@ -2377,7 +2377,7 @@ export declare const schemaPerDocType: {
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             offerPromotion: string;
             personalization: string;
@@ -2396,7 +2396,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             offerPromotion: string;
             personalization: string;
@@ -2415,7 +2415,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             offerPromotion: string;
             personalization: string;
@@ -2444,14 +2444,14 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {}>, {
             productOrService: import("zod").ZodString;
             keywords: import("zod").ZodArray<import("zod").ZodString, "many">;
             cta: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             keywords: string[];
             productOrService: string;
@@ -2459,7 +2459,7 @@ export declare const schemaPerDocType: {
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             keywords: string[];
             productOrService: string;
@@ -2478,7 +2478,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             keywords: string[];
             productOrService: string;
@@ -2497,7 +2497,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             cta: string;
             keywords: string[];
             productOrService: string;
@@ -2523,14 +2523,14 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             keywords: import("zod").ZodOptional<import("zod").ZodArray<import("zod").ZodString, "many">>;
             internalLinks: import("zod").ZodOptional<import("zod").ZodArray<import("zod").ZodString, "many">>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2538,7 +2538,7 @@ export declare const schemaPerDocType: {
             internalLinks?: string[] | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2556,7 +2556,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2574,7 +2574,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2615,7 +2615,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
@@ -2624,7 +2624,7 @@ export declare const schemaPerDocType: {
             answer: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             question: string;
             answer: string;
             description?: string | undefined;
@@ -2633,7 +2633,7 @@ export declare const schemaPerDocType: {
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             question: string;
             answer: string;
             description?: string | undefined;
@@ -2655,7 +2655,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             question: string;
             answer: string;
             description?: string | undefined;
@@ -2677,7 +2677,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             question: string;
             answer: string;
             description?: string | undefined;
@@ -2704,20 +2704,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2734,7 +2734,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2751,7 +2751,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2779,20 +2779,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2810,7 +2810,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2828,7 +2828,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2853,20 +2853,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             additionalInformation: import("zod").ZodOptional<import("zod").ZodString>;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
             additionalInformation?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2883,7 +2883,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2900,7 +2900,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             description?: string | undefined;
             imageUrl?: string | undefined;
             cta?: string | undefined;
@@ -2925,7 +2925,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             keywords: import("zod").ZodOptional<import("zod").ZodArray<import("zod").ZodString, "many">>;
@@ -2936,7 +2936,7 @@ export declare const schemaPerDocType: {
             blogBrief: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             blogOpinion: string;
             blogBrief: string;
@@ -2947,7 +2947,7 @@ export declare const schemaPerDocType: {
             internalLinks?: string[] | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             blogOpinion: string;
             blogBrief: string;
@@ -2968,7 +2968,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             blogOpinion: string;
             blogBrief: string;
@@ -2989,7 +2989,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             blogOpinion: string;
             blogBrief: string;
@@ -3018,7 +3018,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             keywords: import("zod").ZodOptional<import("zod").ZodArray<import("zod").ZodString, "many">>;
@@ -3027,7 +3027,7 @@ export declare const schemaPerDocType: {
             blogTopic: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3036,7 +3036,7 @@ export declare const schemaPerDocType: {
             internalLinks?: string[] | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3055,7 +3055,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3074,7 +3074,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3101,7 +3101,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             keywords: import("zod").ZodOptional<import("zod").ZodArray<import("zod").ZodString, "many">>;
@@ -3110,7 +3110,7 @@ export declare const schemaPerDocType: {
             blogTopic: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3119,7 +3119,7 @@ export declare const schemaPerDocType: {
             internalLinks?: string[] | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3138,7 +3138,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3157,7 +3157,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3184,7 +3184,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             keywords: import("zod").ZodOptional<import("zod").ZodArray<import("zod").ZodString, "many">>;
@@ -3194,7 +3194,7 @@ export declare const schemaPerDocType: {
             comparisonFocusPoints: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             comparisonFocusPoints: string;
             description?: string | undefined;
@@ -3204,7 +3204,7 @@ export declare const schemaPerDocType: {
             internalLinks?: string[] | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             comparisonFocusPoints: string;
             description?: string | undefined;
@@ -3224,7 +3224,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             comparisonFocusPoints: string;
             description?: string | undefined;
@@ -3244,7 +3244,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             comparisonFocusPoints: string;
             description?: string | undefined;
@@ -3272,7 +3272,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             keywords: import("zod").ZodOptional<import("zod").ZodArray<import("zod").ZodString, "many">>;
@@ -3282,7 +3282,7 @@ export declare const schemaPerDocType: {
             results: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             solutionDescription: string;
             results: string;
             description?: string | undefined;
@@ -3292,7 +3292,7 @@ export declare const schemaPerDocType: {
             internalLinks?: string[] | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             solutionDescription: string;
             results: string;
             description?: string | undefined;
@@ -3312,7 +3312,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             solutionDescription: string;
             results: string;
             description?: string | undefined;
@@ -3332,7 +3332,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             solutionDescription: string;
             results: string;
             description?: string | undefined;
@@ -3360,7 +3360,7 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {
             cta: import("zod").ZodOptional<import("zod").ZodString>;
             keywords: import("zod").ZodOptional<import("zod").ZodArray<import("zod").ZodString, "many">>;
@@ -3369,7 +3369,7 @@ export declare const schemaPerDocType: {
             blogTopic: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3378,7 +3378,7 @@ export declare const schemaPerDocType: {
             internalLinks?: string[] | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3397,7 +3397,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3416,7 +3416,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             blogTopic: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
@@ -3436,20 +3436,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {}>, {
             adGoal: import("zod").ZodString;
             mainMessage: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
@@ -3486,7 +3486,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
@@ -3507,7 +3507,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
@@ -3526,20 +3526,20 @@ export declare const schemaPerDocType: {
             description: import("zod").ZodOptional<import("zod").ZodString>;
             imageUrl: import("zod").ZodOptional<import("zod").ZodString>;
             audienceId: import("zod").ZodString;
-            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING"]>;
+            tone: import("zod").ZodEnum<["MARKETING", "SOLDABLE", "FRIENDLLY", "INSPIRED", "INSTRUCTIONAL", "CONVINCING", "HOMORISTIC"]>;
         }, {}>, {
             adGoal: import("zod").ZodString;
             mainMessage: import("zod").ZodString;
         }>, "strip", import("zod").ZodTypeAny, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
             imageUrl?: string | undefined;
         }, {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
@@ -3576,7 +3576,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;
@@ -3597,7 +3597,7 @@ export declare const schemaPerDocType: {
         }[];
         inputParams: {
             audienceId: string;
-            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING";
+            tone: "MARKETING" | "SOLDABLE" | "FRIENDLLY" | "INSPIRED" | "INSTRUCTIONAL" | "CONVINCING" | "HOMORISTIC";
             adGoal: string;
             mainMessage: string;
             description?: string | undefined;

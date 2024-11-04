@@ -6,5 +6,6 @@ export const ZDocumentToneType = z.enum([
     "INSPIRED",
     "INSTRUCTIONAL",
     "CONVINCING",
+    "HOMORISTIC",
 ]);
 //# sourceMappingURL=DocumentToneType.js.map
