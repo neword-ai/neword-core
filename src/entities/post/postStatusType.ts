@@ -3,4 +3,5 @@ export enum PostStatusType {
   PENDING = "PENDING",
   APPROVED = "APPROVED",
   REJECTED = "REJECTED",
+  PUBLISH_FAILED = "PUBLISH_FAILED",
 }
