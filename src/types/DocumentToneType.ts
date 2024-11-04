@@ -7,5 +7,6 @@ export const ZDocumentToneType = z.enum([
   "INSPIRED",
   "INSTRUCTIONAL",
   "CONVINCING",
+  "HOMORISTIC",
 ]);
 export type DocumentToneType = z.infer<typeof ZDocumentToneType>;
