@@ -1,6 +1,6 @@
 import { z } from "zod";
 export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
-    imageUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString, "many">>>;
     type: z.ZodLiteral<"INSTAGRAM_POST">;
     media_type: z.ZodEnum<["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]>;
     media_ids: z.ZodArray<z.ZodString, "many">;
@@ -19,7 +19,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: "INSTAGRAM_POST";
     media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
     media_ids: string[];
-    imageUrl?: string | null | undefined;
+    imageUrls?: string[] | null | undefined;
     location?: string | null | undefined;
     disable_comments?: boolean | undefined;
     children?: {
@@ -30,7 +30,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: "INSTAGRAM_POST";
     media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
     media_ids: string[];
-    imageUrl?: string | null | undefined;
+    imageUrls?: string[] | null | undefined;
     location?: string | null | undefined;
     disable_comments?: boolean | undefined;
     children?: {
@@ -39,7 +39,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
 }>, z.ZodObject<{
     type: z.ZodLiteral<"TWITTER_TWIT">;
     message: z.ZodString;
-    imageUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString, "many">>>;
     media_ids: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     link: z.ZodOptional<z.ZodString>;
     in_reply_to_status_id: z.ZodOptional<z.ZodString>;
@@ -49,7 +49,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     message: string;
     type: "TWITTER_TWIT";
-    imageUrl?: string | null | undefined;
+    imageUrls?: string[] | null | undefined;
     media_ids?: string[] | undefined;
     link?: string | undefined;
     in_reply_to_status_id?: string | undefined;
@@ -59,7 +59,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
 }, {
     message: string;
     type: "TWITTER_TWIT";
-    imageUrl?: string | null | undefined;
+    imageUrls?: string[] | null | undefined;
     media_ids?: string[] | undefined;
     link?: string | undefined;
     in_reply_to_status_id?: string | undefined;
@@ -67,7 +67,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     reply_settings?: "everyone" | "mentioned_users" | "following" | undefined;
     scheduled_publish_time?: number | undefined;
 }>, z.ZodObject<{
-    imageUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString, "many">>>;
     type: z.ZodLiteral<"FACEBOOK_POST">;
     message: z.ZodString;
     link: z.ZodOptional<z.ZodString>;
@@ -78,7 +78,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     message: string;
     type: "FACEBOOK_POST";
     published: boolean;
-    imageUrl?: string | null | undefined;
+    imageUrls?: string[] | null | undefined;
     media_ids?: string[] | undefined;
     link?: string | undefined;
     scheduled_publish_time?: number | undefined;
@@ -86,14 +86,14 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     message: string;
     type: "FACEBOOK_POST";
     published: boolean;
-    imageUrl?: string | null | undefined;
+    imageUrls?: string[] | null | undefined;
     media_ids?: string[] | undefined;
     link?: string | undefined;
     scheduled_publish_time?: number | undefined;
 }>, z.ZodObject<{
     type: z.ZodLiteral<"TIKTOK_POST">;
     message: z.ZodString;
-    imageUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString, "many">>>;
     statistics: z.ZodObject<{
         like_count: z.ZodNumber;
         comment_count: z.ZodNumber;
@@ -137,7 +137,7 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         url: string;
         cover: string;
     };
-    imageUrl?: string | null | undefined;
+    imageUrls?: string[] | null | undefined;
 }, {
     message: string;
     type: "TIKTOK_POST";
@@ -152,24 +152,24 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         url: string;
         cover: string;
     };
-    imageUrl?: string | null | undefined;
+    imageUrls?: string[] | null | undefined;
 }>, z.ZodObject<{
     message: z.ZodString;
-    imageUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString, "many">>>;
     hashtags: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     mentions: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     type: z.ZodLiteral<"LINKEDIN_POST">;
 }, "strip", z.ZodTypeAny, {
     message: string;
     type: "LINKEDIN_POST";
-    imageUrl?: string | null | undefined;
     hashtags?: string[] | undefined;
+    imageUrls?: string[] | null | undefined;
     mentions?: string[] | undefined;
 }, {
     message: string;
     type: "LINKEDIN_POST";
-    imageUrl?: string | null | undefined;
     hashtags?: string[] | undefined;
+    imageUrls?: string[] | null | undefined;
     mentions?: string[] | undefined;
 }>]>;
 export type PostData = z.infer<typeof ZPostData>;
