@@ -2,7 +2,7 @@ import { z } from "zod";
 
 // Instagram Post Schema
 const InstagramPostSchema = z.object({
-  imageUrls: z.array(z.string()).nullable().optional(), // Now nullable
+  imageUrls: z.array(z.string()).nullable().optional().default([]), // Now nullable
   type: z.literal("INSTAGRAM_POST"), // Literal type for identification
   media_type: z.enum(["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]), // Required media type
   media_ids: z.array(z.string()), // Media IDs (must be obtained after uploading media to Instagram API)
@@ -20,8 +20,7 @@ const InstagramPostSchema = z.object({
 const TwitterTweetSchema = z.object({
   type: z.literal("TWITTER_TWIT"), // Literal type for identification
   message: z.string(), // Optional: The text content of the tweet
-  imageUrls: z.array(z.string()).nullable().optional(), // Now nullable
-
+  imageUrls: z.array(z.string()).nullable().optional().default([]), // Now nullable
   media_ids: z.array(z.string()).optional(), // Optional: Media IDs for images or videos (uploaded beforehand)
   link: z.string().optional(), // Optional: URL to include in the tweet
   in_reply_to_status_id: z.string().optional(), // Optional: ID of the tweet being replied to
@@ -34,7 +33,7 @@ const TwitterTweetSchema = z.object({
 
 // Facebook Post Schema
 const FacebookPostSchema = z.object({
-  imageUrls: z.array(z.string()).nullable().optional(), // Now nullable
+  imageUrls: z.array(z.string()).nullable().optional().default([]), // Now nullable
   type: z.literal("FACEBOOK_POST"), // Literal type for identification
   message: z.string(), // Optional message for the post
   link: z.string().optional(), // Optional link to be shared in the post
@@ -46,7 +45,7 @@ const FacebookPostSchema = z.object({
 // LinkedIn Post Schema
 const LinkedInPostSchema = z.object({
   message: z.string(),
-  imageUrls: z.array(z.string()).nullable().optional(), // Now nullable
+  imageUrls: z.array(z.string()).nullable().optional().default([]), // Now nullable
   hashtags: z
     .array(z.string().min(1, "Hashtag cannot be empty"))
     .max(30, "Cannot have more than 30 hashtags") // LinkedIn max hashtags is 30
@@ -62,7 +61,7 @@ const LinkedInPostSchema = z.object({
 const TiktokPostSchema = z.object({
   type: z.literal("TIKTOK_POST"), // Literal type for identification
   message: z.string(), // TikTok-specific field
-  imageUrls: z.array(z.string()).nullable().optional(), // Now nullable
+  imageUrls: z.array(z.string()).nullable().optional().default([]),
   statistics: z.object({
     like_count: z.number(),
     comment_count: z.number(),
@@ -76,7 +75,6 @@ const TiktokPostSchema = z.object({
   }), // TikTok-specific field
 });
 
-// Union of all post types based on "type"
 export const ZPostData = z.discriminatedUnion("type", [
   InstagramPostSchema,
   TwitterTweetSchema,
