@@ -57,20 +57,9 @@ var LinkedInPostSchema = zod_1.z.object({
 });
 // TikTok Post Schema
 var TiktokPostSchema = zod_1.z.object({
-    type: zod_1.z.literal("TIKTOK_POST"), // Literal type for identification
-    message: zod_1.z.string(), // TikTok-specific field
+    type: zod_1.z.literal("TIKTOK_POST"),
+    message: zod_1.z.string(),
     imageUrls: zod_1.z.array(zod_1.z.string()).nullable().optional().default([]),
-    statistics: zod_1.z.object({
-        like_count: zod_1.z.number(),
-        comment_count: zod_1.z.number(),
-        share_count: zod_1.z.number(),
-        play_count: zod_1.z.number(),
-    }), // TikTok-specific field
-    video: zod_1.z.object({
-        url: zod_1.z.string(),
-        duration: zod_1.z.number(),
-        cover: zod_1.z.string(),
-    }), // TikTok-specific field
 });
 exports.ZPostData = zod_1.z.discriminatedUnion("type", [
     InstagramPostSchema,

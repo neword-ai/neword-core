@@ -59,20 +59,9 @@ const LinkedInPostSchema = z.object({
 
 // TikTok Post Schema
 const TiktokPostSchema = z.object({
-  type: z.literal("TIKTOK_POST"), // Literal type for identification
-  message: z.string(), // TikTok-specific field
+  type: z.literal("TIKTOK_POST"),
+  message: z.string(),
   imageUrls: z.array(z.string()).nullable().optional().default([]),
-  statistics: z.object({
-    like_count: z.number(),
-    comment_count: z.number(),
-    share_count: z.number(),
-    play_count: z.number(),
-  }), // TikTok-specific field
-  video: z.object({
-    url: z.string(),
-    duration: z.number(),
-    cover: z.string(),
-  }), // TikTok-specific field
 });
 
 export const ZPostData = z.discriminatedUnion("type", [

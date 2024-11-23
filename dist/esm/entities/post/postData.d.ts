@@ -94,64 +94,13 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     type: z.ZodLiteral<"TIKTOK_POST">;
     message: z.ZodString;
     imageUrls: z.ZodDefault<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString, "many">>>>;
-    statistics: z.ZodObject<{
-        like_count: z.ZodNumber;
-        comment_count: z.ZodNumber;
-        share_count: z.ZodNumber;
-        play_count: z.ZodNumber;
-    }, "strip", z.ZodTypeAny, {
-        like_count: number;
-        comment_count: number;
-        share_count: number;
-        play_count: number;
-    }, {
-        like_count: number;
-        comment_count: number;
-        share_count: number;
-        play_count: number;
-    }>;
-    video: z.ZodObject<{
-        url: z.ZodString;
-        duration: z.ZodNumber;
-        cover: z.ZodString;
-    }, "strip", z.ZodTypeAny, {
-        duration: number;
-        url: string;
-        cover: string;
-    }, {
-        duration: number;
-        url: string;
-        cover: string;
-    }>;
 }, "strip", z.ZodTypeAny, {
     message: string;
     type: "TIKTOK_POST";
     imageUrls: string[] | null;
-    statistics: {
-        like_count: number;
-        comment_count: number;
-        share_count: number;
-        play_count: number;
-    };
-    video: {
-        duration: number;
-        url: string;
-        cover: string;
-    };
 }, {
     message: string;
     type: "TIKTOK_POST";
-    statistics: {
-        like_count: number;
-        comment_count: number;
-        share_count: number;
-        play_count: number;
-    };
-    video: {
-        duration: number;
-        url: string;
-        cover: string;
-    };
     imageUrls?: string[] | null | undefined;
 }>, z.ZodObject<{
     message: z.ZodString;
