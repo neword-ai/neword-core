@@ -4,6 +4,7 @@ exports.PostEntityType = void 0;
 var PostEntityType;
 (function (PostEntityType) {
     PostEntityType["INSTAGRAM_POST"] = "INSTAGRAM_POST";
+    PostEntityType["INSTAGRAM_REEL"] = "INSTAGRAM_REEL";
     PostEntityType["FACEBOOK_POST"] = "FACEBOOK_POST";
     PostEntityType["LINKEDIN_POST"] = "LINKEDIN_POST";
     PostEntityType["TWITTER_TWIT"] = "TWITTER_TWIT";

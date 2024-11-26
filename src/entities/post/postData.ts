@@ -64,12 +64,19 @@ const TiktokPostSchema = z.object({
   imageUrls: z.array(z.string()).nullable().optional().default([]),
 });
 
+const InstagramReelPostSchema = z.object({
+  type: z.literal("INSTAGRAM_REEL"),
+  message: z.string(),
+  imageUrls: z.array(z.string()).nullable().optional().default([]),
+});
+
 export const ZPostData = z.discriminatedUnion("type", [
   InstagramPostSchema,
   TwitterTweetSchema,
   FacebookPostSchema,
   TiktokPostSchema,
   LinkedInPostSchema,
+  InstagramReelPostSchema,
 ]);
 
 // Typescript types for inference

@@ -120,5 +120,17 @@ export declare const ZPostData: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     hashtags?: string[] | undefined;
     imageUrls?: string[] | null | undefined;
     mentions?: string[] | undefined;
+}>, z.ZodObject<{
+    type: z.ZodLiteral<"INSTAGRAM_REEL">;
+    message: z.ZodString;
+    imageUrls: z.ZodDefault<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString, "many">>>>;
+}, "strip", z.ZodTypeAny, {
+    message: string;
+    type: "INSTAGRAM_REEL";
+    imageUrls: string[] | null;
+}, {
+    message: string;
+    type: "INSTAGRAM_REEL";
+    imageUrls?: string[] | null | undefined;
 }>]>;
 export type PostData = z.infer<typeof ZPostData>;

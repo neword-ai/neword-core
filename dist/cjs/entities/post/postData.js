@@ -61,11 +61,17 @@ var TiktokPostSchema = zod_1.z.object({
     message: zod_1.z.string(),
     imageUrls: zod_1.z.array(zod_1.z.string()).nullable().optional().default([]),
 });
+var InstagramReelPostSchema = zod_1.z.object({
+    type: zod_1.z.literal("INSTAGRAM_REEL"),
+    message: zod_1.z.string(),
+    imageUrls: zod_1.z.array(zod_1.z.string()).nullable().optional().default([]),
+});
 exports.ZPostData = zod_1.z.discriminatedUnion("type", [
     InstagramPostSchema,
     TwitterTweetSchema,
     FacebookPostSchema,
     TiktokPostSchema,
     LinkedInPostSchema,
+    InstagramReelPostSchema,
 ]);
 //# sourceMappingURL=postData.js.map
