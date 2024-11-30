@@ -63,6 +63,11 @@ const InstagramReelPostSchema = z.object({
     message: z.string(),
     imageUrls: z.array(z.string()).nullable().optional().default([]),
 });
+const FacebookReelPostSchema = z.object({
+    type: z.literal("FACEBOOK_REEL"),
+    message: z.string(),
+    imageUrls: z.array(z.string()).nullable().optional().default([]),
+});
 export const ZPostData = z.discriminatedUnion("type", [
     InstagramPostSchema,
     TwitterTweetSchema,
@@ -70,5 +75,6 @@ export const ZPostData = z.discriminatedUnion("type", [
     TiktokPostSchema,
     LinkedInPostSchema,
     InstagramReelPostSchema,
+    FacebookReelPostSchema,
 ]);
 //# sourceMappingURL=postData.js.map

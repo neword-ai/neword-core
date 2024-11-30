@@ -66,6 +66,11 @@ var InstagramReelPostSchema = zod_1.z.object({
     message: zod_1.z.string(),
     imageUrls: zod_1.z.array(zod_1.z.string()).nullable().optional().default([]),
 });
+var FacebookReelPostSchema = zod_1.z.object({
+    type: zod_1.z.literal("FACEBOOK_REEL"),
+    message: zod_1.z.string(),
+    imageUrls: zod_1.z.array(zod_1.z.string()).nullable().optional().default([]),
+});
 exports.ZPostData = zod_1.z.discriminatedUnion("type", [
     InstagramPostSchema,
     TwitterTweetSchema,
@@ -73,5 +78,6 @@ exports.ZPostData = zod_1.z.discriminatedUnion("type", [
     TiktokPostSchema,
     LinkedInPostSchema,
     InstagramReelPostSchema,
+    FacebookReelPostSchema,
 ]);
 //# sourceMappingURL=postData.js.map
