@@ -11,4 +11,5 @@ export interface PostEntity extends EntityBase {
     websiteId: string;
     scheduleDate: Date;
     type: PostEntityType;
+    comments?: Comment[];
 }
