@@ -5,7 +5,7 @@ export interface User extends EntityBase {
     firstName: string;
     lastName: string;
     role: UserRole;
-    phone: string;
+    phone?: string;
     companyId: string;
     isActive: boolean;
 }
